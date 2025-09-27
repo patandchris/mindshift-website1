@@ -47,16 +47,34 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        /* Premium gold color extensions */
+        gold: {
+          50: "hsl(48 96% 95%)",
+          100: "hsl(48 96% 88%)",
+          200: "hsl(48 96% 78%)",
+          300: "hsl(48 96% 65%)",
+          400: "hsl(45 100% 70%)",
+          500: "hsl(48 96% 65%)",
+          600: "hsl(50 90% 60%)",
+          700: "hsl(45 80% 50%)",
+          800: "hsl(42 70% 40%)",
+          900: "hsl(40 60% 30%)",
         },
+      },
+      backgroundImage: {
+        'gradient-gold': 'var(--gradient-gold)',
+      },
+      boxShadow: {
+        'gold': 'var(--shadow-gold)',
+        'elegant': 'var(--shadow-elegant)',
+      },
+      fontWeight: {
+        'light': 'var(--font-light)',
+        'normal': 'var(--font-normal)', 
+        'medium': 'var(--font-medium)',
+        'semibold': 'var(--font-semibold)',
+        'bold': 'var(--font-bold)',
+        'black': 'var(--font-black)',
       },
       borderRadius: {
         lg: "var(--radius)",

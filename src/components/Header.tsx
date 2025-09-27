@@ -1,0 +1,115 @@
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import patChrisLogo from "@/assets/pat-chris-logo.png";
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "Coaching", path: "/#coaching" },
+    { name: "Blog", path: "/blog" },
+    { name: "Podcast", path: "/podcast" },
+    { name: "Free Resources", path: "/lead-magnet" },
+    { name: "Contact", path: "/#contact" },
+  ];
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-background/95 backdrop-blur-lg border-b border-border shadow-elegant"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="container-premium">
+        <div className="flex items-center justify-between py-4">
+          {/* Logo */}
+          <Link to="/" className="flex items-center">
+            <img
+              src={patChrisLogo}
+              alt="Pat & Chris Coaching"
+              className="h-12 w-auto"
+            />
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`text-sm font-medium transition-colors hover:text-accent ${
+                  location.pathname === item.path
+                    ? "text-accent"
+                    : "text-foreground"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+
+          {/* CTA Button */}
+          <div className="hidden lg:block">
+            <Button variant="hero" size="lg" asChild>
+              <Link to="/#coaching">Start Your Transformation</Link>
+            </Button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="lg:hidden border-t border-border bg-background/95 backdrop-blur-lg">
+            <nav className="py-4 space-y-2">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="block px-4 py-2 text-sm font-medium hover:text-accent hover:bg-accent/10 rounded-lg transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <div className="px-4 pt-4">
+                <Button variant="hero" size="lg" className="w-full" asChild>
+                  <Link to="/#coaching" onClick={() => setIsMenuOpen(false)}>
+                    Start Your Transformation
+                  </Link>
+                </Button>
+              </div>
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+
+export default Header;
