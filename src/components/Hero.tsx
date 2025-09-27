@@ -29,7 +29,7 @@ const Hero = () => {
           </div>
 
           {/* Sub-headline */}
-          <p className="text-xl font-semibold text-foreground mb-8 md:text-2xl px-[8px] my-0 mx-[10px]">
+          <p className="text-xl font-semibold text-foreground mb-8 px-[8px] md:text-2xl my-[3px] mx-[13px]">
             Transform your mindset with The MindShift System: The 12-Week Unconscious Upgrade.
           </p>
 
