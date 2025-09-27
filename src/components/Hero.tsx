@@ -9,7 +9,7 @@ const Hero = () => {
       </div>
 
       <div className="container-premium relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Content */}
           <div className="text-center lg:text-left">
             {/* Badge */}
@@ -52,8 +52,8 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-gold rounded-3xl blur-3xl opacity-20 scale-110" />
-              <div className="relative bg-card border border-border rounded-3xl p-12 card-premium px-[36px]">
-                <img src={mindshiftLogo} alt="The MindShift System" className="w-full max-w-md mx-auto" />
+              <div className="relative bg-black border border-border rounded-3xl p-12 card-premium px-[36px]">
+                <img src={mindshiftLogo} alt="The MindShift System" className="w-full max-w-lg mx-auto" />
               </div>
             </div>
           </div>
