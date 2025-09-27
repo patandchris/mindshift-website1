@@ -41,7 +41,7 @@ const Header = () => {
             <img
               src={patChrisLogo}
               alt="Pat & Chris Coaching"
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
           </Link>
 
