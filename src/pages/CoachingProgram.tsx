@@ -1,0 +1,273 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CheckCircle, Users, TrendingUp, Clock, Target, Brain, Zap } from "lucide-react";
+import mindshiftLogo from "@/assets/mindshift-logo.png";
+
+const CoachingProgram = () => {
+  const programWeeks = [
+    {
+      week: "Weeks 1-2",
+      title: "Foundation & Assessment",
+      description: "Identify limiting beliefs and establish your baseline"
+    },
+    {
+      week: "Weeks 3-4", 
+      title: "Belief Rewiring",
+      description: "Begin the unconscious reprogramming process"
+    },
+    {
+      week: "Weeks 5-6",
+      title: "Habit Installation", 
+      description: "Build success habits that compound over time"
+    },
+    {
+      week: "Weeks 7-8",
+      title: "Focus Optimization",
+      description: "Master attention and eliminate distractions"
+    },
+    {
+      week: "Weeks 9-10",
+      title: "Integration & Acceleration",
+      description: "Combine all elements for maximum impact"
+    },
+    {
+      week: "Weeks 11-12",
+      title: "Mastery & Maintenance",
+      description: "Lock in your transformation permanently"
+    }
+  ];
+
+  const outcomes = [
+    { icon: Brain, title: "Eliminate Limiting Beliefs", description: "Identify and remove the unconscious blocks holding you back" },
+    { icon: Target, title: "Build Success Habits", description: "Install powerful daily routines that drive results" },
+    { icon: Zap, title: "Unlock Laser Focus", description: "Master your attention and eliminate distractions" },
+    { icon: TrendingUp, title: "Accelerate Growth", description: "Experience compound results in all areas of life" }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Chen",
+      title: "Senior Executive",
+      content: "The MindShift System gave me the mental framework I was missing. I went from feeling stuck to leading with absolute confidence.",
+      result: "Promoted to VP in 6 months"
+    },
+    {
+      name: "Marcus Rodriguez", 
+      title: "Entrepreneur",
+      content: "This isn't just coaching - it's a complete mental upgrade. My decision-making, focus, and results have all transformed.",
+      result: "3x business revenue"
+    },
+    {
+      name: "David Thompson",
+      title: "Sales Director", 
+      content: "I finally broke through my income ceiling. The unconscious reprogramming work is what made all the difference.",
+      result: "Doubled income in 8 months"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      <main>
+        {/* Hero Section */}
+        <section className="section-padding bg-background">
+          <div className="container-premium">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Content */}
+              <div>
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-6">
+                  <span className="w-2 h-2 bg-accent rounded-full mr-2 animate-pulse" />
+                  12-Week Transformation
+                </div>
+                
+                <h1 className="text-4xl md:text-6xl font-bold text-accent mb-6">
+                  The MindShift System: 12-Week Unconscious Upgrade
+                </h1>
+                
+                <p className="text-xl text-muted-foreground mb-8">
+                  The definitive program for ambitious professionals ready to eliminate limiting beliefs, 
+                  build success habits, and unlock their true potential.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                  <Button 
+                    className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+                    size="lg"
+                  >
+                    Apply Now
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    size="lg"
+                    className="border-accent text-accent hover:bg-accent hover:text-black"
+                  >
+                    Book a Strategy Call
+                  </Button>
+                </div>
+
+                {/* Quick Stats */}
+                <div className="flex items-center gap-8 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-2">
+                    <Users className="w-4 h-4" />
+                    <span>500+ Clients Transformed</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-4 h-4" />
+                    <span>12 Weeks to New You</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Logo/Visual */}
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-gold rounded-3xl blur-3xl opacity-20 scale-110" />
+                  <div className="relative bg-black border border-border rounded-3xl p-12 card-premium">
+                    <img src={mindshiftLogo} alt="The MindShift System" className="w-full max-w-md mx-auto" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Program Breakdown */}
+        <section className="section-padding bg-background">
+          <div className="container-premium">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-accent mb-6">
+                Your 12-Week Transformation Journey
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                A systematic approach to rewiring your unconscious mind and unlocking your full potential.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {programWeeks.map((week, index) => (
+                <Card key={index} className="bg-card border border-border hover:shadow-elegant transition-all duration-300">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-medium text-accent">{week.week}</span>
+                      <div className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center">
+                        <span className="text-sm font-bold text-accent">{index + 1}</span>
+                      </div>
+                    </div>
+                    <CardTitle className="text-foreground">{week.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">{week.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Outcomes */}
+        <section className="section-padding bg-background">
+          <div className="container-premium">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-accent mb-6">
+                What You'll Achieve
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Transform your mindset and unlock breakthrough results in every area of your life.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {outcomes.map((outcome, index) => {
+                const Icon = outcome.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Icon className="w-8 h-8 text-accent" />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground mb-3">{outcome.title}</h3>
+                    <p className="text-muted-foreground">{outcome.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <section className="section-padding bg-background">
+          <div className="container-premium">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-accent mb-6">
+                Real Results from Real People
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                See how professionals like you have transformed their lives with The MindShift System.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <Card key={index} className="bg-card border border-border">
+                  <CardContent className="p-6">
+                    <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-4">
+                      {testimonial.result}
+                    </div>
+                    <blockquote className="text-foreground mb-4 italic">
+                      "{testimonial.content}"
+                    </blockquote>
+                    <div>
+                      <div className="font-semibold text-foreground">{testimonial.name}</div>
+                      <div className="text-sm text-muted-foreground">{testimonial.title}</div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="section-padding bg-background">
+          <div className="container-premium">
+            <Card className="bg-card border border-border text-center">
+              <CardContent className="p-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-accent mb-6">
+                  Ready to Transform Your Life?
+                </h2>
+                <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+                  Join hundreds of ambitious professionals who have already upgraded their mindset 
+                  and unlocked their true potential with The MindShift System.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button 
+                    className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+                    size="lg"
+                  >
+                    Apply for The Program
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    size="lg"
+                    className="border-accent text-accent hover:bg-accent hover:text-black"
+                  >
+                    Schedule Your Strategy Call
+                  </Button>
+                </div>
+                <p className="text-sm text-muted-foreground mt-4">
+                  Limited spots available. Application required.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default CoachingProgram;

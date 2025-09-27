@@ -115,9 +115,13 @@ const Blog = () => {
                 {categories.map((category) => (
                   <Button
                     key={category}
-                    variant={selectedCategory === category ? "hero" : "outline"}
+                    variant={selectedCategory === category ? "default" : "outline"}
                     size="sm"
                     onClick={() => setSelectedCategory(category)}
+                    className={selectedCategory === category ? 
+                      "bg-gradient-gold text-black font-semibold hover:shadow-glow" : 
+                      "border-accent text-accent hover:bg-accent hover:text-black"
+                    }
                   >
                     {category}
                   </Button>

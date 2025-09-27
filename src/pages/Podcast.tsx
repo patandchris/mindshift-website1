@@ -110,18 +110,26 @@ const Podcast = () => {
                   </div>
                 </div>
 
-                {/* Platform Links */}
-                <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                  {platformLinks.map((platform) => (
-                    <Button key={platform.name} variant="outline" size="lg" asChild>
-                      <a href={platform.href} target="_blank" rel="noopener noreferrer">
-                        <span className="mr-2 text-lg">{platform.icon}</span>
-                        {platform.name}
-                        <ExternalLink className="ml-2 h-4 w-4" />
-                      </a>
-                    </Button>
-                  ))}
-                </div>
+                 <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+                   <Button 
+                     variant="default" 
+                     size="lg" 
+                     className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+                   >
+                     <span className="mr-2 text-lg">🎵</span>
+                     Subscribe on Spotify
+                     <ExternalLink className="ml-2 h-4 w-4" />
+                   </Button>
+                   <Button 
+                     variant="outline" 
+                     size="lg"
+                     className="border-accent text-accent hover:bg-accent hover:text-black"
+                   >
+                     <span className="mr-2 text-lg">🎧</span>
+                     Subscribe on Apple Podcasts
+                     <ExternalLink className="ml-2 h-4 w-4" />
+                   </Button>
+                 </div>
               </div>
 
               {/* Podcast Artwork */}
@@ -153,19 +161,19 @@ const Podcast = () => {
             <Card className="card-premium max-w-4xl mx-auto">
               <CardContent className="p-8">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
-                  {/* Episode Art */}
-                  <div className="relative aspect-video rounded-lg overflow-hidden group">
-                    <img
-                      src={episodes[0].thumbnail}
-                      alt={episodes[0].title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
-                      <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg cursor-pointer">
-                        <Play className="h-10 w-10 text-accent-foreground ml-1" />
-                      </div>
-                    </div>
-                  </div>
+                   {/* Episode Art */}
+                   <div className="relative aspect-video rounded-lg overflow-hidden group">
+                     <img
+                       src={mamInitialsLogo}
+                       alt={episodes[0].title}
+                       className="w-full h-full object-contain bg-black p-8"
+                     />
+                     <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
+                       <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg cursor-pointer">
+                         <Play className="h-10 w-10 text-accent-foreground ml-1" />
+                       </div>
+                     </div>
+                   </div>
 
                   {/* Episode Info */}
                   <div>
@@ -186,20 +194,32 @@ const Podcast = () => {
                     <h3 className="text-2xl font-bold mb-4">{episodes[0].title}</h3>
                     <p className="text-muted-foreground mb-6">{episodes[0].description}</p>
 
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Button variant="hero" size="lg" className="group">
-                        <Play className="mr-2 h-5 w-5" />
-                        Play Episode
-                      </Button>
-                      <Button variant="outline" size="lg">
-                        <Download className="mr-2 h-5 w-5" />
-                        Download
-                      </Button>
-                      <Button variant="ghost" size="lg">
-                        <Share className="mr-2 h-5 w-5" />
-                        Share
-                      </Button>
-                    </div>
+                     <div className="flex flex-col sm:flex-row gap-4">
+                       <Button 
+                         variant="default" 
+                         size="lg" 
+                         className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+                       >
+                         <Play className="mr-2 h-5 w-5" />
+                         Play Episode
+                       </Button>
+                       <Button 
+                         variant="outline" 
+                         size="lg"
+                         className="border-accent text-accent hover:bg-accent hover:text-black"
+                       >
+                         <Download className="mr-2 h-5 w-5" />
+                         Download
+                       </Button>
+                       <Button 
+                         variant="ghost" 
+                         size="lg"
+                         className="text-muted-foreground hover:text-accent"
+                       >
+                         <Share className="mr-2 h-5 w-5" />
+                         Share
+                       </Button>
+                     </div>
                   </div>
                 </div>
               </CardContent>
@@ -214,9 +234,12 @@ const Podcast = () => {
               <h2 className="text-3xl font-bold">
                 All <span className="text-accent">Episodes</span>
               </h2>
-              <Button variant="outline">
-                Load More Episodes
-              </Button>
+               <Button 
+                 variant="outline"
+                 className="border-accent text-accent hover:bg-accent hover:text-black"
+               >
+                 Load More Episodes
+               </Button>
             </div>
 
             <div className="grid gap-6">
@@ -225,18 +248,18 @@ const Podcast = () => {
                   <CardContent className="p-6">
                     <div className="grid md:grid-cols-4 gap-6 items-center">
                       {/* Episode Thumbnail */}
-                      <div className="relative aspect-video rounded-lg overflow-hidden">
-                        <img
-                          src={episode.thumbnail}
-                          alt={episode.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
-                          <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <Play className="h-6 w-6 text-accent-foreground ml-1" />
-                          </div>
-                        </div>
-                      </div>
+                       <div className="relative aspect-video rounded-lg overflow-hidden">
+                         <img
+                           src={mamInitialsLogo}
+                           alt={episode.title}
+                           className="w-full h-full object-contain bg-black p-4"
+                         />
+                         <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
+                           <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                             <Play className="h-6 w-6 text-accent-foreground ml-1" />
+                           </div>
+                         </div>
+                       </div>
 
                       {/* Episode Details */}
                       <div className="md:col-span-2">

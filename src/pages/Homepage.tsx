@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import MindShiftOverview from "@/components/MindShiftOverview";
-import Testimonials from "@/components/Testimonials";
+import SuccessStories from "@/components/SuccessStories";
+import BeTheFirstToKnow from "@/components/BeTheFirstToKnow";
 import PodcastPromo from "@/components/PodcastPromo";
 import Footer from "@/components/Footer";
 
@@ -11,8 +11,8 @@ const Homepage = () => {
       <Header />
       <main>
         <Hero />
-        <MindShiftOverview />
-        <Testimonials />
+        <SuccessStories />
+        <BeTheFirstToKnow />
         <PodcastPromo />
       </main>
       <Footer />

@@ -11,8 +11,8 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Core brand colors - Premium black and gold theme */
-    --background: 0 0% 6%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 0%;           /* Solid black background */
+    --foreground: 0 0% 100%;         /* Pure white for maximum readability */
 
     --card: 0 0% 9%;
     --card-foreground: 0 0% 98%;
@@ -47,6 +47,7 @@ All colors MUST be HSL.
     
     /* Elegant shadows with gold glow */
     --shadow-gold: 0 10px 30px -10px hsl(48 96% 65% / 0.3);
+    --shadow-glow: 0 0 40px hsl(48 96% 65% / 0.4);
     --shadow-elegant: 0 20px 40px -10px hsl(0 0% 0% / 0.4);
     
     /* Smooth premium transitions */
@@ -63,8 +64,8 @@ All colors MUST be HSL.
 
   .dark {
     /* Same as root for consistent dark theme */
-    --background: 0 0% 6%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
     --card: 0 0% 9%;
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 9%;
@@ -125,8 +126,17 @@ All colors MUST be HSL.
 
   /* Premium card styles */
   .card-premium {
-    @apply bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg;
+    @apply bg-card border border-border rounded-xl p-6 transition-all duration-300;
     box-shadow: var(--shadow-elegant);
+  }
+
+  .card-premium:hover {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* Shadow utilities */
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
   }
 
   /* Gold accent dividers */

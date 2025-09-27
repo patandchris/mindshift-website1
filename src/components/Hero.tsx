@@ -20,28 +20,30 @@ const Hero = () => {
 
             {/* Main Headlines */}
             <h1 className="mb-6">
-              <span className="block text-foreground">Rewire.</span>
-              <span className="block text-foreground">Reshape.</span>
-              <span className="block text-accent">Rise.</span>
+              <span className="block text-accent text-5xl md:text-7xl font-bold">Always Be Improving.</span>
             </h1>
 
             {/* Sub-headline */}
-            <p className="text-xl md:text-2xl font-semibold text-muted-foreground mb-8">
-              Always Be Improving.
+            <p className="text-xl md:text-2xl font-semibold text-foreground mb-8">
+              Transform your mindset with The MindShift System: The 12-Week Unconscious Upgrade.
             </p>
 
             {/* Description */}
             <p className="text-lg text-muted-foreground mb-12 max-w-2xl">
-              Transform your mindset, eliminate limiting beliefs, and unlock your potential with our proven 12-week system designed for ambitious men ready to break through their barriers.
+              Eliminate limiting beliefs, build success habits, and unlock your focus with our proven system designed for ambitious professionals ready to break through their barriers.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="hero" size="xl" className="group">
+              <Button 
+                variant="default" 
+                size="xl" 
+                className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+              >
                 Start Your Transformation
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button variant="outline" size="xl" className="group">
+              <Button variant="outline" size="xl" className="group border-accent text-accent hover:bg-accent hover:text-black">
                 <Play className="mr-2 h-5 w-5" />
                 Watch Success Stories
               </Button>

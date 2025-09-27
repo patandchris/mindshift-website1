@@ -19,7 +19,7 @@ const Header = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Coaching", path: "/#coaching" },
+    { name: "Coaching", path: "/coaching-program" },
     { name: "Blog", path: "/blog" },
     { name: "Podcast", path: "/podcast" },
     { name: "Free Resources", path: "/lead-magnet" },
@@ -64,8 +64,13 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button variant="hero" size="lg" asChild>
-              <Link to="/#coaching">Start Your Transformation</Link>
+            <Button 
+              variant="default" 
+              size="lg" 
+              className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+              asChild
+            >
+              <Link to="/coaching-program">Start Your Transformation</Link>
             </Button>
           </div>
 
@@ -98,8 +103,13 @@ const Header = () => {
                 </Link>
               ))}
               <div className="px-4 pt-4">
-                <Button variant="hero" size="lg" className="w-full" asChild>
-                  <Link to="/#coaching" onClick={() => setIsMenuOpen(false)}>
+                <Button 
+                  variant="default" 
+                  size="lg" 
+                  className="w-full bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+                  asChild
+                >
+                  <Link to="/coaching-program" onClick={() => setIsMenuOpen(false)}>
                     Start Your Transformation
                   </Link>
                 </Button>
