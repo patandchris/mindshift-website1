@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import mindshiftLogo from "@/assets/mindshift-logo.png";
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with subtle pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/95">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(48_96%_65%_/_0.1),transparent_70%)]" />
@@ -54,12 +52,8 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-gold rounded-3xl blur-3xl opacity-20 scale-110" />
-              <div className="relative bg-card border border-border rounded-3xl p-12 card-premium">
-                <img
-                  src={mindshiftLogo}
-                  alt="The MindShift System"
-                  className="w-full max-w-md mx-auto"
-                />
+              <div className="relative bg-card border border-border rounded-3xl p-12 card-premium px-[36px]">
+                <img src={mindshiftLogo} alt="The MindShift System" className="w-full max-w-md mx-auto" />
               </div>
             </div>
           </div>
@@ -72,8 +66,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
