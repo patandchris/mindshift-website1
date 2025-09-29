@@ -34,7 +34,7 @@ const Hero = () => {
           
 
           {/* Main Headlines */}
-          <h1 className="mb-6 mt-24">
+          <h1 className="mb-6 mt-24 text-center">
             <span className="block text-3xl md:text-4xl lg:text-5xl font-bold text-amber-400 px-[7px] py-[12px] whitespace-nowrap">
               <span className="inline-block" style={{ animation: 'glow-pulse 9s ease-in-out infinite' }}>Break Free.</span>
               {" "}
@@ -46,7 +46,7 @@ const Hero = () => {
 
           {/* Intro Text */}
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto px-4">
-            You don't need another productivity hack. You need a complete reset. The MindShift System helps you shatter limiting beliefs, stop self-sabotage, and finally step into the life, wealth, and freedom you know you're capable of.
+            You don't need another productivity hack. You need an unconscious reset. The MindShift System helps you shatter limiting beliefs, stop self-sabotage, and finally step into the life, wealth, and freedom you know you're capable of.
           </p>
 
           {/* Logo/Visual */}
