@@ -15,7 +15,6 @@ const Footer = () => {
     resources: [
       { name: "Blog", path: "/blog" },
       { name: "Podcast", path: "/podcast" },
-      { name: "Free Resources", path: "/lead-magnet" },
       { name: "FAQ", path: "/faq" }
     ],
     legal: [
@@ -33,7 +32,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-background border-t border-border">
       <div className="container-premium">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 py-16">

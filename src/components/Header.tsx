@@ -22,7 +22,6 @@ const Header = () => {
     { name: "Coaching", path: "/coaching-program" },
     { name: "Blog", path: "/blog" },
     { name: "Podcast", path: "/podcast" },
-    { name: "Free Resources", path: "/lead-magnet" },
     { name: "Contact", path: "/#contact" },
   ];
 
