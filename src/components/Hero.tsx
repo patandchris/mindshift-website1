@@ -34,8 +34,8 @@ const Hero = () => {
           
 
           {/* Main Headlines */}
-          <h1 className="mb-8">
-            <span className="block text-5xl font-bold md:text-6xl text-center whitespace-nowrap my-[60px] mx-0 px-[7px] py-[12px]">
+          <h1 className="mb-8 mt-24 text-center">
+            <span className="block text-3xl font-bold md:text-4xl">
               <span className="inline-block animate-[glow-pulse-1_9s_ease-in-out_infinite]">Break Free.</span>
               {" "}
               <span className="inline-block animate-[glow-pulse-2_9s_ease-in-out_infinite]">Rewire Your Mind.</span>
