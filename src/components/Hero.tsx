@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import { Link } from "react-router-dom";
 import mindshiftLogo from "@/assets/mindshift-logo.png";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -19,7 +20,7 @@ const Hero = () => {
           </h1>
 
           {/* Logo/Visual */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-4">
             <div className="bg-background rounded-3xl p-12 px-[36px] my-0 mx-[100px] py-[48px]">
               <img src={mindshiftLogo} alt="The MindShift System" className="w-full max-w-md mx-auto" />
             </div>
@@ -37,10 +38,12 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="default" size="xl" className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300">
-              Start Your Transformation
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <Link to="/coaching-program">
+              <Button variant="default" size="xl" className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300">
+                Start Your Transformation
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
             <Button variant="outline" size="xl" className="group border-accent text-accent hover:bg-accent hover:text-black">
               <Play className="mr-2 h-5 w-5" />
               Watch Success Stories
