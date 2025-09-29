@@ -9,17 +9,14 @@ const Hero = () => {
         @keyframes glow-pulse {
           0%, 33.33%, 100% {
             color: hsl(45, 93%, 58%);
-            text-shadow: none;
           }
           16.66%, 33.33% {
             color: white;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 60px rgba(255, 255, 255, 0.8);
           }
         }
       `}</style>
       {/* Background with subtle pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/95">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(48_96%_65%_/_0.1),transparent_70%)]" />
       </div>
 
       <div className="container-premium relative z-10">
@@ -28,7 +25,7 @@ const Hero = () => {
           
 
           {/* Main Headlines */}
-          <h1 className="mb-6 mt-12">
+          <h1 className="mb-6 mt-24">
             <span className="block text-3xl md:text-4xl lg:text-5xl font-bold text-amber-400 px-[7px] py-[12px] whitespace-nowrap">
               <span className="inline-block" style={{ animation: 'glow-pulse 6s ease-in-out infinite' }}>Break Free.</span>
               {" "}
