@@ -16,7 +16,7 @@ const Hero = () => {
 
           {/* Main Headlines */}
           <h1 className="mb-8">
-            <span className="block text-5xl font-bold md:text-5xl text-amber-400">Always Be Improving.</span>
+            <span className="block text-5xl font-bold md:text-5xl text-amber-400 my-[60px] mx-0 px-[7px] py-[12px]">Break Free. Rewire Your Mind. Redesign Your Life</span>
           </h1>
 
           {/* Logo/Visual */}
