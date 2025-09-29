@@ -73,7 +73,7 @@ const CoachingProgram = () => {
             <div className="flex flex-col items-center text-center">
               {/* Logo/Visual */}
               <div className="mb-6">
-                <div className="bg-background rounded-3xl p-8 my-0 mx-0 px-[26px] py-0">
+                <div className="bg-background rounded-3xl p-8 mx-0 px-[26px] py-0 my-[30px]">
                   <img src={mindshiftLogo} alt="The MindShift System" className="w-full max-w-2xl mx-auto" />
                 </div>
               </div>
