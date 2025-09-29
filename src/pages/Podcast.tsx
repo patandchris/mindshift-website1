@@ -163,7 +163,7 @@ const Podcast = () => {
                      <img
                        src={mamInitialsLogo}
                        alt={episodes[0].title}
-                       className="w-full h-full object-contain bg-black p-2"
+                       className="w-full h-full object-contain bg-black p-1"
                      />
                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
                        <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg cursor-pointer">
@@ -249,7 +249,7 @@ const Podcast = () => {
                          <img
                            src={mamInitialsLogo}
                            alt={episode.title}
-                           className="w-full h-full object-contain bg-black p-1"
+                           className="w-full h-full object-contain bg-black p-0.5"
                          />
                          <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
                            <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
