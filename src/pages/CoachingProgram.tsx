@@ -70,11 +70,16 @@ const CoachingProgram = () => {
         {/* Hero Section */}
         <section className="section-padding bg-background">
           <div className="container-premium">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="flex flex-col items-center text-center">
+              {/* Logo/Visual */}
+              <div className="mb-12">
+                <div className="bg-background rounded-3xl p-8">
+                  <img src={mindshiftLogo} alt="The MindShift System" className="w-full max-w-lg mx-auto" />
+                </div>
+              </div>
+
               {/* Content */}
-              <div className="my-[128px]">
-                
-                
+              <div className="max-w-4xl mx-auto">
                 <h1 className="text-4xl md:text-6xl font-bold text-accent mb-6">
                   The MindShift System: 12-Week Unconscious Upgrade
                 </h1>
@@ -84,7 +89,7 @@ const CoachingProgram = () => {
                   build success habits, and unlock their true potential.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
                   <Button className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" size="lg">
                     Apply Now
                   </Button>
@@ -94,7 +99,7 @@ const CoachingProgram = () => {
                 </div>
 
                 {/* Quick Stats */}
-                <div className="flex items-center gap-8 text-sm text-muted-foreground">
+                <div className="flex items-center justify-center gap-8 text-sm text-muted-foreground">
                   <div className="flex items-center gap-2">
                     <Users className="w-4 h-4" />
                     <span>500+ Clients Transformed</span>
@@ -103,13 +108,6 @@ const CoachingProgram = () => {
                     <Clock className="w-4 h-4" />
                     <span>12 Weeks to New You</span>
                   </div>
-                </div>
-              </div>
-
-              {/* Logo/Visual */}
-              <div className="flex justify-center lg:justify-end">
-                <div className="bg-background rounded-3xl p-12">
-                  <img src={mindshiftLogo} alt="The MindShift System" className="w-full max-w-md mx-auto" />
                 </div>
               </div>
             </div>
