@@ -16,8 +16,19 @@ const Hero = () => {
 
           {/* Main Headlines */}
           <h1 className="mb-8">
-            <span className="block text-5xl font-bold md:text-5xl text-amber-400 my-[60px] mx-0 px-[7px] py-[12px]">Break Free. Rewire Your Mind. Redesign Your Life</span>
+            <span className="block text-3xl md:text-4xl lg:text-5xl font-bold text-amber-400 my-[60px] mx-0 px-[7px] py-[12px] whitespace-nowrap">
+              <span className="inline-block animate-[pulse_2s_ease-in-out_infinite] [text-shadow:0_0_20px_rgba(255,255,255,0.8)]">Break Free.</span>
+              {" "}
+              <span className="inline-block animate-[pulse_2s_ease-in-out_infinite_0.66s] [text-shadow:0_0_20px_rgba(255,255,255,0.8)]">Rewire Your Mind.</span>
+              {" "}
+              <span className="inline-block animate-[pulse_2s_ease-in-out_infinite_1.33s] [text-shadow:0_0_20px_rgba(255,255,255,0.8)]">Redesign Your Life</span>
+            </span>
           </h1>
+
+          {/* Intro Text */}
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto px-4">
+            You don't need another productivity hack. You need a complete reset. The MindShift System helps you shatter limiting beliefs, stop self-sabotage, and finally step into the life, wealth, and freedom you know you're capable of.
+          </p>
 
           {/* Logo/Visual */}
           <div className="flex justify-center mb-4">
