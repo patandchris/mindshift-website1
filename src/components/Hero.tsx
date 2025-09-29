@@ -2,30 +2,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import mindshiftLogo from "@/assets/mindshift-logo.png";
-
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <style>{`
-        @keyframes glow-pulse {
-          0% {
-            color: hsl(45, 93%, 58%);
-          }
-          11.11% {
-            color: white;
-          }
-          22.22% {
-            color: white;
-          }
-          33.33% {
-            color: hsl(45, 93%, 58%);
-          }
-          100% {
-            color: hsl(45, 93%, 58%);
-          }
-        }
-      `}</style>
       {/* Background with subtle pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/95">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(48_96%_65%_/_0.1),transparent_70%)]" />
       </div>
 
       <div className="container-premium relative z-10">
@@ -34,20 +15,9 @@ const Hero = () => {
           
 
           {/* Main Headlines */}
-          <h1 className="mb-6 mt-24 text-center">
-            <span className="block text-3xl md:text-4xl lg:text-5xl font-bold text-amber-400 px-[7px] py-[12px] whitespace-nowrap">
-              <span className="inline-block" style={{ animation: 'glow-pulse 9s ease-in-out infinite' }}>Break Free.</span>
-              {" "}
-              <span className="inline-block" style={{ animation: 'glow-pulse 9s ease-in-out infinite 3s' }}>Rewire Your Mind.</span>
-              {" "}
-              <span className="inline-block" style={{ animation: 'glow-pulse 9s ease-in-out infinite 6s' }}>Redesign Your Life</span>
-            </span>
+          <h1 className="mb-8">
+            <span className="block text-5xl font-bold md:text-5xl text-amber-400 my-[60px] mx-0 px-[7px] py-[12px]">Break Free. Rewire Your Mind. Redesign Your Life</span>
           </h1>
-
-          {/* Intro Text */}
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto px-4">
-            You don't need another productivity hack. You need an unconscious reset. The MindShift System helps you shatter limiting beliefs, stop self-sabotage, and finally step into the life, wealth, and freedom you know you're capable of.
-          </p>
 
           {/* Logo/Visual */}
           <div className="flex justify-center mb-4">
@@ -68,7 +38,7 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/coaching-program">
+            <Link to="/coaching-program" className="my-[19px] px-0 mx-[15px] py-0">
               <Button variant="default" size="xl" className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300">
                 Start Your Transformation
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
