@@ -21,9 +21,9 @@ const Hero = () => {
 
           {/* Logo/Visual */}
           <div className="flex justify-center mb-4">
-            <div className="bg-background rounded-3xl p-12 px-[36px] my-0 mx-[100px] py-[48px]">
-              <img src={mindshiftLogo} alt="The MindShift System" className="w-full max-w-md mx-auto" />
-            </div>
+          <div className="p-12 px-[36px] my-0 mx-[100px] py-[48px]">
+            <img src={mindshiftLogo} alt="The MindShift System" className="w-full max-w-md mx-auto" />
+          </div>
           </div>
 
           {/* Sub-headline */}
