@@ -72,15 +72,15 @@ const CoachingProgram = () => {
           <div className="container-premium">
             <div className="flex flex-col items-center text-center">
               {/* Logo/Visual */}
-              <div className="mb-12">
+              <div className="mb-6">
                 <div className="bg-background rounded-3xl p-8 my-0 mx-0 px-[26px] py-0">
-                  <img src={mindshiftLogo} alt="The MindShift System" className="w-full max-w-lg mx-auto" />
+                  <img src={mindshiftLogo} alt="The MindShift System" className="w-full max-w-2xl mx-auto" />
                 </div>
               </div>
 
               {/* Content */}
               <div className="max-w-4xl mx-auto">
-                <h1 className="text-4xl md:text-6xl font-bold text-accent mb-6 my-[29px]">
+                <h1 className="text-4xl md:text-6xl font-bold text-accent mb-4">
                   The MindShift System: 12-Week Unconscious Upgrade
                 </h1>
                 
@@ -115,7 +115,7 @@ const CoachingProgram = () => {
         </section>
 
         {/* Program Breakdown */}
-        <section className="section-padding bg-background">
+        <section className="section-padding bg-background pt-8">
           <div className="container-premium">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-accent mb-6">
