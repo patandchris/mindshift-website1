@@ -187,7 +187,7 @@ const Podcast = () => {
                          <Download className="mr-2 h-4 w-4" />
                          Download
                        </Button>
-                       <Button variant="ghost" size="default" className="text-muted-foreground hover:text-accent">
+                       <Button variant="outline" size="default" className="border-accent text-accent hover:bg-accent hover:text-black">
                          <Share className="mr-2 h-4 w-4" />
                          Share
                        </Button>
