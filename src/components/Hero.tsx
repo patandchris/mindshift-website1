@@ -7,11 +7,20 @@ const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <style>{`
         @keyframes glow-pulse {
-          0%, 33.33%, 100% {
+          0% {
             color: hsl(45, 93%, 58%);
           }
-          16.66%, 33.33% {
+          11.11% {
             color: white;
+          }
+          22.22% {
+            color: white;
+          }
+          33.33% {
+            color: hsl(45, 93%, 58%);
+          }
+          100% {
+            color: hsl(45, 93%, 58%);
           }
         }
       `}</style>
@@ -27,11 +36,11 @@ const Hero = () => {
           {/* Main Headlines */}
           <h1 className="mb-6 mt-24">
             <span className="block text-3xl md:text-4xl lg:text-5xl font-bold text-amber-400 px-[7px] py-[12px] whitespace-nowrap">
-              <span className="inline-block" style={{ animation: 'glow-pulse 6s ease-in-out infinite' }}>Break Free.</span>
+              <span className="inline-block" style={{ animation: 'glow-pulse 9s ease-in-out infinite' }}>Break Free.</span>
               {" "}
-              <span className="inline-block" style={{ animation: 'glow-pulse 6s ease-in-out infinite 2s' }}>Rewire Your Mind.</span>
+              <span className="inline-block" style={{ animation: 'glow-pulse 9s ease-in-out infinite 3s' }}>Rewire Your Mind.</span>
               {" "}
-              <span className="inline-block" style={{ animation: 'glow-pulse 6s ease-in-out infinite 4s' }}>Redesign Your Life</span>
+              <span className="inline-block" style={{ animation: 'glow-pulse 9s ease-in-out infinite 6s' }}>Redesign Your Life</span>
             </span>
           </h1>
 
