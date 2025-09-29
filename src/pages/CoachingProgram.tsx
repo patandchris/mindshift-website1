@@ -4,71 +4,66 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Users, TrendingUp, Clock, Target, Brain, Zap } from "lucide-react";
 import mindshiftLogo from "@/assets/mindshift-logo.png";
-
 const CoachingProgram = () => {
-  const programWeeks = [
-    {
-      week: "Weeks 1-2",
-      title: "Foundation & Assessment",
-      description: "Identify limiting beliefs and establish your baseline"
-    },
-    {
-      week: "Weeks 3-4", 
-      title: "Belief Rewiring",
-      description: "Begin the unconscious reprogramming process"
-    },
-    {
-      week: "Weeks 5-6",
-      title: "Habit Installation", 
-      description: "Build success habits that compound over time"
-    },
-    {
-      week: "Weeks 7-8",
-      title: "Focus Optimization",
-      description: "Master attention and eliminate distractions"
-    },
-    {
-      week: "Weeks 9-10",
-      title: "Integration & Acceleration",
-      description: "Combine all elements for maximum impact"
-    },
-    {
-      week: "Weeks 11-12",
-      title: "Mastery & Maintenance",
-      description: "Lock in your transformation permanently"
-    }
-  ];
-
-  const outcomes = [
-    { icon: Brain, title: "Eliminate Limiting Beliefs", description: "Identify and remove the unconscious blocks holding you back" },
-    { icon: Target, title: "Build Success Habits", description: "Install powerful daily routines that drive results" },
-    { icon: Zap, title: "Unlock Laser Focus", description: "Master your attention and eliminate distractions" },
-    { icon: TrendingUp, title: "Accelerate Growth", description: "Experience compound results in all areas of life" }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Chen",
-      title: "Senior Executive",
-      content: "The MindShift System gave me the mental framework I was missing. I went from feeling stuck to leading with absolute confidence.",
-      result: "Promoted to VP in 6 months"
-    },
-    {
-      name: "Marcus Rodriguez", 
-      title: "Entrepreneur",
-      content: "This isn't just coaching - it's a complete mental upgrade. My decision-making, focus, and results have all transformed.",
-      result: "3x business revenue"
-    },
-    {
-      name: "David Thompson",
-      title: "Sales Director", 
-      content: "I finally broke through my income ceiling. The unconscious reprogramming work is what made all the difference.",
-      result: "Doubled income in 8 months"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const programWeeks = [{
+    week: "Weeks 1-2",
+    title: "Foundation & Assessment",
+    description: "Identify limiting beliefs and establish your baseline"
+  }, {
+    week: "Weeks 3-4",
+    title: "Belief Rewiring",
+    description: "Begin the unconscious reprogramming process"
+  }, {
+    week: "Weeks 5-6",
+    title: "Habit Installation",
+    description: "Build success habits that compound over time"
+  }, {
+    week: "Weeks 7-8",
+    title: "Focus Optimization",
+    description: "Master attention and eliminate distractions"
+  }, {
+    week: "Weeks 9-10",
+    title: "Integration & Acceleration",
+    description: "Combine all elements for maximum impact"
+  }, {
+    week: "Weeks 11-12",
+    title: "Mastery & Maintenance",
+    description: "Lock in your transformation permanently"
+  }];
+  const outcomes = [{
+    icon: Brain,
+    title: "Eliminate Limiting Beliefs",
+    description: "Identify and remove the unconscious blocks holding you back"
+  }, {
+    icon: Target,
+    title: "Build Success Habits",
+    description: "Install powerful daily routines that drive results"
+  }, {
+    icon: Zap,
+    title: "Unlock Laser Focus",
+    description: "Master your attention and eliminate distractions"
+  }, {
+    icon: TrendingUp,
+    title: "Accelerate Growth",
+    description: "Experience compound results in all areas of life"
+  }];
+  const testimonials = [{
+    name: "Sarah Chen",
+    title: "Senior Executive",
+    content: "The MindShift System gave me the mental framework I was missing. I went from feeling stuck to leading with absolute confidence.",
+    result: "Promoted to VP in 6 months"
+  }, {
+    name: "Marcus Rodriguez",
+    title: "Entrepreneur",
+    content: "This isn't just coaching - it's a complete mental upgrade. My decision-making, focus, and results have all transformed.",
+    result: "3x business revenue"
+  }, {
+    name: "David Thompson",
+    title: "Sales Director",
+    content: "I finally broke through my income ceiling. The unconscious reprogramming work is what made all the difference.",
+    result: "Doubled income in 8 months"
+  }];
+  return <div className="min-h-screen bg-background">
       <Header />
       
       <main>
@@ -77,11 +72,8 @@ const CoachingProgram = () => {
           <div className="container-premium">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
-              <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-6">
-                  <span className="w-2 h-2 bg-accent rounded-full mr-2 animate-pulse" />
-                  12-Week Transformation
-                </div>
+              <div className="my-[128px]">
+                
                 
                 <h1 className="text-4xl md:text-6xl font-bold text-accent mb-6">
                   The MindShift System: 12-Week Unconscious Upgrade
@@ -93,17 +85,10 @@ const CoachingProgram = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <Button 
-                    className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
-                    size="lg"
-                  >
+                  <Button className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" size="lg">
                     Apply Now
                   </Button>
-                  <Button 
-                    variant="outline" 
-                    size="lg"
-                    className="border-accent text-accent hover:bg-accent hover:text-black"
-                  >
+                  <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-black">
                     Book a Strategy Call
                   </Button>
                 </div>
@@ -144,8 +129,7 @@ const CoachingProgram = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {programWeeks.map((week, index) => (
-                <Card key={index} className="bg-card border border-border hover:shadow-elegant transition-all duration-300">
+              {programWeeks.map((week, index) => <Card key={index} className="bg-card border border-border hover:shadow-elegant transition-all duration-300">
                   <CardHeader>
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-medium text-accent">{week.week}</span>
@@ -158,8 +142,7 @@ const CoachingProgram = () => {
                   <CardContent>
                     <p className="text-muted-foreground">{week.description}</p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </section>
@@ -178,17 +161,15 @@ const CoachingProgram = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {outcomes.map((outcome, index) => {
-                const Icon = outcome.icon;
-                return (
-                  <div key={index} className="text-center">
+              const Icon = outcome.icon;
+              return <div key={index} className="text-center">
                     <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <Icon className="w-8 h-8 text-accent" />
                     </div>
                     <h3 className="text-xl font-bold text-foreground mb-3">{outcome.title}</h3>
                     <p className="text-muted-foreground">{outcome.description}</p>
-                  </div>
-                );
-              })}
+                  </div>;
+            })}
             </div>
           </div>
         </section>
@@ -206,8 +187,7 @@ const CoachingProgram = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <Card key={index} className="bg-card border border-border">
+              {testimonials.map((testimonial, index) => <Card key={index} className="bg-card border border-border">
                   <CardContent className="p-6">
                     <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-4">
                       {testimonial.result}
@@ -220,8 +200,7 @@ const CoachingProgram = () => {
                       <div className="text-sm text-muted-foreground">{testimonial.title}</div>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </section>
@@ -239,17 +218,10 @@ const CoachingProgram = () => {
                   and unlocked their true potential with The MindShift System.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button 
-                    className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
-                    size="lg"
-                  >
+                  <Button className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" size="lg">
                     Apply for The Program
                   </Button>
-                  <Button 
-                    variant="outline" 
-                    size="lg"
-                    className="border-accent text-accent hover:bg-accent hover:text-black"
-                  >
+                  <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-black">
                     Schedule Your Strategy Call
                   </Button>
                 </div>
@@ -263,8 +235,6 @@ const CoachingProgram = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default CoachingProgram;
