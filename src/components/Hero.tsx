@@ -2,8 +2,21 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import mindshiftLogo from "@/assets/mindshift-logo.png";
+
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <style>{`
+        @keyframes glow-pulse {
+          0%, 33.33%, 100% {
+            color: hsl(45, 93%, 58%);
+            text-shadow: none;
+          }
+          16.66%, 33.33% {
+            color: white;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 60px rgba(255, 255, 255, 0.8);
+          }
+        }
+      `}</style>
       {/* Background with subtle pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/95">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(48_96%_65%_/_0.1),transparent_70%)]" />
@@ -15,13 +28,13 @@ const Hero = () => {
           
 
           {/* Main Headlines */}
-          <h1 className="mb-8">
-            <span className="block text-3xl md:text-4xl lg:text-5xl font-bold text-amber-400 my-[60px] mx-0 px-[7px] py-[12px] whitespace-nowrap">
-              <span className="inline-block animate-[pulse_2s_ease-in-out_infinite] [text-shadow:0_0_20px_rgba(255,255,255,0.8)]">Break Free.</span>
+          <h1 className="mb-6 mt-12">
+            <span className="block text-3xl md:text-4xl lg:text-5xl font-bold text-amber-400 px-[7px] py-[12px] whitespace-nowrap">
+              <span className="inline-block" style={{ animation: 'glow-pulse 6s ease-in-out infinite' }}>Break Free.</span>
               {" "}
-              <span className="inline-block animate-[pulse_2s_ease-in-out_infinite_0.66s] [text-shadow:0_0_20px_rgba(255,255,255,0.8)]">Rewire Your Mind.</span>
+              <span className="inline-block" style={{ animation: 'glow-pulse 6s ease-in-out infinite 2s' }}>Rewire Your Mind.</span>
               {" "}
-              <span className="inline-block animate-[pulse_2s_ease-in-out_infinite_1.33s] [text-shadow:0_0_20px_rgba(255,255,255,0.8)]">Redesign Your Life</span>
+              <span className="inline-block" style={{ animation: 'glow-pulse 6s ease-in-out infinite 4s' }}>Redesign Your Life</span>
             </span>
           </h1>
 
