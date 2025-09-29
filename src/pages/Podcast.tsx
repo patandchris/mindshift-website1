@@ -81,7 +81,7 @@ const Podcast = () => {
           <div className="container-premium">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
-              <div className="text-center lg:text-left">
+              <div className="text-center lg:text-left mx-0 my-0 py-0 px-0">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-6">Bi-Weekly Podcast</div>
                 
           <h1 className="mb-6 text-5xl font-bold md:text-5xl">
