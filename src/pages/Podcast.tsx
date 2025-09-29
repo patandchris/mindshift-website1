@@ -79,14 +79,21 @@ const Podcast = () => {
         {/* Hero Section */}
         <section className="section-padding bg-card/50">
           <div className="container-premium">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+              {/* Podcast Artwork */}
+              <div className="mb-8">
+                <div className="bg-background rounded-3xl p-8">
+                  <img src={mamLogo} alt="The Middle-Aged & Miserable Podcast" className="w-full max-w-sm mx-auto" />
+                </div>
+              </div>
+
               {/* Content */}
-              <div className="text-center lg:text-left mx-0 my-0 py-0 px-0">
+              <div>
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-6">Bi-Weekly Podcast</div>
                 
-          <h1 className="mb-6 text-5xl font-bold md:text-5xl">
-            The <span className="text-accent">Middle-Aged & Miserable</span> Podcast
-          </h1>
+                <h1 className="mb-6 text-5xl font-bold md:text-5xl">
+                  The <span className="text-accent">Middle-Aged & Miserable</span> Podcast
+                </h1>
                 
                 <p className="text-xl text-muted-foreground mb-8">
                   Raw, unfiltered conversations about breaking through the barriers that keep ambitious men stuck in mediocrity. No fluff, no BS—just actionable insights for the man who's ready to level up.
@@ -108,24 +115,17 @@ const Podcast = () => {
                   </div>
                 </div>
 
-                 <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                   <Button variant="default" size="lg" className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300">
-                     <span className="mr-2 text-lg">🎵</span>
-                     Subscribe on Spotify
-                     <ExternalLink className="ml-2 h-4 w-4" />
-                   </Button>
-                   <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-black">
-                     <span className="mr-2 text-lg">🎧</span>
-                     Subscribe on Apple Podcasts
-                     <ExternalLink className="ml-2 h-4 w-4" />
-                   </Button>
-                 </div>
-              </div>
-
-              {/* Podcast Artwork */}
-              <div className="flex justify-center lg:justify-end">
-                <div className="bg-background rounded-3xl p-8">
-                  <img src={mamLogo} alt="The Middle-Aged & Miserable Podcast" className="w-full max-w-sm mx-auto" />
+                <div className="flex flex-wrap justify-center gap-4">
+                  <Button variant="default" size="lg" className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300">
+                    <span className="mr-2 text-lg">🎵</span>
+                    Subscribe on Spotify
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
+                  <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-black">
+                    <span className="mr-2 text-lg">🎧</span>
+                    Subscribe on Apple Podcasts
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
                 </div>
               </div>
             </div>
