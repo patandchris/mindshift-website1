@@ -75,9 +75,9 @@ const Podcast = () => {
   return <div className="min-h-screen">
       <Header />
       
-      <main className="pt-24">
+      <main className="pt-20">
         {/* Hero Section */}
-        <section className="section-padding bg-card/50">
+        <section className="py-12 bg-card/50">
           <div className="container-premium">
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
               {/* Podcast Artwork */}
