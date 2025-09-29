@@ -82,7 +82,7 @@ const Podcast = () => {
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
               {/* Podcast Artwork */}
               <div className="mb-8">
-                <div className="bg-background rounded-3xl p-8">
+                <div className="bg-background rounded-3xl p-8 mx-[4px] my-0">
                   <img src={mamLogo} alt="The Middle-Aged & Miserable Podcast" className="w-full max-w-sm mx-auto" />
                 </div>
               </div>
