@@ -161,7 +161,7 @@ const Podcast = () => {
 
                   {/* Episode Info */}
                   <div>
-                    <div className="flex items-center gap-4 mb-4 text-sm text-muted-foreground">
+                    <div className="flex items-center justify-center gap-4 mb-4 text-sm text-muted-foreground">
                       <span className="bg-accent/10 px-3 py-1 rounded-full text-accent font-medium">
                         Episode {episodes[0].episode}
                       </span>
@@ -178,7 +178,7 @@ const Podcast = () => {
                     <h3 className="text-2xl font-bold mb-4">{episodes[0].title}</h3>
                     <p className="text-muted-foreground mb-6">{episodes[0].description}</p>
 
-                     <div className="flex flex-col sm:flex-row gap-2">
+                     <div className="flex flex-col sm:flex-row justify-center gap-2">
                        <Button variant="default" size="default" className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300">
                          <Play className="mr-2 h-4 w-4" />
                          Play Episode
