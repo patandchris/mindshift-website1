@@ -75,14 +75,14 @@ const Podcast = () => {
   return <div className="min-h-screen">
       <Header />
       
-      <main className="pt-20">
+      <main className="pt-10">
         {/* Hero Section */}
-        <section className="py-12 bg-card/50">
+        <section className="py-6 bg-card/50">
           <div className="container-premium">
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
               {/* Podcast Artwork */}
-              <div className="mb-8">
-                <div className="bg-background rounded-3xl p-8 mx-[4px] my-[50px]">
+              <div className="mb-6">
+                <div className="bg-background rounded-3xl p-8">
                   <img src={mamLogo} alt="The Middle-Aged & Miserable Podcast" className="w-full max-w-sm mx-auto" />
                 </div>
               </div>
