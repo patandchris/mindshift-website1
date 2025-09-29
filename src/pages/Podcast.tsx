@@ -86,9 +86,9 @@ const Podcast = () => {
                   Weekly Podcast
                 </div>
                 
-                <h1 className="mb-6">
-                  The <span className="text-accent">Middle-Aged & Miserable</span> Podcast
-                </h1>
+          <h1 className="mb-6 text-5xl font-bold md:text-5xl">
+            The <span className="text-accent">Middle-Aged & Miserable</span> Podcast
+          </h1>
                 
                 <p className="text-xl text-muted-foreground mb-8">
                   Raw, unfiltered conversations about breaking through the barriers that keep ambitious men stuck in mediocrity. No fluff, no BS—just actionable insights for the man who's ready to level up.
