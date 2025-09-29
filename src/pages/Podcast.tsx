@@ -116,7 +116,12 @@ const Podcast = () => {
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-4">
-                  <Button variant="default" size="lg" className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300">
+                  <Button 
+                    variant="default" 
+                    size="lg" 
+                    className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+                    onClick={() => window.open('https://open.spotify.com/show/54LfdBGDiJrJtPSRAFVWyV?si=e1d3705155764e1a', '_blank')}
+                  >
                     <span className="mr-2 text-lg">🎵</span>
                     Subscribe on Spotify
                     <ExternalLink className="ml-2 h-4 w-4" />
