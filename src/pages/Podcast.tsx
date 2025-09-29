@@ -134,15 +134,12 @@ const Podcast = () => {
 
               {/* Podcast Artwork */}
               <div className="flex justify-center lg:justify-end">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-gold rounded-3xl blur-3xl opacity-20 scale-110" />
-                  <div className="relative bg-card border border-border rounded-3xl p-8 card-premium">
-                    <img
-                      src={mamLogo}
-                      alt="The Middle-Aged & Miserable Podcast"
-                      className="w-full max-w-sm mx-auto"
-                    />
-                  </div>
+                <div className="bg-background rounded-3xl p-8">
+                  <img
+                    src={mamLogo}
+                    alt="The Middle-Aged & Miserable Podcast"
+                    className="w-full max-w-sm mx-auto"
+                  />
                 </div>
               </div>
             </div>

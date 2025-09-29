@@ -123,11 +123,8 @@ const CoachingProgram = () => {
 
               {/* Logo/Visual */}
               <div className="flex justify-center lg:justify-end">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-gold rounded-3xl blur-3xl opacity-20 scale-110" />
-                  <div className="relative bg-black border border-border rounded-3xl p-12 card-premium">
-                    <img src={mindshiftLogo} alt="The MindShift System" className="w-full max-w-md mx-auto" />
-                  </div>
+                <div className="bg-background rounded-3xl p-12">
+                  <img src={mindshiftLogo} alt="The MindShift System" className="w-full max-w-md mx-auto" />
                 </div>
               </div>
             </div>
