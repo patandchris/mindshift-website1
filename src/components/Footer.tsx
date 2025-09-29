@@ -42,7 +42,7 @@ const Footer = () => {
               <img
                 src={patChrisLogo}
                 alt="Pat & Chris Coaching"
-                className="h-12 w-auto"
+                className="h-20 w-auto"
               />
             </Link>
             <p className="text-muted-foreground mb-6 max-w-md">

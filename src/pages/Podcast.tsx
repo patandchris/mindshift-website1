@@ -81,7 +81,7 @@ const Podcast = () => {
           <div className="container-premium">
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
               {/* Podcast Artwork */}
-              <div className="mb-6">
+              <div className="mb-8">
                 <div className="bg-black rounded-3xl p-8">
                   <img src={mamLogo} alt="The Middle-Aged & Miserable Podcast" className="w-full max-w-sm mx-auto" />
                 </div>
@@ -100,7 +100,7 @@ const Podcast = () => {
                 </p>
 
                 {/* Stats */}
-                <div className="grid grid-cols-3 gap-6 mb-8">
+                <div className="grid grid-cols-3 gap-4 mb-8">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-accent">47</div>
                     <div className="text-sm text-muted-foreground">Episodes</div>
@@ -178,17 +178,17 @@ const Podcast = () => {
                     <h3 className="text-2xl font-bold mb-4">{episodes[0].title}</h3>
                     <p className="text-muted-foreground mb-6">{episodes[0].description}</p>
 
-                     <div className="flex flex-col sm:flex-row gap-4">
-                       <Button variant="default" size="lg" className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300">
-                         <Play className="mr-2 h-5 w-5" />
+                     <div className="flex flex-col sm:flex-row gap-2">
+                       <Button variant="default" size="default" className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300">
+                         <Play className="mr-2 h-4 w-4" />
                          Play Episode
                        </Button>
-                       <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-black">
-                         <Download className="mr-2 h-5 w-5" />
+                       <Button variant="outline" size="default" className="border-accent text-accent hover:bg-accent hover:text-black">
+                         <Download className="mr-2 h-4 w-4" />
                          Download
                        </Button>
-                       <Button variant="ghost" size="lg" className="text-muted-foreground hover:text-accent">
-                         <Share className="mr-2 h-5 w-5" />
+                       <Button variant="ghost" size="default" className="text-muted-foreground hover:text-accent">
+                         <Share className="mr-2 h-4 w-4" />
                          Share
                        </Button>
                      </div>
