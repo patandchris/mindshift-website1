@@ -173,7 +173,7 @@ const CoachingProgram = () => {
         </section>
 
         {/* Testimonials */}
-        <section className="section-padding bg-background">
+        <section id="testimonials" className="section-padding bg-background">
           <div className="container-premium">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-accent mb-6">

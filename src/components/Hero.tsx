@@ -17,7 +17,9 @@ const Hero = () => {
           {/* Main Headlines */}
           <h1 className="mb-8 mt-24 text-center">
             <span className="block text-3xl font-bold md:text-4xl text-accent">
-              Break Free. Rewire Your Mind. Redesign Your Life
+              <span className="block md:inline">Break Free.</span>{" "}
+              <span className="block md:inline">Rewire Your Mind.</span>{" "}
+              <span className="block md:inline">Redesign Your Life</span>
             </span>
           </h1>
 
@@ -32,7 +34,7 @@ const Hero = () => {
               <img 
                 src={mindshiftLogo} 
                 alt="The MindShift System" 
-                className="w-full max-w-2xl mx-auto md:max-w-2xl sm:max-w-md" 
+                className="w-full max-w-sm mx-auto md:max-w-2xl" 
               />
             </div>
           </div>
@@ -48,17 +50,19 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col gap-4 justify-center items-center">
-            <Link to="/coaching-program" className="w-full sm:w-auto">
-              <Button variant="default" size="xl" className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300 w-full sm:w-auto">
+          <div className="flex flex-col gap-4 justify-center items-center w-full max-w-md mx-auto">
+            <Link to="/coaching-program" className="w-full">
+              <Button variant="default" size="xl" className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300 w-full">
                 Start Your Transformation
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
-            <Button variant="outline" size="xl" className="group border-accent text-accent hover:bg-accent hover:text-black w-full sm:w-auto">
-              <Play className="mr-2 h-5 w-5" />
-              Watch Success Stories
-            </Button>
+            <Link to="/coaching-program#testimonials" className="w-full">
+              <Button variant="outline" size="xl" className="group border-accent text-accent hover:bg-accent hover:text-black w-full">
+                <Play className="mr-2 h-5 w-5" />
+                Watch Success Stories
+              </Button>
+            </Link>
           </div>
         </div>
 

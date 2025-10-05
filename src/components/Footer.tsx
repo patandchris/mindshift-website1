@@ -38,14 +38,14 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 py-16">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <Link to="/" className="inline-block mb-3">
+            <Link to="/" className="inline-block mb-2">
               <img
                 src={patChrisLogo}
                 alt="Pat & Chris Coaching"
                 className="h-20 w-auto"
               />
             </Link>
-            <p className="text-muted-foreground mb-3 max-w-md">
+            <p className="text-muted-foreground mb-2 max-w-md">
               Helping ambitious men break through their barriers and create the life they truly want through proven mindset transformation.
             </p>
             

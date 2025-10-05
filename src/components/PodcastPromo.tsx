@@ -26,14 +26,6 @@ const PodcastPromo = () => {
   return <section className="section-padding">
       <div className="container-premium">
         <div className="text-center max-w-3xl mx-auto">
-          {/* Content */}
-          <div className="mb-8">
-            <h2 className="mb-6 text-accent">Listen to The Middle-Aged & Miserable Podcast</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Join us weekly for real conversations about breaking through midlife stagnation, transforming your mindset, and creating the life you actually want. No fluff, just actionable insights.
-            </p>
-          </div>
-
           {/* Podcast Visual */}
           <div className="flex justify-center mb-8">
             <Link to="/podcast" className="block">
@@ -43,6 +35,14 @@ const PodcastPromo = () => {
             </Link>
           </div>
 
+          {/* Content */}
+          <div className="mb-8">
+            <h2 className="mb-6 text-accent">Listen to The Middle-Aged & Miserable Podcast</h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Join us weekly for real conversations about breaking through midlife stagnation, transforming your mindset, and creating the life you actually want. No fluff, just actionable insights.
+            </p>
+          </div>
+
           {/* Subscribe Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" size="lg">
@@ -50,6 +50,9 @@ const PodcastPromo = () => {
             </Button>
             <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-black">
               Subscribe on Apple Podcasts
+            </Button>
+            <Button className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" size="lg">
+              Subscribe on YouTube
             </Button>
           </div>
         </div>
