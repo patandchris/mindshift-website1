@@ -39,33 +39,6 @@ const Blog = () => {
       readTime: "6 min read",
       date: "Mar 10, 2024",
       image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=600&h=400&fit=crop"
-    },
-    {
-      id: 4,
-      title: "The Discipline Equation: Systems vs. Willpower",
-      excerpt: "Stop relying on motivation. Build systems that work even when you don't feel like it. Here's the framework that changes everything.",
-      category: "Success",
-      readTime: "8 min read",
-      date: "Mar 8, 2024",
-      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop"
-    },
-    {
-      id: 5,
-      title: "Leading from the Front: The Masculine Leadership Crisis",
-      excerpt: "Society needs strong men who lead with purpose. Discover what it means to lead in your business, family, and community.",
-      category: "Leadership",
-      readTime: "9 min read",
-      date: "Mar 5, 2024",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop"
-    },
-    {
-      id: 6,
-      title: "The Mindset Reset: Rewiring Your Mental Operating System",
-      excerpt: "Your current results are a direct reflection of your mental programming. Here's how to upgrade your operating system for success.",
-      category: "Mindset",
-      readTime: "10 min read",
-      date: "Mar 3, 2024",
-      image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&h=400&fit=crop"
     }
   ];
 
@@ -110,23 +83,6 @@ const Blog = () => {
                 </div>
               </div>
 
-              {/* Categories */}
-              <div className="flex flex-wrap gap-2 justify-center">
-                {categories.map((category) => (
-                  <Button
-                    key={category}
-                    variant={selectedCategory === category ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => setSelectedCategory(category)}
-                    className={selectedCategory === category ? 
-                      "bg-gradient-gold text-black font-semibold hover:shadow-glow" : 
-                      "border-accent text-accent hover:bg-accent hover:text-black"
-                    }
-                  >
-                    {category}
-                  </Button>
-                ))}
-              </div>
             </div>
           </div>
         </section>

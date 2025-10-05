@@ -25,31 +25,32 @@ const PodcastPromo = () => {
   }];
   return <section className="section-padding">
       <div className="container-premium">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="text-center max-w-3xl mx-auto">
           {/* Content */}
-          <div className="px-[139px] mx-[13px] my-[8px] py-px">
+          <div className="mb-8">
             <h2 className="mb-6 text-accent">Listen to The Middle-Aged & Miserable Podcast</h2>
             <p className="text-xl text-muted-foreground mb-8">
               Join us weekly for real conversations about breaking through midlife stagnation, transforming your mindset, and creating the life you actually want. No fluff, just actionable insights.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" size="lg">
-                Subscribe on Spotify
-              </Button>
-              <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-black">
-                Subscribe on Apple Podcasts
-              </Button>
-            </div>
           </div>
 
           {/* Podcast Visual */}
-          <div className="flex justify-center">
+          <div className="flex justify-center mb-8">
             <Link to="/podcast" className="block">
               <div className="bg-background rounded-3xl p-8 hover:scale-105 transition-transform duration-300">
                 <img src={mamLogo} alt="The Middle-Aged & Miserable Podcast" className="w-full max-w-md mx-auto" />
               </div>
             </Link>
+          </div>
+
+          {/* Subscribe Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" size="lg">
+              Subscribe on Spotify
+            </Button>
+            <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-black">
+              Subscribe on Apple Podcasts
+            </Button>
           </div>
         </div>
       </div>

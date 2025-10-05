@@ -18,14 +18,6 @@ const SuccessStories = () => {
       content: "I finally broke through my limiting beliefs about money and success. This program gave me the tools to think and act like the leader I always wanted to be.",
       videoThumbnail: "/placeholder.svg",
       results: "Promoted to VP"
-    },
-    {
-      id: 3,
-      name: "David Rodriguez",
-      title: "Entrepreneur",
-      content: "Pat and Chris helped me reprogram decades of self-doubt. The unconscious upgrade is real - I'm making decisions from a completely different mindset now.",
-      videoThumbnail: "/placeholder.svg",
-      results: "3x Business Growth"
     }
   ];
 
@@ -39,7 +31,7 @@ const SuccessStories = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className="card-premium bg-card border border-border rounded-xl overflow-hidden group hover:shadow-elegant transition-all duration-300">
               {/* Video Thumbnail */}
@@ -76,11 +68,6 @@ const SuccessStories = () => {
           ))}
         </div>
 
-        <div className="text-center">
-          <Button variant="outline" size="lg">
-            View More Success Stories
-          </Button>
-        </div>
       </div>
     </section>
   );
