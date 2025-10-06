@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Blog from "./pages/Blog";
-import PodcastWithFeed from "./pages/PodcastWithFeed";
+import Podcast from "./pages/Podcast";
 import LeadMagnetPage from "./pages/LeadMagnetPage";
 import CoachingProgram from "./pages/CoachingProgram";
 import NotFound from "./pages/NotFound";
@@ -21,7 +21,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/podcast" element={<PodcastWithFeed />} />
+          <Route path="/podcast" element={<Podcast />} />
           <Route path="/coaching-program" element={<CoachingProgram />} />
           <Route path="/lead-magnet" element={<LeadMagnetPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
