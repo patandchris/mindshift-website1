@@ -2,18 +2,23 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Play, ExternalLink, Download, Share, Calendar, Clock } from "lucide-react";
+import { Play, ExternalLink, Download, Share, Calendar, Clock, Loader2, AlertCircle } from "lucide-react";
 import mamLogo from "@/assets/mam-logo.png";
 import mamInitialsLogo from "@/assets/mam-initials-logo.png";
+import { usePodcastFeed } from "@/hooks/usePodcastFeed";
+
 const Podcast = () => {
-  const episodes = [{
+  const { episodes: rssEpisodes, loading, error } = usePodcastFeed();
+  // Static fallback episodes
+  const staticEpisodes = [{
     id: 1,
     title: "Breaking the Money Ceiling: Why Your Beliefs Keep You Broke",
     description: "In this episode, we dive deep into the unconscious beliefs that create financial limitations. Discover the hidden mental blocks preventing you from achieving true financial freedom and learn the exact process to rewire your money mindset.",
     duration: "32:15",
     date: "Mar 20, 2024",
     episode: 47,
-    thumbnail: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=225&fit=crop"
+    thumbnail: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=225&fit=crop",
+    audioUrl: ""
   }, {
     id: 2,
     title: "The Discipline Paradox: Why Willpower Fails and Systems Win",
@@ -21,7 +26,8 @@ const Podcast = () => {
     duration: "28:42",
     date: "Mar 13, 2024",
     episode: 46,
-    thumbnail: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=225&fit=crop"
+    thumbnail: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=225&fit=crop",
+    audioUrl: ""
   }, {
     id: 3,
     title: "From Stuck to Unstoppable: The 3 Phases of Masculine Growth",
@@ -29,7 +35,8 @@ const Podcast = () => {
     duration: "35:18",
     date: "Mar 6, 2024",
     episode: 45,
-    thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=225&fit=crop"
+    thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=225&fit=crop",
+    audioUrl: ""
   }, {
     id: 4,
     title: "The Modern Man's Dilemma: Comfort vs. Growth",
@@ -37,7 +44,8 @@ const Podcast = () => {
     duration: "41:23",
     date: "Feb 27, 2024",
     episode: 44,
-    thumbnail: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=400&h=225&fit=crop"
+    thumbnail: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=400&h=225&fit=crop",
+    audioUrl: ""
   }, {
     id: 5,
     title: "Building Your Inner Circle: The Power of High-Value Relationships",
@@ -45,7 +53,8 @@ const Podcast = () => {
     duration: "29:56",
     date: "Feb 20, 2024",
     episode: 43,
-    thumbnail: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&h=225&fit=crop"
+    thumbnail: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&h=225&fit=crop",
+    audioUrl: ""
   }, {
     id: 6,
     title: "The Masculinity Crisis: Reclaiming Your Power in a Soft World",
@@ -53,8 +62,14 @@ const Podcast = () => {
     duration: "38:14",
     date: "Feb 13, 2024",
     episode: 42,
-    thumbnail: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=225&fit=crop"
+    thumbnail: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=225&fit=crop",
+    audioUrl: ""
   }];
+
+  // Use RSS episodes if available, otherwise fallback to static
+  const episodes = rssEpisodes.length > 0 ? rssEpisodes : staticEpisodes;
+  const isUsingRSS = rssEpisodes.length > 0;
+
   const platformLinks = [{
     name: "Spotify",
     href: "#",
@@ -76,6 +91,30 @@ const Podcast = () => {
       <Header />
       
       <main className="pt-16">
+        {/* RSS Feed Status Banner */}
+        {loading && (
+          <div className="bg-accent/10 border-b border-accent/20 py-3">
+            <div className="container-premium flex items-center justify-center gap-2 text-accent">
+              <Loader2 className="h-4 w-4 animate-spin" />
+              <span className="text-sm">Loading latest episodes from RSS feed...</span>
+            </div>
+          </div>
+        )}
+        {error && !isUsingRSS && (
+          <div className="bg-destructive/10 border-b border-destructive/20 py-3">
+            <div className="container-premium flex items-center justify-center gap-2 text-destructive">
+              <AlertCircle className="h-4 w-4" />
+              <span className="text-sm">RSS feed temporarily unavailable. Showing static content as fallback.</span>
+            </div>
+          </div>
+        )}
+        {isUsingRSS && (
+          <div className="bg-green-500/10 border-b border-green-500/20 py-3">
+            <div className="container-premium flex items-center justify-center gap-2 text-green-600 dark:text-green-400">
+              <span className="text-sm">✓ Live episodes from RSS feed</span>
+            </div>
+          </div>
+        )}
         {/* Hero Section */}
         <section className="py-8 bg-card/50">
           <div className="container-premium">
@@ -102,7 +141,7 @@ const Podcast = () => {
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-4 mb-8">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-accent">47</div>
+                    <div className="text-2xl font-bold text-accent">{episodes.length}</div>
                     <div className="text-sm text-muted-foreground">Episodes</div>
                   </div>
                   <div className="text-center">
@@ -162,14 +201,29 @@ const Podcast = () => {
 
             <Card className="card-premium max-w-4xl mx-auto">
               <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
+                 <div className="grid md:grid-cols-2 gap-8 items-center">
                    {/* Episode Art */}
                    <div className="relative aspect-video rounded-lg overflow-hidden group">
-                     <img src={mamInitialsLogo} alt={episodes[0].title} className="w-full h-full object-contain bg-black" />
+                     <img 
+                       src={episodes[0].thumbnail || mamInitialsLogo} 
+                       alt={episodes[0].title} 
+                       className="w-full h-full object-contain bg-black" 
+                     />
                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
-                       <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg cursor-pointer">
-                         <Play className="h-10 w-10 text-accent-foreground ml-1" />
-                       </div>
+                       {isUsingRSS && episodes[0].audioUrl ? (
+                         <a 
+                           href={episodes[0].audioUrl} 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           className="w-20 h-20 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg cursor-pointer"
+                         >
+                           <Play className="h-10 w-10 text-accent-foreground ml-1" />
+                         </a>
+                       ) : (
+                         <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg cursor-pointer">
+                           <Play className="h-10 w-10 text-accent-foreground ml-1" />
+                         </div>
+                       )}
                      </div>
                    </div>
 
@@ -190,21 +244,42 @@ const Podcast = () => {
                     </div>
 
                     <h3 className="text-2xl font-bold mb-4">{episodes[0].title}</h3>
-                    <p className="text-muted-foreground mb-6">{episodes[0].description}</p>
+                     <p className="text-muted-foreground mb-6">{episodes[0].description}</p>
 
                      <div className="flex flex-col sm:flex-row justify-center gap-2">
-                       <Button variant="default" size="default" className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300">
-                         <Play className="mr-2 h-4 w-4" />
-                         Play Episode
-                       </Button>
-                       <Button variant="outline" size="default" className="border-accent text-accent hover:bg-accent hover:text-black">
-                         <Download className="mr-2 h-4 w-4" />
-                         Download
-                       </Button>
-                       <Button variant="outline" size="default" className="border-accent text-accent hover:bg-accent hover:text-black">
-                         <Share className="mr-2 h-4 w-4" />
-                         Share
-                       </Button>
+                       {isUsingRSS && episodes[0].audioUrl ? (
+                         <>
+                           <Button 
+                             variant="default" 
+                             size="default" 
+                             className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+                             onClick={() => window.open(episodes[0].audioUrl, '_blank')}
+                           >
+                             <Play className="mr-2 h-4 w-4" />
+                             Play Episode
+                           </Button>
+                           <Button 
+                             variant="outline" 
+                             size="default" 
+                             className="border-accent text-accent hover:bg-accent hover:text-black"
+                             onClick={() => window.open(episodes[0].audioUrl, '_blank')}
+                           >
+                             <Download className="mr-2 h-4 w-4" />
+                             Download
+                           </Button>
+                         </>
+                       ) : (
+                         <>
+                           <Button variant="default" size="default" className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300">
+                             <Play className="mr-2 h-4 w-4" />
+                             Play Episode
+                           </Button>
+                           <Button variant="outline" size="default" className="border-accent text-accent hover:bg-accent hover:text-black">
+                             <Download className="mr-2 h-4 w-4" />
+                             Download
+                           </Button>
+                         </>
+                       )}
                      </div>
                   </div>
                 </div>
@@ -220,9 +295,6 @@ const Podcast = () => {
               <h2 className="text-3xl font-bold">
                 All <span className="text-accent">Episodes</span>
               </h2>
-               <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-black">
-                 Load More Episodes
-               </Button>
             </div>
 
             <div className="grid gap-6">
@@ -231,11 +303,26 @@ const Podcast = () => {
                     <div className="grid md:grid-cols-4 gap-6 items-center">
                       {/* Episode Thumbnail */}
                        <div className="relative aspect-video rounded-lg overflow-hidden">
-                         <img src={mamInitialsLogo} alt={episode.title} className="w-full h-full object-contain bg-black" />
+                         <img 
+                           src={episode.thumbnail || mamInitialsLogo} 
+                           alt={episode.title} 
+                           className="w-full h-full object-contain bg-black" 
+                         />
                          <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
-                           <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                             <Play className="h-6 w-6 text-accent-foreground ml-1" />
-                           </div>
+                           {isUsingRSS && episode.audioUrl ? (
+                             <a 
+                               href={episode.audioUrl} 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               className="w-12 h-12 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
+                             >
+                               <Play className="h-6 w-6 text-accent-foreground ml-1" />
+                             </a>
+                           ) : (
+                             <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                               <Play className="h-6 w-6 text-accent-foreground ml-1" />
+                             </div>
+                           )}
                          </div>
                        </div>
 
@@ -258,15 +345,33 @@ const Podcast = () => {
 
                       {/* Actions */}
                       <div className="flex items-center gap-2">
-                        <Button variant="ghost" size="sm">
-                          <Play className="h-4 w-4" />
-                        </Button>
-                        <Button variant="ghost" size="sm">
-                          <Download className="h-4 w-4" />
-                        </Button>
-                        <Button variant="ghost" size="sm">
-                          <Share className="h-4 w-4" />
-                        </Button>
+                        {isUsingRSS && episode.audioUrl ? (
+                          <>
+                            <Button 
+                              variant="ghost" 
+                              size="sm"
+                              onClick={() => window.open(episode.audioUrl, '_blank')}
+                            >
+                              <Play className="h-4 w-4" />
+                            </Button>
+                            <Button 
+                              variant="ghost" 
+                              size="sm"
+                              onClick={() => window.open(episode.audioUrl, '_blank')}
+                            >
+                              <Download className="h-4 w-4" />
+                            </Button>
+                          </>
+                        ) : (
+                          <>
+                            <Button variant="ghost" size="sm">
+                              <Play className="h-4 w-4" />
+                            </Button>
+                            <Button variant="ghost" size="sm">
+                              <Download className="h-4 w-4" />
+                            </Button>
+                          </>
+                        )}
                       </div>
                     </div>
                   </CardContent>
