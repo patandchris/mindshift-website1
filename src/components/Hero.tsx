@@ -34,7 +34,7 @@ const Hero = () => {
               <img 
                 src={mindshiftLogo} 
                 alt="The MindShift System" 
-                className="w-full max-w-sm mx-auto md:max-w-2xl" 
+                className="w-full max-w-md mx-auto md:max-w-2xl" 
               />
             </div>
           </div>
@@ -50,28 +50,16 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col gap-4 justify-center items-center w-full max-w-md mx-auto">
-            <Link to="/coaching-program" className="w-full">
-              <Button variant="default" size="xl" className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300 w-full">
+          <div className="flex justify-center">
+            <Link to="/coaching-program">
+              <Button variant="default" size="lg" className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300">
                 Start Your Transformation
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </Link>
-            <Link to="/coaching-program#testimonials" className="w-full">
-              <Button variant="outline" size="xl" className="group border-accent text-accent hover:bg-accent hover:text-black w-full">
-                <Play className="mr-2 h-5 w-5" />
-                Watch Success Stories
               </Button>
             </Link>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-muted-foreground rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-muted-foreground rounded-full mt-2 animate-pulse" />
-          </div>
-        </div>
       </div>
     </section>;
 };

@@ -45,13 +45,21 @@ const PodcastPromo = () => {
 
           {/* Subscribe Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" size="lg">
+            <Button 
+              className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" 
+              size="lg"
+              onClick={() => window.open('https://open.spotify.com/show/54LfdBGDiJrJtPSRAFVWyV?si=e1d3705155764e1a', '_blank')}
+            >
               Subscribe on Spotify
             </Button>
             <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-black">
               Subscribe on Apple Podcasts
             </Button>
-            <Button className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" size="lg">
+            <Button 
+              className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" 
+              size="lg"
+              onClick={() => window.open('http://www.youtube.com/@patandchris', '_blank')}
+            >
               Subscribe on YouTube
             </Button>
           </div>
