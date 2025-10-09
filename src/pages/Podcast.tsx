@@ -17,6 +17,7 @@ const Podcast = () => {
         const items = Array.from(xml.querySelectorAll("item"));
         const grid = document.getElementById('podcast-feed');
         if (!grid) return;
+        grid.innerHTML = '';
         const isMobile = matchMedia("(max-width: 640px)").matches;
         const isTablet = matchMedia("(max-width: 992px)").matches;
         grid.style.gridTemplateColumns = isMobile ? "1fr" : (isTablet ? "repeat(2,1fr)" : "repeat(3,1fr)");
@@ -67,7 +68,7 @@ const Podcast = () => {
               </h1>
               
               {/* Subtitle */}
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl">
+              <p className="text-lg text-gray-300 mb-4 max-w-3xl">
                 Raw, unfiltered conversations about breaking through the barriers that keep ambitious people stuck in mediocrity. No fluff. No BS. Just real talk for those ready to rise.
               </p>
             </div>
