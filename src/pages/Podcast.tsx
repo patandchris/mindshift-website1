@@ -33,7 +33,7 @@ const Podcast = () => {
           card.onmouseleave = () => card.style.transform = "translateY(0)";
           card.innerHTML = \`
             <div style="aspect-ratio:1/1;background:#111;border-radius:10px;overflow:hidden;margin-bottom:12px;display:flex;align-items:center;justify-content:center;">
-              \${img ? \`<img src="\${img}" alt="" style="width:100%;height:100%;object-fit:cover;">\` : \`<div style="font-size:48px;color:#777;">🎧</div>\`}
+              \${img ? \`<img src="\${img}" alt="" style="width:100%;height:100%;object-fit:cover;">\` : \`<img src="/mam-logo-initials.png" alt="MAM Podcast" style="width:100%;height:100%;object-fit:cover;">\`}
             </div>
             <div style="font-weight:700;font-size:18px;line-height:1.3;margin-bottom:8px;color:#fff;">\${title}</div>
             <div style="font-size:14px;color:#c0c0c0;margin-bottom:12px;">\${desc}</div>
@@ -74,26 +74,10 @@ const Podcast = () => {
           </div>
         </section>
 
-        {/* Latest Episodes Section */}
-        <section className="py-12 bg-black">
+        {/* Subscribe Buttons */}
+        <section className="py-8 bg-black">
           <div className="container-premium">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#D4AF37' }}>
-              Latest Episodes
-            </h2>
-            <div 
-              id="podcast-feed" 
-              style={{
-                display: 'grid',
-                gap: '24px',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                maxWidth: '1200px',
-                margin: '0 auto',
-                padding: '24px'
-              }}
-            ></div>
-
-            {/* Subscribe Buttons */}
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Button 
                 variant="default" 
                 size="lg" 
@@ -115,12 +99,32 @@ const Podcast = () => {
                 variant="default" 
                 size="lg" 
                 className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
-                onClick={() => window.open('http://www.youtube.com/@patandchris', '_blank')}
+                onClick={() => window.open('https://www.youtube.com/@patandchris', '_blank')}
               >
                 Subscribe on YouTube
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
             </div>
+          </div>
+        </section>
+
+        {/* Latest Episodes Section */}
+        <section className="py-12 bg-black">
+          <div className="container-premium">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#D4AF37' }}>
+              Latest Episodes
+            </h2>
+            <div 
+              id="podcast-feed" 
+              style={{
+                display: 'grid',
+                gap: '24px',
+                gridTemplateColumns: 'repeat(3, 1fr)',
+                maxWidth: '1200px',
+                margin: '0 auto',
+                padding: '24px'
+              }}
+            ></div>
           </div>
         </section>
       </main>
