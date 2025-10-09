@@ -20,9 +20,7 @@ const Header = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Coaching", path: "/coaching-program" },
-    { name: "Blog", path: "/blog" },
     { name: "Podcast", path: "/podcast" },
-    { name: "Contact", path: "/#contact" },
   ];
 
   return (
@@ -69,7 +67,7 @@ const Header = () => {
               className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
               asChild
             >
-              <Link to="/coaching-program">Start Your Transformation</Link>
+              <Link to="/coaching-program" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Start Your Transformation</Link>
             </Button>
           </div>
 
@@ -108,7 +106,7 @@ const Header = () => {
                   className="w-full bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
                   asChild
                 >
-                  <Link to="/coaching-program" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/coaching-program" onClick={() => { setIsMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
                     Start Your Transformation
                   </Link>
                 </Button>

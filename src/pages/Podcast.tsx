@@ -161,7 +161,6 @@ const Podcast = () => {
                     className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
                     onClick={() => window.open('https://open.spotify.com/show/54LfdBGDiJrJtPSRAFVWyV?si=e1d3705155764e1a', '_blank')}
                   >
-                    <span className="mr-2 text-lg">🎵</span>
                     Subscribe on Spotify
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
@@ -170,7 +169,6 @@ const Podcast = () => {
                     size="lg" 
                     className="border-accent text-accent hover:bg-accent hover:text-black"
                   >
-                    <span className="mr-2 text-lg">🎧</span>
                     Subscribe on Apple Podcasts
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
@@ -180,7 +178,6 @@ const Podcast = () => {
                     className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
                     onClick={() => window.open('http://www.youtube.com/@patandchris', '_blank')}
                   >
-                    <span className="mr-2 text-lg">📺</span>
                     Subscribe on YouTube
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>

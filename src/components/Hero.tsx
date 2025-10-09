@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { Link } from "react-router-dom";
-import mindshiftLogo from "@/assets/mindshift-logo.png";
+import mindshiftLogo from "@/assets/mindshift-logo-new.png";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with subtle pattern */}
@@ -34,7 +34,7 @@ const Hero = () => {
               <img 
                 src={mindshiftLogo} 
                 alt="The MindShift System" 
-                className="w-full max-w-md mx-auto md:max-w-2xl" 
+                className="w-full max-w-lg mx-auto md:max-w-2xl" 
               />
             </div>
           </div>
@@ -51,7 +51,7 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex justify-center">
-            <Link to="/coaching-program">
+            <Link to="/coaching-program" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <Button variant="default" size="lg" className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300">
                 Start Your Transformation
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
