@@ -14,7 +14,7 @@ const Podcast = () => {
         const text = await res.text();
         const parser = new DOMParser();
         const xml = parser.parseFromString(text, "application/xml");
-        const items = Array.from(xml.querySelectorAll("item")).slice(0,6);
+        const items = Array.from(xml.querySelectorAll("item"));
         const grid = document.getElementById('podcast-feed');
         if (!grid) return;
         const isMobile = matchMedia("(max-width: 640px)").matches;
@@ -75,9 +75,9 @@ const Podcast = () => {
         </section>
 
         {/* Subscribe Buttons */}
-        <section className="py-8 bg-black">
+        <section className="py-4 bg-black">
           <div className="container-premium">
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <div className="flex flex-wrap justify-center gap-4 mb-4">
               <Button 
                 variant="default" 
                 size="lg" 
@@ -109,9 +109,9 @@ const Podcast = () => {
         </section>
 
         {/* Latest Episodes Section */}
-        <section className="py-12 bg-black">
+        <section className="py-6 bg-black">
           <div className="container-premium">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#D4AF37' }}>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8" style={{ color: '#D4AF37' }}>
               Latest Episodes
             </h2>
             <div 
