@@ -16,12 +16,17 @@ const Podcast = () => {
         const xml = parser.parseFromString(text, "application/xml");
         const items = Array.from(xml.querySelectorAll("item"));
         const grid = document.getElementById('podcast-feed');
+        const loadMoreBtn = document.getElementById('load-more-btn');
+        const btnContainer = document.getElementById('load-more-container');
+        
         if (!grid) return;
         grid.innerHTML = '';
+        
         const isMobile = matchMedia("(max-width: 640px)").matches;
         const isTablet = matchMedia("(max-width: 992px)").matches;
         grid.style.gridTemplateColumns = isMobile ? "1fr" : (isTablet ? "repeat(2,1fr)" : "repeat(3,1fr)");
-        items.forEach(item => {
+        
+        const createCard = (item) => {
           const title = item.querySelector("title")?.textContent ?? "Episode";
           const link = item.querySelector("link")?.textContent ?? "#";
           const desc = (item.querySelector("description")?.textContent ?? "").replace(/<[^>]*>/g,'').slice(0,180) + '…';
@@ -40,8 +45,30 @@ const Podcast = () => {
             <div style="font-size:14px;color:#c0c0c0;margin-bottom:12px;">\${desc}</div>
             <button style="background:#d4af37;color:#000;border:none;border-radius:8px;padding:10px 14px;font-weight:700;cursor:pointer;">Listen Now</button>
           \`;
-          grid.appendChild(card);
+          return card;
+        };
+        
+        // Display first 6 episodes
+        const initialItems = items.slice(0, 6);
+        const remainingItems = items.slice(6);
+        
+        initialItems.forEach(item => {
+          grid.appendChild(createCard(item));
         });
+        
+        // Show button only if there are more episodes
+        if (remainingItems.length > 0 && btnContainer) {
+          btnContainer.style.display = 'flex';
+          
+          loadMoreBtn.onclick = () => {
+            remainingItems.forEach(item => {
+              grid.appendChild(createCard(item));
+            });
+            btnContainer.style.display = 'none';
+          };
+        } else if (btnContainer) {
+          btnContainer.style.display = 'none';
+        }
       })();
     `;
     document.body.appendChild(script);
@@ -126,6 +153,25 @@ const Podcast = () => {
                 padding: '24px'
               }}
             ></div>
+            
+            {/* Load More Button */}
+            <div 
+              id="load-more-container"
+              style={{
+                display: 'none',
+                justifyContent: 'center',
+                marginTop: '32px'
+              }}
+            >
+              <Button 
+                id="load-more-btn"
+                variant="default" 
+                size="lg" 
+                className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+              >
+                Click for More Episodes
+              </Button>
+            </div>
           </div>
         </section>
       </main>
