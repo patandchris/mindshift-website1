@@ -1,62 +1,67 @@
 import { Link } from "react-router-dom";
 import { Instagram, Youtube, Linkedin, Mail } from "lucide-react";
 import patChrisLogo from "@/assets/pat-chris-logo.png";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
   const footerLinks = {
-    company: [
-      { name: "Coaching", path: "/coaching-program" },
-      { name: "Success Stories", path: "/coaching-program" }
-    ],
-    resources: [
-      { name: "Podcast", path: "/podcast" }
-    ],
-    legal: [
-      { name: "Privacy Policy", path: "/privacy" },
-      { name: "Terms of Service", path: "/terms" },
-      { name: "Cookie Policy", path: "/cookies" }
-    ]
+    company: [{
+      name: "Coaching",
+      path: "/coaching-program"
+    }, {
+      name: "Success Stories",
+      path: "/coaching-program"
+    }],
+    resources: [{
+      name: "Podcast",
+      path: "/podcast"
+    }],
+    legal: [{
+      name: "Privacy Policy",
+      path: "/privacy"
+    }, {
+      name: "Terms of Service",
+      path: "/terms"
+    }, {
+      name: "Cookie Policy",
+      path: "/cookies"
+    }]
   };
-
-  const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Youtube, href: "#", label: "YouTube" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:hello@patchriscoaching.com", label: "Email" }
-  ];
-
-  return (
-    <footer className="bg-background border-t border-border">
+  const socialLinks = [{
+    icon: Instagram,
+    href: "#",
+    label: "Instagram"
+  }, {
+    icon: Youtube,
+    href: "#",
+    label: "YouTube"
+  }, {
+    icon: Linkedin,
+    href: "#",
+    label: "LinkedIn"
+  }, {
+    icon: Mail,
+    href: "mailto:hello@patchriscoaching.com",
+    label: "Email"
+  }];
+  return <footer className="bg-background border-t border-border">
       <div className="container-premium">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 py-16">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <Link to="/#top" className="inline-block mb-2" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              <img
-                src={patChrisLogo}
-                alt="Pat & Chris Coaching"
-                className="h-16 w-auto"
-              />
+            <Link to="/#top" className="inline-block mb-2" onClick={() => window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          })}>
+              <img src={patChrisLogo} alt="Pat & Chris Coaching" className="h-16 w-auto" />
             </Link>
-            <p className="text-muted-foreground mb-2 max-w-md mt-2">
-              Helping ambitious men break through their barriers
-            </p>
+            <p className="text-muted-foreground mb-2 max-w-md mt-2 mx-[14px] my-0 px-0 py-0">Helping ambitious men break through their barriers and create the life they truly want though proven mindset transformation</p>
             
             {/* Social Links */}
             <div className="flex items-center gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300"
-                  aria-label={social.label}
-                >
+              {socialLinks.map(social => <a key={social.label} href={social.href} className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300" aria-label={social.label}>
                   <social.icon className="h-5 w-5" />
-                </a>
-              ))}
+                </a>)}
             </div>
           </div>
 
@@ -64,16 +69,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Company</h4>
             <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.path}
-                    className="text-muted-foreground hover:text-accent transition-colors"
-                  >
+              {footerLinks.company.map(link => <li key={link.name}>
+                  <Link to={link.path} className="text-muted-foreground hover:text-accent transition-colors">
                     {link.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -81,16 +81,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Resources</h4>
             <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.path}
-                    className="text-muted-foreground hover:text-accent transition-colors"
-                  >
+              {footerLinks.resources.map(link => <li key={link.name}>
+                  <Link to={link.path} className="text-muted-foreground hover:text-accent transition-colors">
                     {link.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -98,16 +93,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Legal</h4>
             <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.path}
-                    className="text-muted-foreground hover:text-accent transition-colors"
-                  >
+              {footerLinks.legal.map(link => <li key={link.name}>
+                  <Link to={link.path} className="text-muted-foreground hover:text-accent transition-colors">
                     {link.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
         </div>
@@ -124,8 +114,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
