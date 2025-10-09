@@ -34,7 +34,7 @@ const Hero = () => {
               <img 
                 src={mindshiftLogo} 
                 alt="The MindShift System" 
-                className="w-full max-w-lg mx-auto md:max-w-2xl" 
+                className="w-full max-w-2xl mx-auto md:max-w-3xl" 
               />
             </div>
           </div>

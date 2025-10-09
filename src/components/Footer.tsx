@@ -9,7 +9,7 @@ const Footer = () => {
       path: "/coaching-program"
     }, {
       name: "Success Stories",
-      path: "/coaching-program"
+      path: "/#success-stories"
     }],
     resources: [{
       name: "Podcast",
@@ -49,16 +49,16 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 py-16">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <Link to="/#top" className="inline-block mb-2" onClick={() => window.scrollTo({
+            <Link to="/#top" className="inline-block mb-1" onClick={() => window.scrollTo({
             top: 0,
             behavior: 'smooth'
           })}>
               <img src={patChrisLogo} alt="Pat & Chris Coaching" className="h-16 w-auto" />
             </Link>
-            <p className="text-muted-foreground mb-2 max-w-md mt-2 mx-[14px] my-0 px-0 py-0">Helping ambitious men break through their barriers and create the life they truly want though proven mindset transformation</p>
+            <p className="text-muted-foreground mb-1 max-w-md mt-1">Helping ambitious men break through their barriers and create the life they truly want through proven mindset transformation.</p>
             
             {/* Social Links */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 mt-1">
               {socialLinks.map(social => <a key={social.label} href={social.href} className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300" aria-label={social.label}>
                   <social.icon className="h-5 w-5" />
                 </a>)}

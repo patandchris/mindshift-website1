@@ -116,263 +116,117 @@ const Podcast = () => {
           </div>
         )}
         {/* Hero Section */}
-        <section className="py-8 bg-card/50">
+        <section className="py-12 bg-black">
           <div className="container-premium">
-            <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-              {/* Podcast Artwork */}
+            <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+              {/* Podcast Logo */}
               <div className="mb-8">
-                <div className="bg-black rounded-3xl p-8">
-                  <img src={mamLogo} alt="The Middle-Aged & Miserable Podcast" className="w-full max-w-sm mx-auto" />
-                </div>
+                <img src={mamLogo} alt="The Middle-Aged & Miserable Podcast" className="w-full max-w-md mx-auto" />
               </div>
 
-              {/* Content */}
-              <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-6">Bi-Weekly Podcast</div>
-                
-                <h1 className="mb-6 text-5xl font-bold md:text-5xl">
-                  The <span className="text-accent">Middle-Aged & Miserable</span> Podcast
-                </h1>
-                
-                <p className="text-xl text-muted-foreground mb-8">
-                  Raw, unfiltered conversations about breaking through the barriers that keep ambitious men stuck in mediocrity. No fluff, no BS—just actionable insights for the man who's ready to level up.
+              {/* Title */}
+              <h1 className="mb-4 text-4xl font-bold md:text-5xl text-accent">
+                The Middle-Aged & Miserable Podcast
+              </h1>
+              
+              {/* Subtitle */}
+              <p className="text-lg text-gray-300 mb-12 max-w-3xl">
+                Raw, unfiltered conversations about breaking through the barriers that keep ambitious people stuck in mediocrity. No fluff. No BS. Just real talk for those ready to rise.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Episodes Grid */}
+        <section className="py-12 bg-black">
+          <div className="container-premium">
+            {loading ? (
+              <div className="text-center py-12">
+                <Loader2 className="h-12 w-12 animate-spin text-accent mx-auto mb-4" />
+                <p className="text-gray-300">Loading episodes...</p>
+              </div>
+            ) : error && !isUsingRSS ? (
+              <div className="text-center py-12">
+                <p className="text-gray-300 mb-6">
+                  Podcast feed temporarily unavailable — please listen directly on Spotify, Apple Podcasts, or YouTube.
                 </p>
-
-                {/* Stats */}
-                <div className="grid grid-cols-3 gap-4 mb-8">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-accent">{episodes.length}</div>
-                    <div className="text-sm text-muted-foreground">Episodes</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-accent">50K+</div>
-                    <div className="text-sm text-muted-foreground">Downloads</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-accent">4.9</div>
-                    <div className="text-sm text-muted-foreground">Rating</div>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap justify-center gap-4">
-                  <Button 
-                    variant="default" 
-                    size="lg" 
-                    className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
-                    onClick={() => window.open('https://open.spotify.com/show/54LfdBGDiJrJtPSRAFVWyV?si=e1d3705155764e1a', '_blank')}
-                  >
-                    Subscribe on Spotify
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
-                    className="border-accent text-accent hover:bg-accent hover:text-black"
-                  >
-                    Subscribe on Apple Podcasts
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </Button>
-                  <Button 
-                    variant="default" 
-                    size="lg" 
-                    className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
-                    onClick={() => window.open('http://www.youtube.com/@patandchris', '_blank')}
-                  >
-                    Subscribe on YouTube
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </Button>
-                </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Latest Episode Featured */}
-        <section className="section-padding">
-          <div className="container-premium">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">
-                Latest <span className="text-accent">Episode</span>
-              </h2>
-            </div>
-
-            <Card className="card-premium max-w-4xl mx-auto">
-              <CardContent className="p-8">
-                 <div className="grid md:grid-cols-2 gap-8 items-center">
-                   {/* Episode Art */}
-                   <div className="relative aspect-video rounded-lg overflow-hidden group">
-                     <img 
-                       src={episodes[0].thumbnail || mamInitialsLogo} 
-                       alt={episodes[0].title} 
-                       className="w-full h-full object-contain bg-black" 
-                     />
-                     <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
-                       {isUsingRSS && episodes[0].audioUrl ? (
-                         <a 
-                           href={episodes[0].audioUrl} 
-                           target="_blank" 
-                           rel="noopener noreferrer"
-                           className="w-20 h-20 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg cursor-pointer"
-                         >
-                           <Play className="h-10 w-10 text-accent-foreground ml-1" />
-                         </a>
-                       ) : (
-                         <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg cursor-pointer">
-                           <Play className="h-10 w-10 text-accent-foreground ml-1" />
-                         </div>
-                       )}
-                     </div>
-                   </div>
-
-                  {/* Episode Info */}
-                  <div>
-                    <div className="flex items-center justify-center gap-4 mb-4 text-sm text-muted-foreground">
-                      <span className="bg-accent/10 px-3 py-1 rounded-full text-accent font-medium">
-                        Episode {episodes[0].episode}
-                      </span>
-                      <div className="flex items-center gap-1">
-                        <Calendar className="h-4 w-4" />
-                        <span>{episodes[0].date}</span>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                {episodes.slice(0, 6).map(episode => (
+                  <Card key={episode.id} className="bg-zinc-900 border-zinc-800 overflow-hidden group hover:border-accent/50 transition-all">
+                    <CardContent className="p-0">
+                      {/* Episode Image */}
+                      <div className="relative aspect-square overflow-hidden">
+                        <img 
+                          src={episode.thumbnail || mamInitialsLogo} 
+                          alt={episode.title} 
+                          className="w-full h-full object-cover" 
+                        />
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-4 w-4" />
-                        <span>{episodes[0].duration}</span>
-                      </div>
-                    </div>
-
-                    <h3 className="text-2xl font-bold mb-4">{episodes[0].title}</h3>
-                     <p className="text-muted-foreground mb-6">{episodes[0].description}</p>
-
-                     <div className="flex flex-col sm:flex-row justify-center gap-2">
-                       {isUsingRSS && episodes[0].audioUrl ? (
-                         <>
-                           <Button 
-                             variant="default" 
-                             size="default" 
-                             className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
-                             onClick={() => window.open(episodes[0].audioUrl, '_blank')}
-                           >
-                             <Play className="mr-2 h-4 w-4" />
-                             Play Episode
-                           </Button>
-                           <Button 
-                             variant="outline" 
-                             size="default" 
-                             className="border-accent text-accent hover:bg-accent hover:text-black"
-                             onClick={() => window.open(episodes[0].audioUrl, '_blank')}
-                           >
-                             <Download className="mr-2 h-4 w-4" />
-                             Download
-                           </Button>
-                         </>
-                       ) : (
-                         <>
-                           <Button variant="default" size="default" className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300">
-                             <Play className="mr-2 h-4 w-4" />
-                             Play Episode
-                           </Button>
-                           <Button variant="outline" size="default" className="border-accent text-accent hover:bg-accent hover:text-black">
-                             <Download className="mr-2 h-4 w-4" />
-                             Download
-                           </Button>
-                         </>
-                       )}
-                     </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* All Episodes */}
-        <section className="section-padding bg-card/50">
-          <div className="container-premium">
-            <div className="flex items-center justify-between mb-12">
-              <h2 className="text-3xl font-bold">
-                All <span className="text-accent">Episodes</span>
-              </h2>
-            </div>
-
-            <div className="grid gap-6">
-              {episodes.slice(1).map(episode => <Card key={episode.id} className="card-premium group hover:scale-[1.01] cursor-pointer">
-                  <CardContent className="p-6">
-                    <div className="grid md:grid-cols-4 gap-6 items-center">
-                      {/* Episode Thumbnail */}
-                       <div className="relative aspect-video rounded-lg overflow-hidden">
-                         <img 
-                           src={episode.thumbnail || mamInitialsLogo} 
-                           alt={episode.title} 
-                           className="w-full h-full object-contain bg-black" 
-                         />
-                         <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
-                           {isUsingRSS && episode.audioUrl ? (
-                             <a 
-                               href={episode.audioUrl} 
-                               target="_blank" 
-                               rel="noopener noreferrer"
-                               className="w-12 h-12 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
-                             >
-                               <Play className="h-6 w-6 text-accent-foreground ml-1" />
-                             </a>
-                           ) : (
-                             <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                               <Play className="h-6 w-6 text-accent-foreground ml-1" />
-                             </div>
-                           )}
-                         </div>
-                       </div>
-
-                      {/* Episode Details */}
-                      <div className="md:col-span-2">
-                        <div className="flex items-center gap-4 mb-2 text-sm text-muted-foreground">
-                          <span className="bg-accent/10 px-2 py-1 rounded text-accent font-medium">
-                            Ep {episode.episode}
-                          </span>
-                          <span>{episode.date}</span>
-                          <span>{episode.duration}</span>
-                        </div>
-                        <h3 className="text-lg font-bold mb-2 group-hover:text-accent transition-colors">
+                      
+                      {/* Episode Info */}
+                      <div className="p-6">
+                        <h3 className="text-lg font-bold text-white mb-2 line-clamp-2">
                           {episode.title}
                         </h3>
-                        <p className="text-muted-foreground text-sm line-clamp-2">
+                        <p className="text-sm text-gray-400 mb-4 line-clamp-2">
                           {episode.description}
                         </p>
-                      </div>
-
-                      {/* Actions */}
-                      <div className="flex items-center gap-2">
+                        
                         {isUsingRSS && episode.audioUrl ? (
-                          <>
-                            <Button 
-                              variant="ghost" 
-                              size="sm"
-                              onClick={() => window.open(episode.audioUrl, '_blank')}
-                            >
-                              <Play className="h-4 w-4" />
-                            </Button>
-                            <Button 
-                              variant="ghost" 
-                              size="sm"
-                              onClick={() => window.open(episode.audioUrl, '_blank')}
-                            >
-                              <Download className="h-4 w-4" />
-                            </Button>
-                          </>
+                          <Button 
+                            variant="default" 
+                            size="sm"
+                            className="w-full bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all"
+                            onClick={() => window.open(episode.audioUrl, '_blank')}
+                          >
+                            Listen Now
+                          </Button>
                         ) : (
-                          <>
-                            <Button variant="ghost" size="sm">
-                              <Play className="h-4 w-4" />
-                            </Button>
-                            <Button variant="ghost" size="sm">
-                              <Download className="h-4 w-4" />
-                            </Button>
-                          </>
+                          <Button 
+                            variant="default" 
+                            size="sm"
+                            className="w-full bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all"
+                          >
+                            Listen Now
+                          </Button>
                         )}
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>)}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
+
+            {/* Subscribe Buttons */}
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button 
+                variant="default" 
+                size="lg" 
+                className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+                onClick={() => window.open('https://open.spotify.com/show/54LfdBGDiJrJtPSRAFVWyV?si=e1d3705155764e1a', '_blank')}
+              >
+                Subscribe on Spotify
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-accent text-accent hover:bg-accent hover:text-black"
+              >
+                Subscribe on Apple Podcasts
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </Button>
+              <Button 
+                variant="default" 
+                size="lg" 
+                className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+                onClick={() => window.open('http://www.youtube.com/@patandchris', '_blank')}
+              >
+                Subscribe on YouTube
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </Button>
             </div>
           </div>
         </section>

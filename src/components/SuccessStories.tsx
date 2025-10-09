@@ -22,7 +22,7 @@ const SuccessStories = () => {
   ];
 
   return (
-    <section className="section-padding bg-background">
+    <section id="success-stories" className="section-padding bg-background">
       <div className="container-premium">
         <div className="text-center mb-16">
           <h2 className="mb-6 text-accent">Real Results from Real Clients</h2>

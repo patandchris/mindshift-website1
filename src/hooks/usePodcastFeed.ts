@@ -12,7 +12,7 @@ export interface PodcastEpisode {
   thumbnail?: string;
 }
 
-const RSS_FEED_URL = 'https://feeds.buzzsprout.com/2418156.rss';
+const RSS_FEED_URL = 'https://rss.app/feeds/MCbM8cGxDw2hXcu5.xml';
 
 export const usePodcastFeed = () => {
   const [episodes, setEpisodes] = useState<PodcastEpisode[]>([]);
