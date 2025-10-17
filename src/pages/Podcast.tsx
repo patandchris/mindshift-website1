@@ -112,7 +112,7 @@ const Podcast = () => {
                 className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
                 onClick={() => window.open('https://open.spotify.com/show/54LfdBGDiJrJtPSRAFVWyV?si=e1d3705155764e1a', '_blank')}
               >
-                Subscribe on Spotify
+                Listen on Spotify
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
               <Button 
