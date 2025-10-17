@@ -120,7 +120,7 @@ const Podcast = () => {
                 size="lg" 
                 className="border-accent text-accent hover:bg-accent hover:text-black"
               >
-                Subscribe on Apple Podcasts
+                Listen on Apple Podcasts
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
               <Button 
