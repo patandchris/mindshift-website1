@@ -129,7 +129,7 @@ const Podcast = () => {
                 className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
                 onClick={() => window.open('https://www.youtube.com/@patandchris', '_blank')}
               >
-                Subscribe on YouTube
+                Watch on YouTube
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
             </div>
