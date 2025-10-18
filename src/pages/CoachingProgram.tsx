@@ -93,8 +93,13 @@ const CoachingProgram = () => {
                   <Button className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" size="lg">
                     Apply Now
                   </Button>
-                  <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-black">
-                    Book a Strategy Call
+                  <Button 
+                    variant="outline" 
+                    size="lg" 
+                    className="border-accent text-accent hover:bg-accent hover:text-black"
+                    onClick={() => window.open('https://calendly.com/patandchris/30min', '_blank')}
+                  >
+                    Book a Discovery Call
                   </Button>
                 </div>
 
@@ -219,8 +224,13 @@ const CoachingProgram = () => {
                   <Button className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" size="lg">
                     Apply for The Program
                   </Button>
-                  <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-black">
-                    Schedule Your Strategy Call
+                  <Button 
+                    variant="outline" 
+                    size="lg" 
+                    className="border-accent text-accent hover:bg-accent hover:text-black"
+                    onClick={() => window.open('https://calendly.com/patandchris/30min', '_blank')}
+                  >
+                    Book a Discovery Call
                   </Button>
                 </div>
                 <p className="text-sm text-muted-foreground mt-4">
