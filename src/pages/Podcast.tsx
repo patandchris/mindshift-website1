@@ -10,7 +10,17 @@ const Podcast = () => {
     const script = document.createElement('script');
     script.innerHTML = `
       (async () => {
-        const res = await fetch('https://rss.app/feeds/MCbM8cGxDw2hXcu5.xml');
+        const res = await fetch('https://feeds.buzzsprout.com/2418156.rss');
+        if (!res.ok) {
+          console.error('RSS Feed Error:', res.status, res.statusText);
+          const errorText = await res.text();
+          console.error('Error details:', errorText);
+          const grid = document.getElementById('podcast-feed');
+          if (grid) {
+            grid.innerHTML = '<div style="color:#ff4444;padding:20px;text-align:center;">Failed to load podcast feed. Error: ' + res.status + ' ' + res.statusText + '</div>';
+          }
+          return;
+        }
         const text = await res.text();
         const parser = new DOMParser();
         const xml = parser.parseFromString(text, "application/xml");
