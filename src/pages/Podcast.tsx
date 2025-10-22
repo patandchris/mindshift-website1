@@ -42,8 +42,12 @@ const Podcast = () => {
           const enclosureUrl = item.querySelector("enclosure")?.getAttribute('url') || '';
           const link = enclosureUrl ? enclosureUrl.replace('.mp3', '') : "#";
           const desc = (item.querySelector("description")?.textContent ?? "").replace(/<[^>]*>/g,'').slice(0,180) + '…';
-          const img = item.querySelector("itunes\\\\:image, image, enclosure[url*='.jpg'], enclosure[url*='.png']")?.getAttribute('href')
-                   || item.querySelector("enclosure")?.getAttribute('url') || '';
+          // Extract episode image from itunes:image or fallback to channel image
+          const itunesImage = item.querySelector("itunes\\\\:image");
+          const img = itunesImage?.getAttribute('href') || 
+                      itunesImage?.getAttribute('url') || 
+                      xml.querySelector("channel > itunes\\\\:image")?.getAttribute('href') || 
+                      '';
           const card = document.createElement('a');
           card.href = link; card.target = "_blank"; card.rel="noopener";
           card.style = "display:block;background:#0a0a0a;border:1px solid #222;border-radius:12px;padding:16px;text-decoration:none;color:#fff;transition:transform 0.2s;";
