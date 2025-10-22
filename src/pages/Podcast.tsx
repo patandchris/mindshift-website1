@@ -38,7 +38,9 @@ const Podcast = () => {
         
         const createCard = (item) => {
           const title = item.querySelector("title")?.textContent ?? "Episode";
-          const link = item.querySelector("link")?.textContent ?? "#";
+          // Extract episode link from enclosure URL (remove .mp3 to get episode page)
+          const enclosureUrl = item.querySelector("enclosure")?.getAttribute('url') || '';
+          const link = enclosureUrl ? enclosureUrl.replace('.mp3', '') : "#";
           const desc = (item.querySelector("description")?.textContent ?? "").replace(/<[^>]*>/g,'').slice(0,180) + '…';
           const img = item.querySelector("itunes\\\\:image, image, enclosure[url*='.jpg'], enclosure[url*='.png']")?.getAttribute('href')
                    || item.querySelector("enclosure")?.getAttribute('url') || '';
