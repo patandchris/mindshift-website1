@@ -10,6 +10,7 @@ import LeadMagnetPage from "./pages/LeadMagnetPage";
 import CoachingProgram from "./pages/CoachingProgram";
 import NotFound from "./pages/NotFound";
 import UploadVideo from "./pages/UploadVideo";
+import Auth from "./pages/Auth";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/coaching-program" element={<CoachingProgram />} />
           <Route path="/lead-magnet" element={<LeadMagnetPage />} />
           <Route path="/upload-video" element={<UploadVideo />} />
+          <Route path="/auth" element={<Auth />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
