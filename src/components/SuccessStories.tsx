@@ -1,12 +1,11 @@
-import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import VideoPlayerModal from "./VideoPlayerModal";
 
 const SuccessStories = () => {
-  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,6 +25,24 @@ const SuccessStories = () => {
   }, []);
 
   const videoUrl = "https://onbxflybhvpksyxpsdxm.supabase.co/storage/v1/object/public/testimonials//6gi88eyrjhi.mp4";
+
+  const handlePlayClick = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  const handleVideoClick = () => {
+    if (videoRef.current) {
+      if (videoRef.current.paused) {
+        videoRef.current.play();
+        setIsPlaying(true);
+      } else {
+        videoRef.current.pause();
+      }
+    }
+  };
 
   return (
     <section id="success-stories" className="section-padding" style={{ backgroundColor: '#000000' }}>
@@ -63,28 +80,35 @@ const SuccessStories = () => {
                 Client Success Story
               </h3>
               <div 
-                className="relative aspect-video rounded-xl overflow-hidden cursor-pointer group"
+                className="relative aspect-[9/16] rounded-xl overflow-hidden cursor-pointer group max-w-sm mx-auto lg:mx-0"
                 style={{ 
                   boxShadow: '0 0 40px rgba(212, 175, 55, 0.3)'
                 }}
-                onClick={() => setIsVideoModalOpen(true)}
+                onClick={handleVideoClick}
               >
                 <video
+                  ref={videoRef}
                   src={videoUrl}
                   className="w-full h-full object-cover"
-                  muted
+                  controls={isPlaying}
+                  controlsList="nodownload"
                 />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-all duration-300">
+                {!isPlaying && (
                   <div 
-                    className="w-20 h-20 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
-                    style={{ 
-                      border: '3px solid #D4AF37',
-                      backgroundColor: 'rgba(0, 0, 0, 0.6)'
-                    }}
+                    className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-all duration-300"
+                    onClick={handlePlayClick}
                   >
-                    <Play className="w-8 h-8 ml-1" style={{ color: '#D4AF37' }} />
+                    <div 
+                      className="w-20 h-20 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
+                      style={{ 
+                        border: '3px solid #D4AF37',
+                        backgroundColor: 'rgba(0, 0, 0, 0.6)'
+                      }}
+                    >
+                      <Play className="w-8 h-8 ml-1" style={{ color: '#D4AF37' }} />
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
 
@@ -103,12 +127,6 @@ const SuccessStories = () => {
         </div>
 
       </div>
-
-      <VideoPlayerModal
-        isOpen={isVideoModalOpen}
-        onClose={() => setIsVideoModalOpen(false)}
-        videoUrl={videoUrl}
-      />
     </section>
   );
 };
