@@ -21,7 +21,7 @@ const BeTheFirstToKnow = () => {
               className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
               onClick={() => window.open('https://calendly.com/patandchris/30min', '_blank')}
             >
-              Start Your Transformation
+              Book a Discovery Call
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
           </CardContent>
