@@ -73,14 +73,14 @@ const SuccessStories = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="flex flex-col lg:flex-row gap-8 items-center mb-16">
+          <div className="flex flex-col lg:flex-row gap-8 items-center lg:items-start lg:justify-center mb-16">
             {/* Video Container - Left on Desktop */}
             <div className="w-full lg:w-1/2">
               <h3 className="text-xl font-semibold mb-4" style={{ color: '#D4AF37' }}>
                 Client Success Story
               </h3>
               <div 
-                className="relative aspect-[9/16] rounded-xl overflow-hidden cursor-pointer group max-w-sm mx-auto lg:mx-0"
+                className="relative aspect-[9/16] rounded-xl overflow-hidden cursor-pointer group max-w-sm mx-auto lg:ml-auto lg:mr-8"
                 style={{ 
                   boxShadow: '0 0 40px rgba(212, 175, 55, 0.3)'
                 }}
@@ -113,7 +113,7 @@ const SuccessStories = () => {
             </div>
 
             {/* Text Testimonial - Right on Desktop */}
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 lg:pl-8">
               <blockquote className="text-lg leading-relaxed mb-6" style={{ color: '#FFFFFF' }}>
                 "Thanks to the MindShift coaching program, I learned that to achieve my future goals, first I have to change myself. I have to think, act and believe differently, and that's what I've been doing since starting MindShift.
                 <br /><br />
