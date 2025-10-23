@@ -26,7 +26,8 @@ const SuccessStories = () => {
 
   const videoUrl = "https://onbxflybhvpksyxpsdxm.supabase.co/storage/v1/object/public/testimonials//6gi88eyrjhi.mp4";
 
-  const handlePlayClick = () => {
+  const handlePlayClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
     if (videoRef.current) {
       videoRef.current.play();
       setIsPlaying(true);
@@ -84,7 +85,6 @@ const SuccessStories = () => {
                 style={{ 
                   boxShadow: '0 0 40px rgba(212, 175, 55, 0.3)'
                 }}
-                onClick={handleVideoClick}
               >
                 <video
                   ref={videoRef}
@@ -92,6 +92,7 @@ const SuccessStories = () => {
                   className="w-full h-full object-cover"
                   controls={isPlaying}
                   controlsList="nodownload"
+                  onClick={handleVideoClick}
                 />
                 {!isPlaying && (
                   <div 
