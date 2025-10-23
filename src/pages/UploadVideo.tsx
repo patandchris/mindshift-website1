@@ -23,12 +23,9 @@ const UploadVideo = () => {
         return;
       }
 
-      const { data, error } = await supabase
-        .from('user_roles')
-        .select('role')
-        .eq('user_id', session.user.id)
-        .eq('role', 'admin')
-        .maybeSingle();
+      // Use server-side RPC function for admin validation
+      // This cannot be bypassed on the client
+      const { data, error } = await supabase.rpc('check_is_admin');
 
       if (error) throw error;
       
