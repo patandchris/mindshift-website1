@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Play, Headphones, ExternalLink } from "lucide-react";
+import { Play, Headphones, ExternalLink, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import mamLogo from "@/assets/mam-logo.png";
 const PodcastPromo = () => {
@@ -43,25 +43,17 @@ const PodcastPromo = () => {
             </p>
           </div>
 
-          {/* Subscribe Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" 
-              size="lg"
-              onClick={() => window.open('https://open.spotify.com/show/54LfdBGDiJrJtPSRAFVWyV?si=e1d3705155764e1a', '_blank')}
-            >
-              Subscribe on Spotify
-            </Button>
-            <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-black">
-              Subscribe on Apple Podcasts
-            </Button>
-            <Button 
-              className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" 
-              size="lg"
-              onClick={() => window.open('http://www.youtube.com/@patandchris', '_blank')}
-            >
-              Subscribe on YouTube
-            </Button>
+          {/* Listen Now Button */}
+          <div className="flex justify-center">
+            <Link to="/podcast" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <Button 
+                className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" 
+                size="lg"
+              >
+                Listen Now
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
