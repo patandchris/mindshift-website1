@@ -19,6 +19,12 @@ const getElementAttribute = (element: Element | null, tagName: string, attribute
   return element?.querySelector(tagName)?.getAttribute(attribute) || '';
 };
 
+const stripHtmlTags = (html: string): string => {
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  return tmp.textContent || tmp.innerText || '';
+};
+
 export const usePodcastFeed = (feedUrl: string) => {
   const [episodes, setEpisodes] = useState<PodcastEpisode[]>([]);
   const [loading, setLoading] = useState(true);
@@ -61,7 +67,7 @@ export const usePodcastFeed = (feedUrl: string) => {
           return {
             id: getElementText(item, 'guid') || `episode-${index}`,
             title: getElementText(item, 'title') || 'Untitled Episode',
-            description: getElementText(item, 'description') || '',
+            description: stripHtmlTags(getElementText(item, 'description')) || '',
             duration: formattedDuration,
             date: pubDate ? new Date(pubDate).toLocaleDateString('en-US', {
               month: 'short',
