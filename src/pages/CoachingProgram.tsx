@@ -197,7 +197,7 @@ const CoachingProgram = () => {
                   Book a free MindShift Breakthrough Session to uncover what's really holding you back
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
-                  Get a clear plan to take back control of your life, career, and success.
+                  Uncover what's really holding you back and get a clear plan to take back control of your life, career and success!
                 </p>
                 <Button 
                   variant="default" 
