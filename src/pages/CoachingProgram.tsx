@@ -90,25 +90,15 @@ const CoachingProgram = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
-                  <Button className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" size="lg">
-                    Apply Now
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
-                    className="border-accent text-accent hover:bg-accent hover:text-black"
-                    onClick={() => window.open('https://calendly.com/patandchris/30min', '_blank')}
-                  >
+                  
+                  <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-black" onClick={() => window.open('https://calendly.com/patandchris/30min', '_blank')}>
                     Book a Discovery Call
                   </Button>
                 </div>
 
                 {/* Quick Stats */}
                 <div className="flex items-center justify-center gap-8 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-2">
-                    <Users className="w-4 h-4" />
-                    <span>500+ Clients Transformed</span>
-                  </div>
+                  
                   <div className="flex items-center gap-2">
                     <Clock className="w-4 h-4" />
                     <span>12 Weeks to the New You</span>
@@ -224,12 +214,7 @@ const CoachingProgram = () => {
                   <Button className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300" size="lg">
                     Apply for The Program
                   </Button>
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
-                    className="border-accent text-accent hover:bg-accent hover:text-black"
-                    onClick={() => window.open('https://calendly.com/patandchris/30min', '_blank')}
-                  >
+                  <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-black" onClick={() => window.open('https://calendly.com/patandchris/30min', '_blank')}>
                     Book a Discovery Call
                   </Button>
                 </div>
