@@ -5,8 +5,16 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Download, Users, TrendingUp } from "lucide-react";
+import { z } from "zod";
+import { useToast } from "@/hooks/use-toast";
+
+const leadMagnetSchema = z.object({
+  firstName: z.string().trim().min(1, 'First name is required').max(100, 'First name must be less than 100 characters'),
+  email: z.string().trim().email('Invalid email address').max(255, 'Email must be less than 255 characters')
+});
 
 const LeadMagnetPage = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     firstName: "",
     email: ""
@@ -15,8 +23,20 @@ const LeadMagnetPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate inputs
+    const validationResult = leadMagnetSchema.safeParse(formData);
+    if (!validationResult.success) {
+      const firstError = validationResult.error.errors[0];
+      toast({
+        title: "Validation Error",
+        description: firstError.message,
+        variant: "destructive",
+      });
+      return;
+    }
+    
     // Here you would integrate with HubSpot
-    console.log("Form submitted:", formData);
     setIsSubmitted(true);
   };
 
