@@ -51,21 +51,11 @@ const NotFound = () => {
 
             {/* Help Text */}
             <div className="mt-12 bg-card border border-border rounded-lg p-6">
-              <h3 className="font-semibold mb-4">Looking for something specific?</h3>
-              <div className="grid sm:grid-cols-2 gap-4 text-sm">
-                <div>
-                  <Link to="/blog" className="text-accent hover:text-accent/80 transition-colors">
-                    → Read our Blog
-                  </Link>
-                </div>
+              <h3 className="font-semibold mb-4 text-center">Looking for something specific?</h3>
+              <div className="flex flex-col sm:flex-row gap-4 text-sm justify-center items-center">
                 <div>
                   <Link to="/podcast" className="text-accent hover:text-accent/80 transition-colors">
                     → Listen to Podcast
-                  </Link>
-                </div>
-                <div>
-                  <Link to="/lead-magnet" className="text-accent hover:text-accent/80 transition-colors">
-                    → Free Resources
                   </Link>
                 </div>
                 <div>
