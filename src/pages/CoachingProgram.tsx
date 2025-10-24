@@ -48,20 +48,10 @@ const CoachingProgram = () => {
     description: "Experience compound results in all areas of life"
   }];
   const testimonials = [{
-    name: "Sarah Chen",
-    title: "Senior Executive",
-    content: "The MindShift System gave me the mental framework I was missing. I went from feeling stuck to leading with absolute confidence.",
-    result: "Promoted to VP in 6 months"
-  }, {
-    name: "Marcus Rodriguez",
-    title: "Entrepreneur",
-    content: "This isn't just coaching - it's a complete mental upgrade. My decision-making, focus, and results have all transformed.",
-    result: "3x business revenue"
-  }, {
-    name: "David Thompson",
-    title: "Sales Director",
-    content: "I finally broke through my income ceiling. The unconscious reprogramming work is what made all the difference.",
-    result: "Doubled income in 8 months"
+    name: "Haroldo Chacon",
+    title: "Structural Engineer",
+    content: "By applying all aspects covered by this MindShift Coaching Program, I've noticed significant changes in the way I think, my actions and beliefs. This is bringing me unexpected results in areas that I never thought possible before. It's really changed my behaviors and my life!",
+    result: "Started 2 new business ventures"
   }];
   return <div className="min-h-screen bg-background">
       <Header />
@@ -179,7 +169,7 @@ const CoachingProgram = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="max-w-2xl mx-auto">
               {testimonials.map((testimonial, index) => <Card key={index} className="bg-card border border-border">
                   <CardContent className="p-6">
                     <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-4">
