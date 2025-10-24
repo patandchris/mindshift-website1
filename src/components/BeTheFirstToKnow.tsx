@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const BeTheFirstToKnow = () => {
   return (
-    <section className="section-padding bg-background">
+    <section className="py-8 md:py-12 bg-background">
       <div className="container-premium">
         <Card className="max-w-2xl mx-auto bg-card border border-border">
           <CardContent className="p-12 flex flex-col items-center text-center">

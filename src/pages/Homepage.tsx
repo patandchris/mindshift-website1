@@ -4,6 +4,7 @@ import SuccessStories from "@/components/SuccessStories";
 import BeTheFirstToKnow from "@/components/BeTheFirstToKnow";
 import PodcastPromo from "@/components/PodcastPromo";
 import Footer from "@/components/Footer";
+import { Separator } from "@/components/ui/separator";
 
 const Homepage = () => {
   return (
@@ -13,6 +14,9 @@ const Homepage = () => {
         <Hero />
         <SuccessStories />
         <BeTheFirstToKnow />
+        <div className="container-premium py-12">
+          <Separator className="bg-gradient-gold h-[2px]" />
+        </div>
         <PodcastPromo />
       </main>
       <Footer />
