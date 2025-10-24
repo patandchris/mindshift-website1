@@ -3,95 +3,13 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import mamLogo from "@/assets/mam-logo.png";
-import { useEffect } from "react";
+import { useState } from "react";
+import { usePodcastFeed } from "@/hooks/usePodcastFeed";
+import { Loader2 } from "lucide-react";
 
 const Podcast = () => {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.innerHTML = `
-      (async () => {
-        const res = await fetch('https://feeds.buzzsprout.com/2418156.rss');
-        if (!res.ok) {
-          console.error('RSS Feed Error:', res.status, res.statusText);
-          const errorText = await res.text();
-          console.error('Error details:', errorText);
-          const grid = document.getElementById('podcast-feed');
-          if (grid) {
-            grid.innerHTML = '<div style="color:#ff4444;padding:20px;text-align:center;">Failed to load podcast feed. Error: ' + res.status + ' ' + res.statusText + '</div>';
-          }
-          return;
-        }
-        const text = await res.text();
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(text, "application/xml");
-        const items = Array.from(xml.querySelectorAll("item"));
-        const grid = document.getElementById('podcast-feed');
-        const loadMoreBtn = document.getElementById('load-more-btn');
-        const btnContainer = document.getElementById('load-more-container');
-        
-        if (!grid) return;
-        grid.innerHTML = '';
-        
-        const isMobile = matchMedia("(max-width: 640px)").matches;
-        const isTablet = matchMedia("(max-width: 992px)").matches;
-        grid.style.gridTemplateColumns = isMobile ? "1fr" : (isTablet ? "repeat(2,1fr)" : "repeat(3,1fr)");
-        
-        const createCard = (item) => {
-          const title = item.querySelector("title")?.textContent ?? "Episode";
-          // Extract episode link from enclosure URL (remove .mp3 to get episode page)
-          const enclosureUrl = item.querySelector("enclosure")?.getAttribute('url') || '';
-          const link = enclosureUrl ? enclosureUrl.replace('.mp3', '') : "#";
-          const desc = (item.querySelector("description")?.textContent ?? "").replace(/<[^>]*>/g,'').slice(0,180) + '…';
-          // Extract episode image from itunes:image or fallback to channel image
-          const itunesImage = item.querySelector("itunes\\\\:image");
-          const img = itunesImage?.getAttribute('href') || 
-                      itunesImage?.getAttribute('url') || 
-                      xml.querySelector("channel > itunes\\\\:image")?.getAttribute('href') || 
-                      '';
-          const card = document.createElement('a');
-          card.href = link; card.target = "_blank"; card.rel="noopener";
-          card.style = "display:block;background:#0a0a0a;border:1px solid #222;border-radius:12px;padding:16px;text-decoration:none;color:#fff;transition:transform 0.2s;";
-          card.onmouseenter = () => card.style.transform = "translateY(-4px)";
-          card.onmouseleave = () => card.style.transform = "translateY(0)";
-          card.innerHTML = \`
-            <div style="aspect-ratio:1/1;background:#111;border-radius:10px;overflow:hidden;margin-bottom:12px;display:flex;align-items:center;justify-content:center;">
-              \${img ? \`<img src="\${img}" alt="" style="width:100%;height:100%;object-fit:cover;">\` : \`<img src="/mam-logo-initials.png" alt="MAM Podcast" style="width:100%;height:100%;object-fit:cover;">\`}
-            </div>
-            <div style="font-weight:700;font-size:18px;line-height:1.3;margin-bottom:8px;color:#fff;">\${title}</div>
-            <div style="font-size:14px;color:#c0c0c0;margin-bottom:12px;">\${desc}</div>
-            <button style="background:#d4af37;color:#000;border:none;border-radius:8px;padding:10px 14px;font-weight:700;cursor:pointer;">Listen Now</button>
-          \`;
-          return card;
-        };
-        
-        // Display first 6 episodes
-        const initialItems = items.slice(0, 6);
-        const remainingItems = items.slice(6);
-        
-        initialItems.forEach(item => {
-          grid.appendChild(createCard(item));
-        });
-        
-        // Show button only if there are more episodes
-        if (remainingItems.length > 0 && btnContainer) {
-          btnContainer.style.display = 'flex';
-          
-          loadMoreBtn.onclick = () => {
-            remainingItems.forEach(item => {
-              grid.appendChild(createCard(item));
-            });
-            btnContainer.style.display = 'none';
-          };
-        } else if (btnContainer) {
-          btnContainer.style.display = 'none';
-        }
-      })();
-    `;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  const { episodes, loading, error } = usePodcastFeed('https://feeds.buzzsprout.com/2418156.rss');
+  const [displayCount, setDisplayCount] = useState(6);
   return <div className="min-h-screen">
       <Header />
       
@@ -156,39 +74,71 @@ const Podcast = () => {
         {/* Latest Episodes Section */}
         <section className="py-6 bg-black">
           <div className="container-premium">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8" style={{ color: '#D4AF37' }}>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-accent">
               Latest Episodes
             </h2>
-            <div 
-              id="podcast-feed" 
-              style={{
-                display: 'grid',
-                gap: '24px',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                maxWidth: '1200px',
-                margin: '0 auto',
-                padding: '24px'
-              }}
-            ></div>
             
-            {/* Load More Button */}
-            <div 
-              id="load-more-container"
-              style={{
-                display: 'none',
-                justifyContent: 'center',
-                marginTop: '32px'
-              }}
-            >
-              <Button 
-                id="load-more-btn"
-                variant="default" 
-                size="lg" 
-                className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
-              >
-                Click for More Episodes
-              </Button>
-            </div>
+            {/* Loading State */}
+            {loading && (
+              <div className="flex justify-center items-center py-12">
+                <Loader2 className="h-8 w-8 animate-spin text-accent" />
+              </div>
+            )}
+            
+            {/* Error State */}
+            {error && (
+              <div className="text-center py-12">
+                <p className="text-red-500 text-lg">Failed to load podcast feed. Please try again later.</p>
+              </div>
+            )}
+            
+            {/* Episodes Grid */}
+            {!loading && !error && episodes.length > 0 && (
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4">
+                  {episodes.slice(0, displayCount).map((episode) => (
+                    <a
+                      key={episode.id}
+                      href={episode.audioUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block bg-black border border-gray-800 rounded-xl p-4 transition-transform hover:-translate-y-1 no-underline"
+                    >
+                      <div className="aspect-square bg-gray-900 rounded-lg overflow-hidden mb-3 flex items-center justify-center">
+                        <img
+                          src={episode.thumbnail || '/mam-logo-initials.png'}
+                          alt={episode.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <h3 className="font-bold text-lg leading-tight mb-2 text-white">
+                        {episode.title}
+                      </h3>
+                      <p className="text-sm text-gray-400 mb-3 line-clamp-3">
+                        {episode.description}
+                      </p>
+                      <button className="bg-gradient-gold text-black font-semibold py-2 px-4 rounded-lg hover:shadow-glow transition-all">
+                        Listen Now
+                      </button>
+                    </a>
+                  ))}
+                </div>
+                
+                {/* Load More Button */}
+                {displayCount < episodes.length && (
+                  <div className="flex justify-center mt-8">
+                    <Button
+                      variant="default"
+                      size="lg"
+                      className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+                      onClick={() => setDisplayCount(episodes.length)}
+                    >
+                      Click for More Episodes
+                    </Button>
+                  </div>
+                )}
+              </>
+            )}
           </div>
         </section>
       </main>

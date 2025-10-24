@@ -12,9 +12,7 @@ export interface PodcastEpisode {
   thumbnail?: string;
 }
 
-const RSS_FEED_URL = 'https://rss.app/feeds/MCbM8cGxDw2hXcu5.xml';
-
-export const usePodcastFeed = () => {
+export const usePodcastFeed = (feedUrl: string) => {
   const [episodes, setEpisodes] = useState<PodcastEpisode[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -34,7 +32,7 @@ export const usePodcastFeed = () => {
         });
 
         // Use a CORS proxy for RSS feed
-        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(RSS_FEED_URL)}`;
+        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(feedUrl)}`;
         const feed = await parser.parseURL(proxyUrl);
 
         const parsedEpisodes: PodcastEpisode[] = feed.items.map((item: any, index: number) => {
@@ -82,7 +80,7 @@ export const usePodcastFeed = () => {
     };
 
     fetchPodcastFeed();
-  }, []);
+  }, [feedUrl]);
 
   return { episodes, loading, error };
 };

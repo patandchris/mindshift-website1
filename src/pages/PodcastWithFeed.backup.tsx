@@ -8,7 +8,7 @@ import mamInitialsLogo from "@/assets/mam-initials-logo.png";
 import { usePodcastFeed } from "@/hooks/usePodcastFeed";
 
 const PodcastWithFeed = () => {
-  const { episodes, loading, error } = usePodcastFeed();
+  const { episodes, loading, error } = usePodcastFeed('https://feeds.buzzsprout.com/2418156.rss');
 
   if (loading) {
     return (
