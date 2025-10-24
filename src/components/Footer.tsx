@@ -8,7 +8,7 @@ const Footer = () => {
       name: "Coaching",
       path: "/coaching-program"
     }, {
-      name: "Success Stories",
+      name: "Real Results from Real Clients",
       path: "/#success-stories"
     }],
     resources: [{
