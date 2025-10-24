@@ -191,7 +191,24 @@ const CoachingProgram = () => {
         {/* CTA Section */}
         <section className="section-padding bg-background">
           <div className="container-premium">
-            
+            <Card className="max-w-2xl mx-auto bg-card border border-border">
+              <CardContent className="p-12 flex flex-col items-center text-center">
+                <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6">
+                  Book a free MindShift Breakthrough Session to uncover what's really holding you back
+                </h2>
+                <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
+                  Get a clear plan to take back control of your life, career, and success.
+                </p>
+                <Button 
+                  variant="default" 
+                  size="lg" 
+                  className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+                  onClick={() => window.open('https://calendly.com/patandchris/30min', '_blank')}
+                >
+                  Book a Discovery Call
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </section>
       </main>
