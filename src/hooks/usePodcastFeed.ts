@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Parser from 'rss-parser';
 
 export interface PodcastEpisode {
   id: string;
@@ -12,6 +11,14 @@ export interface PodcastEpisode {
   thumbnail?: string;
 }
 
+const getElementText = (element: Element | null, tagName: string): string => {
+  return element?.querySelector(tagName)?.textContent || '';
+};
+
+const getElementAttribute = (element: Element | null, tagName: string, attribute: string): string => {
+  return element?.querySelector(tagName)?.getAttribute(attribute) || '';
+};
+
 export const usePodcastFeed = (feedUrl: string) => {
   const [episodes, setEpisodes] = useState<PodcastEpisode[]>([]);
   const [loading, setLoading] = useState(true);
@@ -21,48 +28,49 @@ export const usePodcastFeed = (feedUrl: string) => {
     const fetchPodcastFeed = async () => {
       try {
         setLoading(true);
-        const parser = new Parser({
-          customFields: {
-            item: [
-              ['itunes:duration', 'duration'],
-              ['itunes:episode', 'episode'],
-              ['itunes:image', 'image'],
-            ],
-          },
-        });
-
+        
         // Use a CORS proxy for RSS feed
         const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(feedUrl)}`;
-        const feed = await parser.parseURL(proxyUrl);
-
-        const parsedEpisodes: PodcastEpisode[] = feed.items.map((item: any, index: number) => {
+        const response = await fetch(proxyUrl);
+        const xmlText = await response.text();
+        
+        // Parse XML using DOMParser
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        
+        const items = xmlDoc.querySelectorAll('item');
+        const parsedEpisodes: PodcastEpisode[] = Array.from(items).map((item, index) => {
           // Parse duration from seconds or HH:MM:SS format
+          const durationText = getElementText(item, 'itunes\\:duration') || getElementText(item, 'duration');
           let formattedDuration = '0:00';
-          if (item.duration) {
-            const duration = item.duration as string;
-            if (duration.includes(':')) {
-              formattedDuration = duration;
+          if (durationText) {
+            if (durationText.includes(':')) {
+              formattedDuration = durationText;
             } else {
-              const seconds = parseInt(duration);
+              const seconds = parseInt(durationText);
               const minutes = Math.floor(seconds / 60);
               const remainingSeconds = seconds % 60;
               formattedDuration = `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
             }
           }
 
+          const episodeNumber = getElementText(item, 'itunes\\:episode') || getElementText(item, 'episode');
+          const pubDate = getElementText(item, 'pubDate');
+          const thumbnail = getElementAttribute(item, 'itunes\\:image', 'href') || getElementAttribute(item, 'image', 'href');
+
           return {
-            id: item.guid || `episode-${index}`,
-            title: item.title || 'Untitled Episode',
-            description: item.contentSnippet || item.content || '',
+            id: getElementText(item, 'guid') || `episode-${index}`,
+            title: getElementText(item, 'title') || 'Untitled Episode',
+            description: getElementText(item, 'description') || '',
             duration: formattedDuration,
-            date: item.pubDate ? new Date(item.pubDate).toLocaleDateString('en-US', {
+            date: pubDate ? new Date(pubDate).toLocaleDateString('en-US', {
               month: 'short',
               day: 'numeric',
               year: 'numeric'
             }) : '',
-            episode: parseInt(item.episode as string) || index + 1,
-            audioUrl: item.enclosure?.url || '',
-            thumbnail: item.image?.['@_href'] || undefined,
+            episode: parseInt(episodeNumber) || index + 1,
+            audioUrl: getElementAttribute(item, 'enclosure', 'url'),
+            thumbnail: thumbnail || undefined,
           };
         });
 
