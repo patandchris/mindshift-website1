@@ -11,6 +11,7 @@ import CoachingProgram from "./pages/CoachingProgram";
 import NotFound from "./pages/NotFound";
 import UploadVideo from "./pages/UploadVideo";
 import Auth from "./pages/Auth";
+import MindshiftApp from "./pages/MindshiftApp";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/lead-magnet" element={<LeadMagnetPage />} />
           <Route path="/upload-video" element={<UploadVideo />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/mindshift-app" element={<MindshiftApp />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
