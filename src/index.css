@@ -11,23 +11,23 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Core brand colors - Navy blue and bronze gold theme */
-    --background: 226 38% 23%;       /* Navy blue background #242E50 */
+    --background: 225 44% 14%;        /* Dark navy blue background #141C34 */
     --foreground: 0 0% 100%;         /* Pure white for maximum readability */
 
-    --card: 226 38% 18%;             /* Darker navy for cards */
+    --card: 225 44% 10%;              /* Darker navy for cards */
     --card-foreground: 0 0% 98%;
 
-    --popover: 226 38% 18%;
+    --popover: 225 44% 10%;
     --popover-foreground: 0 0% 98%;
 
     /* Bronze gold for CTAs and highlights #907015 */
     --primary: 44 75% 32%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 226 38% 28%;        /* Lighter navy */
+    --secondary: 225 44% 18%;         /* Lighter navy */
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 226 30% 30%;
+    --muted: 225 40% 20%;
     --muted-foreground: 0 0% 75%;
 
     --accent: 44 75% 32%;            /* Bronze gold */
@@ -36,8 +36,8 @@ All colors MUST be HSL.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 226 30% 35%;
-    --input: 226 30% 35%;
+    --border: 225 40% 25%;
+    --input: 225 40% 25%;
     --ring: 44 75% 32%;
 
     --radius: 0.75rem;
@@ -48,7 +48,7 @@ All colors MUST be HSL.
     /* Elegant shadows with gold glow */
     --shadow-gold: 0 10px 30px -10px hsl(44 75% 32% / 0.4);
     --shadow-glow: 0 0 40px hsl(44 75% 32% / 0.5);
-    --shadow-elegant: 0 20px 40px -10px hsl(226 38% 10% / 0.5);
+    --shadow-elegant: 0 20px 40px -10px hsl(225 44% 8% / 0.5);
     
     /* Smooth premium transitions */
     --transition-elegant: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -64,24 +64,24 @@ All colors MUST be HSL.
 
   .dark {
     /* Same as root for consistent theme */
-    --background: 226 38% 23%;
+    --background: 225 44% 14%;
     --foreground: 0 0% 100%;
-    --card: 226 38% 18%;
+    --card: 225 44% 10%;
     --card-foreground: 0 0% 98%;
-    --popover: 226 38% 18%;
+    --popover: 225 44% 10%;
     --popover-foreground: 0 0% 98%;
     --primary: 44 75% 32%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 226 38% 28%;
+    --secondary: 225 44% 18%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 226 30% 30%;
+    --muted: 225 40% 20%;
     --muted-foreground: 0 0% 75%;
     --accent: 44 75% 32%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 226 30% 35%;
-    --input: 226 30% 35%;
+    --border: 225 40% 25%;
+    --input: 225 40% 25%;
     --ring: 44 75% 32%;
   }
 }
