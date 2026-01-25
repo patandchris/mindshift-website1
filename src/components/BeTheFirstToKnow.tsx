@@ -7,7 +7,7 @@ const BeTheFirstToKnow = () => {
   return (
     <section className="py-8 md:py-12 bg-background">
       <div className="container-premium">
-        <Card className="max-w-2xl mx-auto bg-card border border-border">
+        <Card className="max-w-2xl mx-auto bg-secondary border border-border">
           <CardContent className="p-12 flex flex-col items-center text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6">
               Still Feeling Stuck — Even After Trying Everything?

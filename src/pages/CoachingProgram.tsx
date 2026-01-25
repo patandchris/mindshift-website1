@@ -117,11 +117,11 @@ const CoachingProgram = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {programWeeks.map((week, index) => <Card key={index} className="bg-card border border-border hover:shadow-elegant transition-all duration-300">
+              {programWeeks.map((week, index) => <Card key={index} className="bg-secondary border-2 border-accent/20 hover:border-accent/50 hover:shadow-glow hover:-translate-y-1 transition-all duration-300">
                   <CardHeader>
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-medium text-accent">{week.week}</span>
-                      <div className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center border border-accent/30">
                         <span className="text-sm font-bold text-accent">{index + 1}</span>
                       </div>
                     </div>
@@ -185,7 +185,7 @@ const CoachingProgram = () => {
             </div>
 
             <div className="max-w-2xl mx-auto">
-              {testimonials.map((testimonial, index) => <Card key={index} className="bg-card border border-border">
+              {testimonials.map((testimonial, index) => <Card key={index} className="bg-secondary border border-border">
                   <CardContent className="p-6">
                     <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-4">
                       {testimonial.result}
