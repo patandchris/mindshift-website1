@@ -56,9 +56,9 @@ const Podcast = () => {
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
               <Button 
-                variant="outline" 
+                variant="default" 
                 size="lg" 
-                className="border-accent text-accent hover:bg-accent hover:text-background"
+                className="bg-gradient-gold text-background font-semibold hover:shadow-glow transition-all duration-300"
                 onClick={() => window.open('https://podcasts.apple.com/us/podcast/the-middle-aged-miserable-podcast/id1780040120', '_blank')}
               >
                 Listen on Apple Podcasts
