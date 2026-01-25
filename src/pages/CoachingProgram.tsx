@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import AnimatedWeekCard from "@/components/AnimatedWeekCard";
 import { CheckCircle, Users, TrendingUp, Clock, Target, Brain, Zap } from "lucide-react";
 import mindshiftLogo from "@/assets/mindshift-logo.png";
 const CoachingProgram = () => {
@@ -117,20 +118,15 @@ const CoachingProgram = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {programWeeks.map((week, index) => <Card key={index} className="bg-secondary border-2 border-accent/20 hover:border-accent/50 hover:shadow-glow hover:-translate-y-1 transition-all duration-300">
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-medium text-accent">{week.week}</span>
-                      <div className="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center border border-accent/30">
-                        <span className="text-sm font-bold text-accent">{index + 1}</span>
-                      </div>
-                    </div>
-                    <CardTitle className="text-foreground">{week.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{week.description}</p>
-                  </CardContent>
-                </Card>)}
+              {programWeeks.map((week, index) => (
+                <AnimatedWeekCard
+                  key={index}
+                  week={week.week}
+                  title={week.title}
+                  description={week.description}
+                  index={index}
+                />
+              ))}
             </div>
           </div>
         </section>
