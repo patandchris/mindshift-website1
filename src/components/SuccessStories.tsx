@@ -80,7 +80,7 @@ const SuccessStories = () => {
                 Client Success Story
               </h3>
               <div 
-                className="relative aspect-[9/16] rounded-xl overflow-hidden cursor-pointer group max-w-sm mx-auto lg:ml-auto lg:mr-8 shadow-glow"
+                className="relative aspect-[9/16] rounded-xl overflow-hidden cursor-pointer group max-w-sm mx-auto lg:ml-auto lg:mr-8 border border-border"
               >
                 <video
                   ref={videoRef}
