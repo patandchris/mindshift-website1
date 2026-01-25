@@ -10,45 +10,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Core brand colors - Premium black and gold theme */
-    --background: 0 0% 0%;           /* Solid black background */
+    /* Core brand colors - Navy blue and bronze gold theme */
+    --background: 226 38% 23%;       /* Navy blue background #242E50 */
     --foreground: 0 0% 100%;         /* Pure white for maximum readability */
 
-    --card: 0 0% 9%;
+    --card: 226 38% 18%;             /* Darker navy for cards */
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 9%;
+    --popover: 226 38% 18%;
     --popover-foreground: 0 0% 98%;
 
-    /* Premium gold for CTAs and highlights */
-    --primary: 48 96% 65%;
-    --primary-foreground: 0 0% 6%;
+    /* Bronze gold for CTAs and highlights #907015 */
+    --primary: 44 75% 32%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 15%;
+    --secondary: 226 38% 28%;        /* Lighter navy */
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 226 30% 30%;
+    --muted-foreground: 0 0% 75%;
 
-    --accent: 48 96% 65%;
-    --accent-foreground: 0 0% 6%;
+    --accent: 44 75% 32%;            /* Bronze gold */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 48 96% 65%;
+    --border: 226 30% 35%;
+    --input: 226 30% 35%;
+    --ring: 44 75% 32%;
 
     --radius: 0.75rem;
 
-    /* Premium gold gradient for special elements */
-    --gradient-gold: linear-gradient(135deg, hsl(48 96% 65%) 0%, hsl(45 100% 70%) 50%, hsl(50 90% 60%) 100%);
+    /* Bronze gold gradient for special elements */
+    --gradient-gold: linear-gradient(135deg, hsl(44 75% 32%) 0%, hsl(42 70% 38%) 50%, hsl(40 65% 42%) 100%);
     
     /* Elegant shadows with gold glow */
-    --shadow-gold: 0 10px 30px -10px hsl(48 96% 65% / 0.3);
-    --shadow-glow: 0 0 40px hsl(48 96% 65% / 0.4);
-    --shadow-elegant: 0 20px 40px -10px hsl(0 0% 0% / 0.4);
+    --shadow-gold: 0 10px 30px -10px hsl(44 75% 32% / 0.4);
+    --shadow-glow: 0 0 40px hsl(44 75% 32% / 0.5);
+    --shadow-elegant: 0 20px 40px -10px hsl(226 38% 10% / 0.5);
     
     /* Smooth premium transitions */
     --transition-elegant: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -63,26 +63,26 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Same as root for consistent dark theme */
-    --background: 0 0% 0%;
+    /* Same as root for consistent theme */
+    --background: 226 38% 23%;
     --foreground: 0 0% 100%;
-    --card: 0 0% 9%;
+    --card: 226 38% 18%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 9%;
+    --popover: 226 38% 18%;
     --popover-foreground: 0 0% 98%;
-    --primary: 48 96% 65%;
-    --primary-foreground: 0 0% 6%;
-    --secondary: 0 0% 15%;
+    --primary: 44 75% 32%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 226 38% 28%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 65%;
-    --accent: 48 96% 65%;
-    --accent-foreground: 0 0% 6%;
+    --muted: 226 30% 30%;
+    --muted-foreground: 0 0% 75%;
+    --accent: 44 75% 32%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 48 96% 65%;
+    --border: 226 30% 35%;
+    --input: 226 30% 35%;
+    --ring: 44 75% 32%;
   }
 }
 
