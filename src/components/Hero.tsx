@@ -50,7 +50,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex justify-center">
             <Link to="/coaching-program" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              <Button variant="default" size="lg" className="group bg-gradient-gold text-background font-semibold hover:shadow-glow transition-all duration-300">
+              <Button variant="default" size="lg" className="group bg-gradient-gold text-background font-bold hover:shadow-glow transition-all duration-300">
                 Start Your Transformation
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>

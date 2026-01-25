@@ -12,7 +12,13 @@ const Homepage = () => {
       <Header />
       <main>
         <Hero />
+        <div className="container-premium py-8">
+          <Separator className="bg-gradient-gold h-[2px]" />
+        </div>
         <SuccessStories />
+        <div className="container-premium py-8">
+          <Separator className="bg-gradient-gold h-[2px]" />
+        </div>
         <BeTheFirstToKnow />
         <div className="container-premium py-12">
           <Separator className="bg-gradient-gold h-[2px]" />

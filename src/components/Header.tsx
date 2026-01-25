@@ -48,7 +48,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-accent ${
+                className={`text-lg font-bold transition-colors hover:text-accent ${
                   location.pathname === item.path
                     ? "text-accent"
                     : "text-foreground"
@@ -64,7 +64,7 @@ const Header = () => {
             <Button 
               variant="default" 
               size="lg" 
-              className="bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+              className="bg-gradient-gold text-background font-bold hover:shadow-glow transition-all duration-300"
               asChild
             >
               <Link to="/coaching-program" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Start Your Transformation</Link>
@@ -93,7 +93,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="block px-4 py-2 text-sm font-medium hover:text-accent hover:bg-accent/10 rounded-lg transition-colors"
+                  className="block px-4 py-2 text-lg font-bold hover:text-accent hover:bg-accent/10 rounded-lg transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -103,7 +103,7 @@ const Header = () => {
                 <Button 
                   variant="default" 
                   size="lg" 
-                  className="w-full bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+                  className="w-full bg-gradient-gold text-background font-bold hover:shadow-glow transition-all duration-300"
                   asChild
                 >
                   <Link to="/coaching-program" onClick={() => { setIsMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
