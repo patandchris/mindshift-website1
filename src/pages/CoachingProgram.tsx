@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { CheckCircle, Users, TrendingUp, Clock, Target, Brain, Zap } from "lucide-react";
 import mindshiftLogo from "@/assets/mindshift-logo.png";
 const CoachingProgram = () => {
@@ -80,8 +81,7 @@ const CoachingProgram = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
-                  
-                  <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-black" onClick={() => window.open('https://calendly.com/patandchris/30min', '_blank')}>
+                  <Button variant="default" size="lg" className="bg-gradient-gold text-background font-bold hover:shadow-glow transition-all duration-300" onClick={() => window.open('https://calendly.com/patandchris/30min', '_blank')}>
                     Book a Discovery Call
                   </Button>
                 </div>
@@ -98,6 +98,11 @@ const CoachingProgram = () => {
             </div>
           </div>
         </section>
+
+        {/* Gold Divider */}
+        <div className="container-premium">
+          <Separator className="bg-gradient-to-r from-transparent via-accent to-transparent h-[2px]" />
+        </div>
 
         {/* Program Breakdown */}
         <section className="section-padding bg-background pt-8">
@@ -130,6 +135,11 @@ const CoachingProgram = () => {
           </div>
         </section>
 
+        {/* Gold Divider */}
+        <div className="container-premium">
+          <Separator className="bg-gradient-to-r from-transparent via-accent to-transparent h-[2px]" />
+        </div>
+
         {/* Outcomes */}
         <section className="section-padding bg-background">
           <div className="container-premium">
@@ -146,16 +156,21 @@ const CoachingProgram = () => {
               {outcomes.map((outcome, index) => {
               const Icon = outcome.icon;
               return <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-secondary rounded-xl flex items-center justify-center mx-auto mb-4 border border-border">
                       <Icon className="w-8 h-8 text-accent" />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-3">{outcome.title}</h3>
+                    <h3 className="text-xl font-bold text-accent mb-3">{outcome.title}</h3>
                     <p className="text-muted-foreground">{outcome.description}</p>
                   </div>;
             })}
             </div>
           </div>
         </section>
+
+        {/* Gold Divider */}
+        <div className="container-premium">
+          <Separator className="bg-gradient-to-r from-transparent via-accent to-transparent h-[2px]" />
+        </div>
 
         {/* Testimonials */}
         <section id="testimonials" className="section-padding bg-background">
@@ -188,10 +203,15 @@ const CoachingProgram = () => {
           </div>
         </section>
 
+        {/* Gold Divider */}
+        <div className="container-premium">
+          <Separator className="bg-gradient-to-r from-transparent via-accent to-transparent h-[2px]" />
+        </div>
+
         {/* CTA Section */}
         <section className="section-padding bg-background">
           <div className="container-premium">
-            <Card className="max-w-2xl mx-auto bg-card border border-border">
+            <Card className="max-w-2xl mx-auto bg-secondary border border-border">
               <CardContent className="p-12 flex flex-col items-center text-center">
                 <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6">
                   Book a free MindShift Breakthrough Session
@@ -202,7 +222,7 @@ const CoachingProgram = () => {
                 <Button 
                   variant="default" 
                   size="lg" 
-                  className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+                  className="group bg-gradient-gold text-background font-bold hover:shadow-glow transition-all duration-300"
                   onClick={() => window.open('https://calendly.com/patandchris/30min', '_blank')}
                 >
                   Book a Discovery Call

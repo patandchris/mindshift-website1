@@ -14,7 +14,7 @@ All colors MUST be HSL.
     --background: 225 44% 14%;        /* Dark navy blue background #141C34 */
     --foreground: 0 0% 100%;         /* Pure white for maximum readability */
 
-    --card: 225 44% 10%;              /* Darker navy for cards */
+    --card: 225 44% 12%;              /* Slightly lighter navy for cards - better contrast */
     --card-foreground: 0 0% 98%;
 
     --popover: 225 44% 10%;
