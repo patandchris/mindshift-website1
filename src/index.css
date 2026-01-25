@@ -12,7 +12,7 @@ All colors MUST be HSL.
   :root {
     /* Core brand colors - Navy blue and bronze gold theme */
     --background: 225 44% 14%;        /* Dark navy blue background #141C34 */
-    --foreground: 0 0% 100%;         /* Pure white for maximum readability */
+    --foreground: 0 0% 98%;          /* Grey-white for refined readability */
 
     --card: 225 44% 12%;              /* Slightly lighter navy for cards - better contrast */
     --card-foreground: 0 0% 98%;
