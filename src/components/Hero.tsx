@@ -4,10 +4,8 @@ import { Link } from "react-router-dom";
 import mindshiftLogo from "@/assets/mindshift-logo-new.png";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with subtle pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/95">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(48_96%_65%_/_0.1),transparent_70%)]" />
-      </div>
+      {/* Background */}
+      <div className="absolute inset-0 bg-background" />
 
       <div className="container-premium relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -52,7 +50,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex justify-center">
             <Link to="/coaching-program" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              <Button variant="default" size="lg" className="group bg-gradient-gold text-primary-foreground font-semibold hover:shadow-glow transition-all duration-300">
+              <Button variant="default" size="lg" className="group bg-gradient-gold text-background font-semibold hover:shadow-glow transition-all duration-300">
                 Start Your Transformation
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>

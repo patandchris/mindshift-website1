@@ -43,7 +43,7 @@ const Podcast = () => {
               <Button 
                 variant="default" 
                 size="lg" 
-                className="bg-gradient-gold text-primary-foreground font-semibold hover:shadow-glow transition-all duration-300"
+                className="bg-gradient-gold text-background font-semibold hover:shadow-glow transition-all duration-300"
                 onClick={() => window.open('https://open.spotify.com/show/54LfdBGDiJrJtPSRAFVWyV?si=e1d3705155764e1a', '_blank')}
               >
                 Listen on Spotify
@@ -52,7 +52,7 @@ const Podcast = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-accent text-accent hover:bg-accent hover:text-primary-foreground"
+                className="border-accent text-accent hover:bg-accent hover:text-background"
                 onClick={() => window.open('https://podcasts.apple.com/us/podcast/the-middle-aged-miserable-podcast/id1780040120', '_blank')}
               >
                 Listen on Apple Podcasts
@@ -61,7 +61,7 @@ const Podcast = () => {
               <Button 
                 variant="default" 
                 size="lg" 
-                className="bg-gradient-gold text-primary-foreground font-semibold hover:shadow-glow transition-all duration-300"
+                className="bg-gradient-gold text-background font-semibold hover:shadow-glow transition-all duration-300"
                 onClick={() => window.open('https://www.youtube.com/@patandchris', '_blank')}
               >
                 Watch on YouTube
@@ -117,7 +117,7 @@ const Podcast = () => {
                       <p className="text-sm text-muted-foreground mb-3 line-clamp-3">
                         {episode.description}
                       </p>
-                      <button className="bg-gradient-gold text-primary-foreground font-semibold py-2 px-4 rounded-lg hover:shadow-glow transition-all">
+                      <button className="bg-gradient-gold text-background font-semibold py-2 px-4 rounded-lg hover:shadow-glow transition-all">
                         Listen Now
                       </button>
                     </a>
@@ -130,7 +130,7 @@ const Podcast = () => {
                     <Button
                       variant="default"
                       size="lg"
-                      className="bg-gradient-gold text-primary-foreground font-semibold hover:shadow-glow transition-all duration-300"
+                      className="bg-gradient-gold text-background font-semibold hover:shadow-glow transition-all duration-300"
                       onClick={() => setDisplayCount(episodes.length)}
                     >
                       Click for More Episodes
