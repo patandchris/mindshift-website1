@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import { ExternalLink } from "lucide-react";
 import mamLogo from "@/assets/mam-logo.png";
 import { useState } from "react";
@@ -36,6 +37,11 @@ const Podcast = () => {
           </div>
         </section>
 
+        {/* Gold Divider */}
+        <div className="container-premium">
+          <Separator className="bg-gradient-to-r from-transparent via-accent to-transparent h-[2px]" />
+        </div>
+
         {/* Subscribe Buttons */}
         <section className="py-4 bg-background">
           <div className="container-premium">
@@ -70,6 +76,11 @@ const Podcast = () => {
             </div>
           </div>
         </section>
+
+        {/* Gold Divider */}
+        <div className="container-premium">
+          <Separator className="bg-gradient-to-r from-transparent via-accent to-transparent h-[2px]" />
+        </div>
 
         {/* Latest Episodes Section */}
         <section className="py-6 bg-background">

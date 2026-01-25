@@ -13,15 +13,15 @@ const Homepage = () => {
       <main>
         <Hero />
         <div className="container-premium py-8">
-          <Separator className="bg-gradient-gold h-[2px]" />
+          <Separator className="bg-gradient-to-r from-transparent via-accent to-transparent h-[2px]" />
         </div>
         <SuccessStories />
         <div className="container-premium py-8">
-          <Separator className="bg-gradient-gold h-[2px]" />
+          <Separator className="bg-gradient-to-r from-transparent via-accent to-transparent h-[2px]" />
         </div>
         <BeTheFirstToKnow />
         <div className="container-premium py-12">
-          <Separator className="bg-gradient-gold h-[2px]" />
+          <Separator className="bg-gradient-to-r from-transparent via-accent to-transparent h-[2px]" />
         </div>
         <PodcastPromo />
       </main>
