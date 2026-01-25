@@ -18,7 +18,7 @@ const BeTheFirstToKnow = () => {
             <Button 
               variant="default" 
               size="lg" 
-              className="group bg-gradient-gold text-black font-semibold hover:shadow-glow transition-all duration-300"
+              className="group bg-gradient-gold text-primary-foreground font-semibold hover:shadow-glow transition-all duration-300"
               onClick={() => window.open('https://calendly.com/patandchris/30min', '_blank')}
             >
               Book a Discovery Call
