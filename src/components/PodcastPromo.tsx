@@ -47,7 +47,7 @@ const PodcastPromo = () => {
           <div className="flex justify-center">
             <Link to="/podcast" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <Button 
-                className="group bg-gradient-gold text-primary-foreground font-semibold hover:shadow-glow transition-all duration-300" 
+                className="group bg-gradient-gold text-background font-semibold hover:shadow-glow transition-all duration-300" 
                 size="lg"
               >
                 Listen Now

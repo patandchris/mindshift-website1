@@ -35,10 +35,31 @@ export const usePodcastFeed = (feedUrl: string) => {
       try {
         setLoading(true);
         
-        // Use a CORS proxy for RSS feed
-        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(feedUrl)}`;
-        const response = await fetch(proxyUrl);
-        const xmlText = await response.text();
+        // Use corsproxy.io as primary, with fallback options
+        const proxyUrls = [
+          `https://corsproxy.io/?${encodeURIComponent(feedUrl)}`,
+          `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(feedUrl)}`,
+        ];
+        
+        let xmlText = '';
+        let fetchError = null;
+        
+        for (const proxyUrl of proxyUrls) {
+          try {
+            const response = await fetch(proxyUrl);
+            if (response.ok) {
+              xmlText = await response.text();
+              break;
+            }
+          } catch (err) {
+            fetchError = err;
+            continue;
+          }
+        }
+        
+        if (!xmlText) {
+          throw fetchError || new Error('Failed to fetch from all proxies');
+        }
         
         // Parse XML using DOMParser
         const parser = new DOMParser();
