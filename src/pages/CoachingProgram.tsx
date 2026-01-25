@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import AnimatedWeekCard from "@/components/AnimatedWeekCard";
 import { CheckCircle, Users, TrendingUp, Clock, Target, Brain, Zap } from "lucide-react";
-import mindshiftLogo from "@/assets/mindshift-logo.png";
+import mindshiftLogo from "@/assets/mindshift-logo-new.png";
 const CoachingProgram = () => {
   const programWeeks = [{
     week: "Weeks 1-2",
