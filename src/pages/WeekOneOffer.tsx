@@ -2,8 +2,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Brain, Moon, Target, Sparkles } from "lucide-react";
+import { CheckCircle, Brain, Moon, Target, Lightbulb } from "lucide-react";
 import mindshiftLogo from "@/assets/mindshift-logo-new.png";
+import patChrisLogo from "@/assets/pat-chris-logo.png";
 
 const WeekOneOffer = () => {
   const weekOneIncludes = [
@@ -23,9 +24,9 @@ const WeekOneOffer = () => {
       icon: Target
     },
     {
-      title: "An NLP Change Pattern",
-      description: "A Neuro Linguistic Programming visualization exercise audio track that will rewire your mind to change the way you think about success.",
-      icon: Sparkles
+      title: "Mindset Focus for the Week",
+      description: "A practical awareness shift that trains you to notice limiting self-talk, internal resistance, and unconscious patterns as they occur.",
+      icon: Lightbulb
     }
   ];
 
@@ -38,14 +39,23 @@ const WeekOneOffer = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header hideNavAndCta />
+      <Header />
       
       <main className="pt-24">
-        {/* Hero Section with Logo */}
+        {/* Hero Section with Logos */}
         <section className="py-12">
           <div className="container-premium">
             <div className="max-w-4xl mx-auto text-center">
-              {/* MindShift Logo - Same size as homepage */}
+              {/* Pat & Chris Logo */}
+              <div className="flex justify-center mb-8">
+                <img
+                  src={patChrisLogo}
+                  alt="Pat & Chris Coaching"
+                  className="h-20 w-auto"
+                />
+              </div>
+              
+              {/* MindShift Logo */}
               <div className="flex justify-center mb-8">
                 <div className="p-12 px-[36px] my-0 mx-[100px] py-[48px]">
                   <img
@@ -59,13 +69,21 @@ const WeekOneOffer = () => {
           </div>
         </section>
 
-        {/* What You'll Do Section */}
+        {/* What Week One Does Section */}
         <section className="py-12 bg-card/50">
           <div className="container-premium">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-                During Week One, you will begin the process of:
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+                What Week One of <span className="text-accent">MindShift</span> Does
               </h2>
+              
+              <p className="text-xl text-muted-foreground text-center mb-8">
+                This week is focused on beliefs — because beliefs shape everything else.
+              </p>
+              
+              <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+                During Week One, you will begin the process of:
+              </h3>
               
               <div className="space-y-4 mb-8">
                 {beliefProcessPoints.map((point, index) => (
@@ -75,6 +93,18 @@ const WeekOneOffer = () => {
                   </div>
                 ))}
               </div>
+
+              {/* This is not positive thinking box */}
+              <Card className="bg-[hsl(225_44%_12%)] border-accent/30 mt-12">
+                <CardContent className="p-8 text-center">
+                  <p className="text-xl md:text-2xl font-bold text-foreground mb-2">
+                    This is not positive thinking.
+                  </p>
+                  <p className="text-xl md:text-2xl font-bold text-accent">
+                    This is unconscious reprogramming.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
