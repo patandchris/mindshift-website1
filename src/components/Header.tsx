@@ -38,13 +38,23 @@ const Header = ({ hideNavAndCta = false }: HeaderProps) => {
       <div className="container-premium">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <Link to="/#top" className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <img
-              src={patChrisLogo}
-              alt="Pat & Chris Coaching"
-              className="h-16 w-auto"
-            />
-          </Link>
+          {hideNavAndCta ? (
+            <div className="flex items-center">
+              <img
+                src={patChrisLogo}
+                alt="Pat & Chris Coaching"
+                className="h-16 w-auto"
+              />
+            </div>
+          ) : (
+            <Link to="/#top" className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <img
+                src={patChrisLogo}
+                alt="Pat & Chris Coaching"
+                className="h-16 w-auto"
+              />
+            </Link>
+          )}
 
           {/* Desktop Navigation */}
           {!hideNavAndCta && (
