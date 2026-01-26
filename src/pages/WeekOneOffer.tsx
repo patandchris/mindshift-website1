@@ -2,31 +2,30 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Brain, Moon, Target, Lightbulb } from "lucide-react";
+import { CheckCircle, Brain, Moon, Target, Sparkles } from "lucide-react";
 import mindshiftLogo from "@/assets/mindshift-logo-new.png";
-import patChrisLogo from "@/assets/pat-chris-logo.png";
 
 const WeekOneOffer = () => {
   const weekOneIncludes = [
     {
-      title: "Success Fundamentals: Beliefs",
+      title: "A Guide to Beliefs",
       description: "Understand how beliefs are formed, why they operate automatically, and how they silently dictate your confidence, income, and results.",
       icon: Brain
     },
     {
-      title: "Guided Hypnosis (Night and Day Versions)",
+      title: "Guided Hypnosis",
       description: "Begin upgrading your unconscious programming at the point where resistance is lowest, allowing new empowering beliefs to take hold naturally.",
       icon: Moon
     },
     {
-      title: "Belief Awareness Exercises",
+      title: "Belief Awareness Exercise",
       description: "Simple, structured questions designed to expose where you may be unknowingly limiting your own success.",
       icon: Target
     },
     {
-      title: "Mindset Focus for the Week",
-      description: "A practical awareness shift that trains you to notice limiting self-talk, internal resistance, and unconscious patterns as they occur.",
-      icon: Lightbulb
+      title: "NLP Change Pattern",
+      description: "A Neuro Linguistic Programming change pattern designed to rewire your unconscious programming towards success.",
+      icon: Sparkles
     }
   ];
 
@@ -39,25 +38,16 @@ const WeekOneOffer = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Header hideNavAndCta />
       
       <main className="pt-24">
-        {/* Hero Section with Logos */}
-        <section className="py-12">
+        {/* Hero Section with MindShift Logo */}
+        <section className="py-6">
           <div className="container-premium">
             <div className="max-w-4xl mx-auto text-center">
-              {/* Pat & Chris Logo */}
-              <div className="flex justify-center mb-8">
-                <img
-                  src={patChrisLogo}
-                  alt="Pat & Chris Coaching"
-                  className="h-20 w-auto"
-                />
-              </div>
-              
               {/* MindShift Logo */}
-              <div className="flex justify-center mb-8">
-                <div className="p-12 px-[36px] my-0 mx-[100px] py-[48px]">
+              <div className="flex justify-center">
+                <div className="px-8 py-6">
                   <img
                     src={mindshiftLogo}
                     alt="The MindShift System"
@@ -70,10 +60,10 @@ const WeekOneOffer = () => {
         </section>
 
         {/* What Week One Does Section */}
-        <section className="py-12 bg-card/50">
+        <section className="py-10 bg-card/50">
           <div className="container-premium">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-muted-foreground">
                 What Week One of <span className="text-accent">MindShift</span> Does
               </h2>
               
@@ -81,7 +71,7 @@ const WeekOneOffer = () => {
                 This week is focused on beliefs — because beliefs shape everything else.
               </p>
               
-              <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+              <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-muted-foreground">
                 During Week One, you will begin the process of:
               </h3>
               
@@ -89,7 +79,7 @@ const WeekOneOffer = () => {
                 {beliefProcessPoints.map((point, index) => (
                   <div key={index} className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                    <p className="text-lg text-foreground">{point}</p>
+                    <p className="text-lg text-muted-foreground">{point}</p>
                   </div>
                 ))}
               </div>
@@ -97,7 +87,7 @@ const WeekOneOffer = () => {
               {/* This is not positive thinking box */}
               <Card className="bg-[hsl(225_44%_12%)] border-accent/30 mt-12">
                 <CardContent className="p-8 text-center">
-                  <p className="text-xl md:text-2xl font-bold text-foreground mb-2">
+                  <p className="text-xl md:text-2xl font-bold text-muted-foreground mb-2">
                     This is not positive thinking.
                   </p>
                   <p className="text-xl md:text-2xl font-bold text-accent">
@@ -113,10 +103,10 @@ const WeekOneOffer = () => {
         <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent" />
 
         {/* What's Included Section */}
-        <section className="py-16">
+        <section className="py-14">
           <div className="container-premium">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-muted-foreground">
                 What's Included in <span className="text-accent">Week One</span>
               </h2>
               
@@ -129,7 +119,7 @@ const WeekOneOffer = () => {
                           <item.icon className="h-6 w-6 text-accent" />
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold mb-3 text-foreground">{item.title}</h3>
+                          <h3 className="text-xl font-bold mb-3 text-accent">{item.title}</h3>
                           <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                         </div>
                       </div>
@@ -145,10 +135,10 @@ const WeekOneOffer = () => {
         <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent" />
 
         {/* CTA Section */}
-        <section className="py-16 bg-card/50">
+        <section className="py-14 bg-card/50">
           <div className="container-premium">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-muted-foreground">
                 Start Week One of <span className="text-accent">MindShift</span>
               </h2>
               
@@ -160,7 +150,7 @@ const WeekOneOffer = () => {
               </p>
 
               <div className="bg-background border border-accent/20 rounded-xl p-8 mb-8">
-                <p className="text-lg text-foreground mb-4">
+                <p className="text-lg text-muted-foreground mb-4">
                   For a limited time only, Week One of the MindShift System is available as a standalone entry point.
                 </p>
                 <p className="text-muted-foreground">
