@@ -4,7 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import patChrisLogo from "@/assets/pat-chris-logo.png";
 
-const Header = () => {
+interface HeaderProps {
+  hideNavAndCta?: boolean;
+}
+
+const Header = ({ hideNavAndCta = false }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
@@ -43,50 +47,56 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`text-lg font-bold transition-colors hover:text-accent ${
-                  location.pathname === item.path
-                    ? "text-accent"
-                    : "text-foreground"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
+          {!hideNavAndCta && (
+            <nav className="hidden lg:flex items-center space-x-8">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={`text-lg font-bold transition-colors hover:text-accent ${
+                    location.pathname === item.path
+                      ? "text-accent"
+                      : "text-foreground"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+          )}
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Button 
-              variant="default" 
-              size="lg" 
-              className="bg-gradient-gold text-background font-bold hover:shadow-glow transition-all duration-300"
-              asChild
-            >
-              <Link to="/coaching-program" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Start Your Transformation</Link>
-            </Button>
-          </div>
+          {!hideNavAndCta && (
+            <div className="hidden lg:block">
+              <Button 
+                variant="default" 
+                size="lg" 
+                className="bg-gradient-gold text-background font-bold hover:shadow-glow transition-all duration-300"
+                asChild
+              >
+                <Link to="/coaching-program" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Start Your Transformation</Link>
+              </Button>
+            </div>
+          )}
 
           {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
+          {!hideNavAndCta && (
+            <button
+              className="lg:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          )}
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
+        {!hideNavAndCta && isMenuOpen && (
           <div className="lg:hidden border-t border-border bg-background/95 backdrop-blur-lg">
             <nav className="py-4 space-y-2">
               {navItems.map((item) => (

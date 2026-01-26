@@ -2,9 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { CheckCircle, Brain, Moon, Sun, Target, Eye } from "lucide-react";
-import patChrisLogo from "@/assets/pat-chris-logo.png";
+import { CheckCircle, Brain, Moon, Target, Sparkles } from "lucide-react";
 import mindshiftLogo from "@/assets/mindshift-logo-new.png";
 
 const WeekOneOffer = () => {
@@ -25,9 +23,9 @@ const WeekOneOffer = () => {
       icon: Target
     },
     {
-      title: "Mindset Focus for the Week",
-      description: "A practical awareness shift that trains you to notice limiting self-talk, internal resistance, and unconscious patterns as they occur.",
-      icon: Eye
+      title: "An NLP Change Pattern",
+      description: "A Neuro Linguistic Programming visualization exercise audio track that will rewire your mind to change the way you think about success.",
+      icon: Sparkles
     }
   ];
 
@@ -40,63 +38,42 @@ const WeekOneOffer = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Header hideNavAndCta />
       
       <main className="pt-24">
-        {/* Hero Section with Logos */}
-        <section className="section-padding">
+        {/* Hero Section with Logo */}
+        <section className="py-12">
           <div className="container-premium">
             <div className="max-w-4xl mx-auto text-center">
-              {/* Logos */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
-                <img
-                  src={patChrisLogo}
-                  alt="Pat & Chris"
-                  className="h-16 md:h-20 object-contain"
-                />
-                <Separator orientation="vertical" className="hidden sm:block h-16 bg-accent/30" />
-                <img
-                  src={mindshiftLogo}
-                  alt="The MindShift System"
-                  className="h-16 md:h-20 object-contain"
-                />
+              {/* MindShift Logo - Same size as homepage */}
+              <div className="flex justify-center mb-8">
+                <div className="p-12 px-[36px] my-0 mx-[100px] py-[48px]">
+                  <img
+                    src={mindshiftLogo}
+                    alt="The MindShift System"
+                    className="w-full max-w-2xl mx-auto md:max-w-3xl"
+                  />
+                </div>
               </div>
-
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                What Week One of <span className="text-accent">MindShift</span> Does
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-                This week is focused on beliefs — because beliefs shape everything else.
-              </p>
             </div>
           </div>
         </section>
 
         {/* What You'll Do Section */}
-        <section className="section-padding bg-card/50">
+        <section className="py-12 bg-card/50">
           <div className="container-premium">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
                 During Week One, you will begin the process of:
               </h2>
               
-              <div className="space-y-4 mb-12">
+              <div className="space-y-4 mb-8">
                 {beliefProcessPoints.map((point, index) => (
                   <div key={index} className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                     <p className="text-lg text-foreground">{point}</p>
                   </div>
                 ))}
-              </div>
-
-              <div className="bg-background border border-accent/20 rounded-xl p-8 text-center">
-                <p className="text-xl md:text-2xl font-semibold text-foreground mb-2">
-                  This is not positive thinking.
-                </p>
-                <p className="text-xl md:text-2xl font-bold text-accent">
-                  This is unconscious reprogramming.
-                </p>
               </div>
             </div>
           </div>
@@ -106,7 +83,7 @@ const WeekOneOffer = () => {
         <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent" />
 
         {/* What's Included Section */}
-        <section className="section-padding">
+        <section className="py-16">
           <div className="container-premium">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
@@ -138,7 +115,7 @@ const WeekOneOffer = () => {
         <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent" />
 
         {/* CTA Section */}
-        <section className="section-padding bg-card/50">
+        <section className="py-16 bg-card/50">
           <div className="container-premium">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
