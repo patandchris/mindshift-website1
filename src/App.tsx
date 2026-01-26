@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Blog from "./pages/Blog";
 import Podcast from "./pages/Podcast";
-import LeadMagnetPage from "./pages/LeadMagnetPage";
+import WeekOneOffer from "./pages/WeekOneOffer";
 import CoachingProgram from "./pages/CoachingProgram";
 import NotFound from "./pages/NotFound";
 import UploadVideo from "./pages/UploadVideo";
@@ -26,7 +26,7 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/podcast" element={<Podcast />} />
           <Route path="/coaching-program" element={<CoachingProgram />} />
-          <Route path="/lead-magnet" element={<LeadMagnetPage />} />
+          <Route path="/week-one-offer" element={<WeekOneOffer />} />
           <Route path="/upload-video" element={<UploadVideo />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/mindshift-app" element={<MindshiftApp />} />
