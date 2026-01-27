@@ -45,11 +45,11 @@ const WeekOneOffer = () => {
         <section className="py-10">
           <div className="container-premium">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-xl md:text-2xl font-bold mb-8 tracking-wide">
-                <span className="text-foreground">FOR A LIMITED TIME ONLY</span>
-                <span className="text-accent">, GET WEEK 1 OF THE MINDSHIFT SYSTEM 12 WEEK PROGRAM </span>
-                <span className="text-foreground">FREE</span>
-              </p>
+              <div className="mb-8 tracking-wide">
+                <p className="text-2xl md:text-3xl font-bold text-foreground">FOR A LIMITED TIME ONLY</p>
+                <p className="text-2xl md:text-3xl font-bold text-accent">, GET WEEK 1 OF THE MINDSHIFT SYSTEM 12 WEEK PROGRAM</p>
+                <p className="text-3xl md:text-4xl font-bold text-foreground">FREE</p>
+              </div>
 
               <Button 
                 variant="hero" 
@@ -66,9 +66,6 @@ const WeekOneOffer = () => {
             </div>
           </div>
         </section>
-
-        {/* Gold Divider */}
-        <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent" />
 
         {/* Hero Section with MindShift Logo */}
         <section className="py-6">
@@ -92,19 +89,11 @@ const WeekOneOffer = () => {
         <section className="py-10 bg-card/50">
           <div className="container-premium">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-muted-foreground">
-                What Week One of <span className="text-accent">MindShift</span> Does
-              </h2>
-              
-              <p className="text-xl text-muted-foreground text-center mb-8">
-                This week is focused on beliefs — because beliefs shape everything else.
-              </p>
-              
               <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-muted-foreground">
-                During Week One, you will begin the process of:
+                During Week 1, you will begin the process of:
               </h3>
               
-              <div className="space-y-4 mb-8">
+              <div className="max-w-xl mx-auto space-y-4 mb-8">
                 {beliefProcessPoints.map((point, index) => (
                   <div key={index} className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
@@ -112,18 +101,6 @@ const WeekOneOffer = () => {
                   </div>
                 ))}
               </div>
-
-              {/* This is not positive thinking box */}
-              <Card className="bg-[hsl(225_44%_12%)] border-accent/30 mt-12">
-                <CardContent className="p-8 text-center">
-                  <p className="text-xl md:text-2xl font-bold text-muted-foreground mb-2">
-                    This is not positive thinking.
-                  </p>
-                  <p className="text-xl md:text-2xl font-bold text-accent">
-                    This is unconscious reprogramming.
-                  </p>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
@@ -136,7 +113,7 @@ const WeekOneOffer = () => {
           <div className="container-premium">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-muted-foreground">
-                What's Included in <span className="text-accent">Week One</span>
+                What's Included in <span className="text-accent">Week 1</span>
               </h2>
               
               <div className="grid md:grid-cols-2 gap-8">
