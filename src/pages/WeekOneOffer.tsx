@@ -46,8 +46,8 @@ const WeekOneOffer = () => {
           <div className="container-premium">
             <div className="max-w-3xl mx-auto text-center">
               <div className="mb-8 tracking-wide">
-                <p className="text-2xl md:text-3xl font-bold text-foreground">FOR A LIMITED TIME ONLY</p>
-                <p className="text-2xl md:text-3xl font-bold text-accent">, GET WEEK 1 OF THE MINDSHIFT SYSTEM 12 WEEK PROGRAM</p>
+                <p className="text-2xl md:text-3xl font-bold text-foreground">FOR A LIMITED TIME ONLY !</p>
+                <p className="text-2xl md:text-3xl font-bold text-accent">GET WEEK 1 OF THE MINDSHIFT SYSTEM 12 WEEK PROGRAM</p>
                 <p className="text-3xl md:text-4xl font-bold text-foreground">FREE</p>
               </div>
 
@@ -68,12 +68,12 @@ const WeekOneOffer = () => {
         </section>
 
         {/* Hero Section with MindShift Logo */}
-        <section className="py-6">
+        <section className="py-2">
           <div className="container-premium">
             <div className="max-w-4xl mx-auto text-center">
               {/* MindShift Logo */}
               <div className="flex justify-center">
-                <div className="px-8 py-6">
+                <div className="px-8 py-2">
                   <img
                     src={mindshiftLogo}
                     alt="The MindShift System"
@@ -86,11 +86,11 @@ const WeekOneOffer = () => {
         </section>
 
         {/* What Week One Does Section */}
-        <section className="py-10 bg-card/50">
+        <section className="py-6 bg-card/50">
           <div className="container-premium">
             <div className="max-w-4xl mx-auto">
               <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-muted-foreground">
-                During Week 1, you will begin the process of:
+                During week 1, you will begin the process of:
               </h3>
               
               <div className="max-w-xl mx-auto space-y-4 mb-8">
@@ -112,9 +112,12 @@ const WeekOneOffer = () => {
         <section className="py-14">
           <div className="container-premium">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-muted-foreground">
-                What's Included in <span className="text-accent">Week 1</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-muted-foreground">
+                What's Included in <span className="text-accent">Week 1</span>?
               </h2>
+              
+              {/* Gold Divider */}
+              <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent mb-12" />
               
               <div className="grid md:grid-cols-2 gap-8">
                 {weekOneIncludes.map((item, index) => (
@@ -133,6 +136,26 @@ const WeekOneOffer = () => {
                   </Card>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Bottom CTA Section */}
+        <section className="py-14">
+          <div className="container-premium">
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="text-2xl md:text-3xl font-bold text-muted-foreground mb-8">
+                Click below for your free access to week 1
+              </p>
+              
+              <Button 
+                variant="hero" 
+                size="xl"
+                className="text-primary"
+                onClick={() => window.open('https://calendly.com/chris-the-mindshift-system/discovery-call', '_blank')}
+              >
+                Start Week One Now
+              </Button>
             </div>
           </div>
         </section>
