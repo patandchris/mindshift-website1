@@ -44,17 +44,17 @@ const WeekOneOffer = () => {
         {/* CTA Section - Moved to Top */}
         <section className="py-10">
           <div className="container-premium">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center">
               <div className="mb-8 tracking-wide">
                 <p className="text-2xl md:text-3xl font-bold text-foreground">FOR A LIMITED TIME ONLY !</p>
-                <p className="text-2xl md:text-3xl font-bold text-accent whitespace-nowrap">GET WEEK 1 OF THE MINDSHIFT SYSTEM 12 WEEK PROGRAM</p>
+                <p className="text-xl md:text-2xl lg:text-3xl font-bold text-accent">GET WEEK 1 OF THE MINDSHIFT SYSTEM 12 WEEK PROGRAM</p>
                 <p className="text-3xl md:text-4xl font-bold text-foreground">FREE</p>
               </div>
 
               <Button 
                 variant="premium" 
                 size="xl"
-                className="mb-4"
+                className="mb-4 text-primary"
                 onClick={() => window.open('https://calendly.com/chris-the-mindshift-system/discovery-call', '_blank')}
               >
                 Start Week One Now
@@ -151,6 +151,7 @@ const WeekOneOffer = () => {
               <Button 
                 variant="premium" 
                 size="xl"
+                className="text-primary"
                 onClick={() => window.open('https://calendly.com/chris-the-mindshift-system/discovery-call', '_blank')}
               >
                 Start Week One Now
