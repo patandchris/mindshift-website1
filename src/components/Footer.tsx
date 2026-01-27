@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import { Instagram, Youtube, Linkedin, Mail } from "lucide-react";
 import patChrisLogo from "@/assets/pat-chris-logo.png";
-const Footer = () => {
+
+interface FooterProps {
+  minimal?: boolean;
+}
+
+const Footer = ({ minimal = false }: FooterProps) => {
   const currentYear = new Date().getFullYear();
   const footerLinks = {
     company: [{
@@ -43,6 +48,22 @@ const Footer = () => {
     href: "mailto:hello@patchriscoaching.com",
     label: "Email"
   }];
+
+  // Minimal footer for standalone pages
+  if (minimal) {
+    return (
+      <footer className="bg-background border-t border-border">
+        <div className="container-premium py-8">
+          <div className="flex justify-center">
+            <div className="cursor-default">
+              <img src={patChrisLogo} alt="Pat & Chris Coaching" className="h-16 w-auto" />
+            </div>
+          </div>
+        </div>
+      </footer>
+    );
+  }
+
   return <footer className="bg-background border-t border-border">
       <div className="container-premium">
         {/* Main Footer Content */}

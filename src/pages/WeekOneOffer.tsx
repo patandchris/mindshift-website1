@@ -41,6 +41,35 @@ const WeekOneOffer = () => {
       <Header hideNavAndCta />
       
       <main className="pt-24">
+        {/* CTA Section - Moved to Top */}
+        <section className="py-10">
+          <div className="container-premium">
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="text-xl md:text-2xl font-bold mb-8 tracking-wide">
+                <span className="text-foreground">FOR A LIMITED TIME ONLY</span>
+                <span className="text-accent">, GET WEEK 1 OF THE MINDSHIFT SYSTEM 12 WEEK PROGRAM </span>
+                <span className="text-foreground">FREE</span>
+              </p>
+
+              <Button 
+                variant="hero" 
+                size="xl"
+                className="mb-4 text-primary"
+                onClick={() => window.open('https://calendly.com/chris-the-mindshift-system/discovery-call', '_blank')}
+              >
+                Start Week One Now
+              </Button>
+              
+              <p className="text-sm text-muted-foreground">
+                This limited-time offer will be removed soon. No long-term commitment required.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Gold Divider */}
+        <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent" />
+
         {/* Hero Section with MindShift Logo */}
         <section className="py-6">
           <div className="container-premium">
@@ -130,52 +159,9 @@ const WeekOneOffer = () => {
             </div>
           </div>
         </section>
-
-        {/* Gold Divider */}
-        <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent" />
-
-        {/* CTA Section */}
-        <section className="py-14 bg-card/50">
-          <div className="container-premium">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-muted-foreground">
-                Start Week One of <span className="text-accent">MindShift</span>
-              </h2>
-              
-              <p className="text-xl text-muted-foreground mb-4">
-                This is where change actually begins.
-              </p>
-              <p className="text-lg text-muted-foreground mb-8">
-                Not by trying harder — but by upgrading what's running beneath the surface.
-              </p>
-
-              <div className="bg-background border border-accent/20 rounded-xl p-8 mb-8">
-                <p className="text-lg text-muted-foreground mb-4">
-                  For a limited time only, Week One of the MindShift System is available as a standalone entry point.
-                </p>
-                <p className="text-muted-foreground">
-                  If you are ready to stop operating from old limits and start building from a stronger internal foundation, begin with Week One now.
-                </p>
-              </div>
-
-              <Button 
-                variant="hero" 
-                size="xl"
-                className="mb-4"
-                onClick={() => window.open('https://calendly.com/chris-the-mindshift-system/discovery-call', '_blank')}
-              >
-                Start Week One Now
-              </Button>
-              
-              <p className="text-sm text-muted-foreground">
-                This limited-time offer will be removed soon. No long-term commitment required.
-              </p>
-            </div>
-          </div>
-        </section>
       </main>
 
-      <Footer />
+      <Footer minimal />
     </div>
   );
 };
