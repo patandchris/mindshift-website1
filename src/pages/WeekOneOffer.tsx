@@ -47,14 +47,14 @@ const WeekOneOffer = () => {
             <div className="max-w-3xl mx-auto text-center">
               <div className="mb-8 tracking-wide">
                 <p className="text-2xl md:text-3xl font-bold text-foreground">FOR A LIMITED TIME ONLY !</p>
-                <p className="text-2xl md:text-3xl font-bold text-accent">GET WEEK 1 OF THE MINDSHIFT SYSTEM 12 WEEK PROGRAM</p>
+                <p className="text-2xl md:text-3xl font-bold text-accent whitespace-nowrap">GET WEEK 1 OF THE MINDSHIFT SYSTEM 12 WEEK PROGRAM</p>
                 <p className="text-3xl md:text-4xl font-bold text-foreground">FREE</p>
               </div>
 
               <Button 
-                variant="hero" 
+                variant="premium" 
                 size="xl"
-                className="mb-4 text-primary"
+                className="mb-4"
                 onClick={() => window.open('https://calendly.com/chris-the-mindshift-system/discovery-call', '_blank')}
               >
                 Start Week One Now
@@ -112,12 +112,9 @@ const WeekOneOffer = () => {
         <section className="py-14">
           <div className="container-premium">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-muted-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-muted-foreground">
                 What's Included in <span className="text-accent">Week 1</span>?
               </h2>
-              
-              {/* Gold Divider */}
-              <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent mb-12" />
               
               <div className="grid md:grid-cols-2 gap-8">
                 {weekOneIncludes.map((item, index) => (
@@ -140,6 +137,9 @@ const WeekOneOffer = () => {
           </div>
         </section>
 
+        {/* Gold Divider */}
+        <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent" />
+
         {/* Bottom CTA Section */}
         <section className="py-14">
           <div className="container-premium">
@@ -149,9 +149,8 @@ const WeekOneOffer = () => {
               </p>
               
               <Button 
-                variant="hero" 
+                variant="premium" 
                 size="xl"
-                className="text-primary"
                 onClick={() => window.open('https://calendly.com/chris-the-mindshift-system/discovery-call', '_blank')}
               >
                 Start Week One Now
