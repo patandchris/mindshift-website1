@@ -203,10 +203,9 @@ const WeekOneContent = () => {
       <header className="bg-card/50 border-b border-border sticky top-0 z-50 backdrop-blur-lg">
         <div className="container-premium py-6">
           <div className="flex items-center justify-between">
-            <div className="w-24" /> {/* Spacer for balance */}
             <img src={mindshiftLogo} alt="MindShift System" className="h-20 md:h-24" />
-            <div className="flex items-center gap-2">
-              <Button variant="premium" size="sm" onClick={() => window.open('https://calendly.com/patandchris/30min', '_blank')}>
+            <div className="flex items-center gap-6">
+              <Button variant="premium" size="lg" className="h-12 px-6" onClick={() => window.open('https://calendly.com/patandchris/30min', '_blank')}>
                 Get Access to Weeks 2-11
               </Button>
               <Button variant="ghost" size="sm" onClick={handleLogout} className="text-muted-foreground hover:text-foreground">
