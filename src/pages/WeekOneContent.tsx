@@ -202,27 +202,38 @@ const WeekOneContent = () => {
       {/* Header */}
       <header className="bg-card/50 border-b border-border sticky top-0 z-50 backdrop-blur-lg">
         <div className="container-premium py-6">
-          <div className="flex flex-col items-center justify-center gap-4">
-            <img src={mindshiftLogo} alt="MindShift System" className="h-16 md:h-20" />
-            <Button variant="ghost" size="sm" onClick={handleLogout} className="text-muted-foreground hover:text-foreground absolute right-4 top-4">
-              <LogOut className="w-4 h-4 mr-2" />
-              <span className="hidden sm:inline">Sign Out</span>
-            </Button>
+          <div className="flex items-center justify-between">
+            <div className="w-24" /> {/* Spacer for balance */}
+            <img src={mindshiftLogo} alt="MindShift System" className="h-20 md:h-24" />
+            <div className="flex items-center gap-2">
+              <Button variant="premium" size="sm" onClick={() => window.open('https://calendly.com/patandchris/30min', '_blank')}>
+                Get Access to Weeks 2-11
+              </Button>
+              <Button variant="ghost" size="sm" onClick={handleLogout} className="text-muted-foreground hover:text-foreground">
+                <LogOut className="w-4 h-4 mr-2" />
+                <span className="hidden sm:inline">Sign Out</span>
+              </Button>
+            </div>
           </div>
         </div>
       </header>
 
       <main className="container-premium py-8">
         {/* Week Title */}
-        <h1 className="font-semibold text-muted-foreground mb-6">Week 1: The Invisible Ceiling</h1>
+        <h1 className="font-semibold mb-6">
+          <span className="text-accent">Week 1:</span>{' '}
+          <span className="text-muted-foreground">The Invisible Ceiling</span>
+        </h1>
 
         {/* Progress Section */}
         <div className="mb-10">
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="text-sm font-semibold text-accent">Your Progress</h2>
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-base font-semibold text-accent">Your Progress</h2>
             <span className="text-accent font-bold">{memberData?.progress_percentage || 0}%</span>
           </div>
-          <Progress value={memberData?.progress_percentage || 0} className="h-3" />
+          <div className="flex flex-col items-center justify-center gap-2 py-2">
+            <Progress value={memberData?.progress_percentage || 0} className="h-3 w-full" />
+          </div>
           <p className="text-sm text-muted-foreground mt-2">
             {memberData?.progress_percentage === 100 
               ? "🎉 Congratulations! You've completed Week 1!"

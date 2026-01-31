@@ -123,14 +123,14 @@ const AudioLessonCard = ({
       <CardContent className="p-4 md:p-6">
         <div className="flex-1 min-w-0">
           {/* Title and Description */}
-          <div className="flex items-start justify-between gap-2 mb-3">
+          <div className="flex items-start justify-between gap-2 mb-2">
             <div>
               <h3 className="font-semibold text-accent">{title}</h3>
               <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{description}</p>
             </div>
             {isCompleted && (
-              <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded-full flex-shrink-0">
-                Completed
+              <span className="text-xs bg-green-600/20 text-green-500 border border-green-500/50 px-2 py-1 rounded-full flex-shrink-0">
+                ✓ Completed
               </span>
             )}
           </div>
