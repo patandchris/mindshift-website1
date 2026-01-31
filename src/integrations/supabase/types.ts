@@ -14,6 +14,54 @@ export type Database = {
   }
   public: {
     Tables: {
+      member_content_progress: {
+        Row: {
+          completed_at: string | null
+          content_id: string
+          id: string
+          is_completed: boolean
+          member_id: string
+          playback_position: number | null
+          started_at: string | null
+          updated_at: string
+        }
+        Insert: {
+          completed_at?: string | null
+          content_id: string
+          id?: string
+          is_completed?: boolean
+          member_id: string
+          playback_position?: number | null
+          started_at?: string | null
+          updated_at?: string
+        }
+        Update: {
+          completed_at?: string | null
+          content_id?: string
+          id?: string
+          is_completed?: boolean
+          member_id?: string
+          playback_position?: number | null
+          started_at?: string | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "member_content_progress_content_id_fkey"
+            columns: ["content_id"]
+            isOneToOne: false
+            referencedRelation: "week1_content"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "member_content_progress_member_id_fkey"
+            columns: ["member_id"]
+            isOneToOne: false
+            referencedRelation: "week1_members"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       user_roles: {
         Row: {
           created_at: string | null
@@ -35,6 +83,90 @@ export type Database = {
         }
         Relationships: []
       }
+      week1_content: {
+        Row: {
+          content_type: string
+          created_at: string
+          description: string | null
+          display_order: number
+          duration_seconds: number | null
+          file_url: string | null
+          id: string
+          title: string
+        }
+        Insert: {
+          content_type: string
+          created_at?: string
+          description?: string | null
+          display_order: number
+          duration_seconds?: number | null
+          file_url?: string | null
+          id?: string
+          title: string
+        }
+        Update: {
+          content_type?: string
+          created_at?: string
+          description?: string | null
+          display_order?: number
+          duration_seconds?: number | null
+          file_url?: string | null
+          id?: string
+          title?: string
+        }
+        Relationships: []
+      }
+      week1_members: {
+        Row: {
+          completed_at: string | null
+          created_at: string
+          email: string
+          hubspot_contact_id: string | null
+          hubspot_last_synced_at: string | null
+          hubspot_sync_status: string | null
+          id: string
+          last_activity_at: string
+          progress_percentage: number
+          registered_at: string
+          started_at: string | null
+          status: Database["public"]["Enums"]["member_status"]
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          completed_at?: string | null
+          created_at?: string
+          email: string
+          hubspot_contact_id?: string | null
+          hubspot_last_synced_at?: string | null
+          hubspot_sync_status?: string | null
+          id?: string
+          last_activity_at?: string
+          progress_percentage?: number
+          registered_at?: string
+          started_at?: string | null
+          status?: Database["public"]["Enums"]["member_status"]
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          completed_at?: string | null
+          created_at?: string
+          email?: string
+          hubspot_contact_id?: string | null
+          hubspot_last_synced_at?: string | null
+          hubspot_sync_status?: string | null
+          id?: string
+          last_activity_at?: string
+          progress_percentage?: number
+          registered_at?: string
+          started_at?: string | null
+          status?: Database["public"]["Enums"]["member_status"]
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -45,6 +177,7 @@ export type Database = {
     }
     Enums: {
       app_role: "admin" | "user"
+      member_status: "not_started" | "in_progress" | "completed"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -173,6 +306,7 @@ export const Constants = {
   public: {
     Enums: {
       app_role: ["admin", "user"],
+      member_status: ["not_started", "in_progress", "completed"],
     },
   },
 } as const

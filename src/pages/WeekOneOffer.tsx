@@ -55,7 +55,7 @@ const WeekOneOffer = () => {
                 variant="premium" 
                 size="xl"
                 className="mb-4"
-                onClick={() => window.open('https://calendly.com/chris-the-mindshift-system/discovery-call', '_blank')}
+                onClick={() => window.location.href = '/week-one-access'}
               >
                 Start Week One Now
               </Button>
@@ -151,7 +151,7 @@ const WeekOneOffer = () => {
               <Button 
                 variant="premium" 
                 size="xl"
-                onClick={() => window.open('https://calendly.com/chris-the-mindshift-system/discovery-call', '_blank')}
+                onClick={() => window.location.href = '/week-one-access'}
               >
                 Start Week One Now
               </Button>
