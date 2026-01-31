@@ -201,16 +201,10 @@ const WeekOneContent = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="bg-card/50 border-b border-border sticky top-0 z-50 backdrop-blur-lg">
-        <div className="container-premium py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <img src={mindshiftLogo} alt="MindShift System" className="h-10 md:h-12" />
-              <div className="hidden sm:block">
-                <h1 className="text-lg md:text-xl font-bold text-accent">Your Journey</h1>
-                <p className="text-sm text-muted-foreground">Week 1: Belief Transformation</p>
-              </div>
-            </div>
-            <Button variant="ghost" size="sm" onClick={handleLogout} className="text-muted-foreground hover:text-foreground">
+        <div className="container-premium py-6">
+          <div className="flex flex-col items-center justify-center gap-4">
+            <img src={mindshiftLogo} alt="MindShift System" className="h-16 md:h-20" />
+            <Button variant="ghost" size="sm" onClick={handleLogout} className="text-muted-foreground hover:text-foreground absolute right-4 top-4">
               <LogOut className="w-4 h-4 mr-2" />
               <span className="hidden sm:inline">Sign Out</span>
             </Button>
@@ -222,7 +216,7 @@ const WeekOneContent = () => {
         {/* Progress Section */}
         <div className="mb-10">
           <div className="flex items-center justify-between mb-3">
-            <h2 className="text-lg font-semibold text-foreground">Your Progress</h2>
+            <h2 className="font-semibold text-foreground">Your Progress</h2>
             <span className="text-accent font-bold">{memberData?.progress_percentage || 0}%</span>
           </div>
           <Progress value={memberData?.progress_percentage || 0} className="h-3" />
@@ -235,15 +229,9 @@ const WeekOneContent = () => {
           </p>
         </div>
 
-        {/* Mobile Title */}
-        <div className="sm:hidden mb-6">
-          <h1 className="text-xl font-bold text-accent">Your Journey</h1>
-          <p className="text-sm text-muted-foreground">Week 1: Belief Transformation</p>
-        </div>
-
         {/* Audio Lessons */}
         <section className="mb-10">
-          <h2 className="text-xl font-bold text-foreground mb-6">Audio Lessons</h2>
+          <h2 className="text-xl font-bold text-accent mb-6">Audio Lessons</h2>
           <div className="space-y-4">
             {audioContent.map((item) => (
               <AudioLessonCard
@@ -264,7 +252,7 @@ const WeekOneContent = () => {
 
         {/* Documents */}
         <section>
-          <h2 className="text-xl font-bold text-foreground mb-6">Resources & Documents</h2>
+          <h2 className="text-xl font-bold text-accent mb-6">Resources & Documents</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {documentContent.map((item) => (
               <DocumentCard

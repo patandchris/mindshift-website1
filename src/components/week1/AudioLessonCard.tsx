@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
-import { Play, Pause, RotateCcw, SkipForward, CheckCircle, Music } from 'lucide-react';
+import { Play, Pause, SkipBack, SkipForward } from 'lucide-react';
 
 interface AudioLessonCardProps {
   id: string;
@@ -121,103 +121,94 @@ const AudioLessonCard = ({
   return (
     <Card className={`bg-card border-border transition-all duration-300 ${isCompleted ? 'border-accent/50' : 'hover:border-accent/30'}`}>
       <CardContent className="p-4 md:p-6">
-        <div className="flex items-start gap-4">
-          {/* Icon / Completed Check */}
-          <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center ${isCompleted ? 'bg-accent/20' : 'bg-secondary'}`}>
-            {isCompleted ? (
-              <CheckCircle className="w-6 h-6 text-accent" />
-            ) : (
-              <Music className="w-6 h-6 text-muted-foreground" />
-            )}
-          </div>
-
-          <div className="flex-1 min-w-0">
-            {/* Title and Description */}
-            <div className="flex items-start justify-between gap-2 mb-3">
-              <div>
-                <h3 className="font-semibold text-foreground">{title}</h3>
-                <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{description}</p>
-              </div>
-              {isCompleted && (
-                <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded-full flex-shrink-0">
-                  Completed
-                </span>
-              )}
+        <div className="flex-1 min-w-0">
+          {/* Title and Description */}
+          <div className="flex items-start justify-between gap-2 mb-3">
+            <div>
+              <h3 className="font-semibold text-accent">{title}</h3>
+              <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{description}</p>
             </div>
-
-            {/* Audio Player */}
-            {fileUrl ? (
-              <>
-                <audio ref={audioRef} src={fileUrl} preload="metadata" />
-                
-                {/* Progress Bar */}
-                <div className="mb-3">
-                  <Slider
-                    value={[currentTime]}
-                    max={audioDuration || 100}
-                    step={1}
-                    onValueChange={handleSeek}
-                    className="cursor-pointer"
-                  />
-                  <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                    <span>{formatTime(currentTime)}</span>
-                    <span>{formatTime(audioDuration)}</span>
-                  </div>
-                </div>
-
-                {/* Controls */}
-                <div className="flex items-center gap-2">
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={handleRestart}
-                    className="h-9 w-9 text-muted-foreground hover:text-foreground"
-                    title="Restart"
-                  >
-                    <RotateCcw className="w-4 h-4" />
-                  </Button>
-
-                  <Button
-                    variant="default"
-                    size="icon"
-                    onClick={togglePlay}
-                    className="h-10 w-10 bg-accent hover:bg-accent/90"
-                  >
-                    {isPlaying ? (
-                      <Pause className="w-5 h-5" />
-                    ) : (
-                      <Play className="w-5 h-5 ml-0.5" />
-                    )}
-                  </Button>
-
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={handleSkipToEnd}
-                    className="h-9 w-9 text-muted-foreground hover:text-foreground"
-                    title="Skip to end"
-                  >
-                    <SkipForward className="w-4 h-4" />
-                  </Button>
-
-                  {!isCompleted && progressPercentage > 90 && (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => onComplete(true)}
-                      className="ml-auto text-xs"
-                    >
-                      Mark Complete
-                    </Button>
-                  )}
-                </div>
-              </>
-            ) : (
-              <div className="bg-secondary/50 rounded-lg p-4 text-center">
-                <p className="text-sm text-muted-foreground">Audio file coming soon</p>
-              </div>
+            {isCompleted && (
+              <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded-full flex-shrink-0">
+                Completed
+              </span>
             )}
           </div>
+
+          {/* Audio Player */}
+          {fileUrl ? (
+            <>
+              <audio ref={audioRef} src={fileUrl} preload="metadata" />
+              
+              {/* Progress Bar */}
+              <div className="mb-3">
+                <Slider
+                  value={[currentTime]}
+                  max={audioDuration || 100}
+                  step={1}
+                  onValueChange={handleSeek}
+                  className="cursor-pointer"
+                />
+                <div className="flex justify-between text-base text-muted-foreground mt-1 font-medium">
+                  <span>{formatTime(currentTime)}</span>
+                  <span>{formatTime(audioDuration)}</span>
+                </div>
+              </div>
+
+              {/* Controls */}
+              <div className="flex items-center justify-center gap-3">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={handleRestart}
+                  className="h-9 w-9 text-muted-foreground hover:text-foreground"
+                  title="Restart"
+                >
+                  <SkipBack className="w-4 h-4" />
+                </Button>
+
+                <Button
+                  variant="default"
+                  size="icon"
+                  onClick={togglePlay}
+                  className="h-12 w-12 bg-accent hover:bg-accent/90"
+                >
+                  {isPlaying ? (
+                    <Pause className="w-6 h-6" />
+                  ) : (
+                    <Play className="w-6 h-6 ml-0.5" />
+                  )}
+                </Button>
+
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={handleSkipToEnd}
+                  className="h-9 w-9 text-muted-foreground hover:text-foreground"
+                  title="Skip to end"
+                >
+                  <SkipForward className="w-4 h-4" />
+                </Button>
+              </div>
+
+              {!isCompleted && progressPercentage > 90 && (
+                <div className="flex justify-center mt-3">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => onComplete(true)}
+                    className="text-xs"
+                  >
+                    Mark Complete
+                  </Button>
+                </div>
+              )}
+            </>
+          ) : (
+            <div className="bg-secondary/50 rounded-lg p-4 text-center">
+              <p className="text-sm text-muted-foreground">Audio file coming soon</p>
+            </div>
+          )}
         </div>
       </CardContent>
     </Card>
