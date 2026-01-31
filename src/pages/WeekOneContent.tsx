@@ -213,10 +213,13 @@ const WeekOneContent = () => {
       </header>
 
       <main className="container-premium py-8">
+        {/* Week Title */}
+        <h1 className="font-semibold text-muted-foreground mb-6">Week 1: The Invisible Ceiling</h1>
+
         {/* Progress Section */}
         <div className="mb-10">
           <div className="flex items-center justify-between mb-3">
-            <h2 className="font-semibold text-foreground">Your Progress</h2>
+            <h2 className="text-sm font-semibold text-accent">Your Progress</h2>
             <span className="text-accent font-bold">{memberData?.progress_percentage || 0}%</span>
           </div>
           <Progress value={memberData?.progress_percentage || 0} className="h-3" />
@@ -231,7 +234,7 @@ const WeekOneContent = () => {
 
         {/* Audio Lessons */}
         <section className="mb-10">
-          <h2 className="text-xl font-bold text-accent mb-6">Audio Lessons</h2>
+          <h2 className="font-semibold text-accent mb-6">Audio Lessons</h2>
           <div className="space-y-4">
             {audioContent.map((item) => (
               <AudioLessonCard
@@ -252,7 +255,7 @@ const WeekOneContent = () => {
 
         {/* Documents */}
         <section>
-          <h2 className="text-xl font-bold text-accent mb-6">Resources & Documents</h2>
+          <h2 className="font-semibold text-accent mb-6">Resources & Documents</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {documentContent.map((item) => (
               <DocumentCard
