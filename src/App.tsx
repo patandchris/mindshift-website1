@@ -12,6 +12,8 @@ import NotFound from "./pages/NotFound";
 import UploadVideo from "./pages/UploadVideo";
 import Auth from "./pages/Auth";
 import MindshiftApp from "./pages/MindshiftApp";
+import WeekOneAccess from "./pages/WeekOneAccess";
+import WeekOneContent from "./pages/WeekOneContent";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/upload-video" element={<UploadVideo />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/mindshift-app" element={<MindshiftApp />} />
+          <Route path="/week-one-access" element={<WeekOneAccess />} />
+          <Route path="/week-one-content" element={<WeekOneContent />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
