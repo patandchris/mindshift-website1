@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
 
 export interface PodcastEpisode {
   id: string;
@@ -35,31 +36,20 @@ export const usePodcastFeed = (feedUrl: string) => {
       try {
         setLoading(true);
         
-        // Use corsproxy.io as primary, with fallback options
-        const proxyUrls = [
-          `https://corsproxy.io/?${encodeURIComponent(feedUrl)}`,
-          `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(feedUrl)}`,
-        ];
+        // Use edge function to fetch the podcast feed
+        const { data, error: fnError } = await supabase.functions.invoke('fetch-podcast-feed', {
+          body: { feedUrl }
+        });
         
-        let xmlText = '';
-        let fetchError = null;
-        
-        for (const proxyUrl of proxyUrls) {
-          try {
-            const response = await fetch(proxyUrl);
-            if (response.ok) {
-              xmlText = await response.text();
-              break;
-            }
-          } catch (err) {
-            fetchError = err;
-            continue;
-          }
+        if (fnError) {
+          throw new Error(fnError.message);
         }
         
-        if (!xmlText) {
-          throw fetchError || new Error('Failed to fetch from all proxies');
+        if (data.error) {
+          throw new Error(data.error);
         }
+        
+        const xmlText = data.xml;
         
         // Parse XML using DOMParser
         const parser = new DOMParser();
