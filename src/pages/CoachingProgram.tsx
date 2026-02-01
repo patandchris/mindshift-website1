@@ -186,11 +186,11 @@ const CoachingProgram = () => {
                     <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-4">
                       {testimonial.result}
                     </div>
-                    <blockquote className="text-foreground mb-4 italic">
+                    <blockquote className="text-muted-foreground mb-4 italic">
                       "{testimonial.content}"
                     </blockquote>
                     <div>
-                      <div className="font-semibold text-foreground">{testimonial.name}</div>
+                      <div className="font-semibold text-muted-foreground">{testimonial.name}</div>
                       <div className="text-sm text-muted-foreground">{testimonial.title}</div>
                     </div>
                   </CardContent>

@@ -88,7 +88,7 @@ const Footer = ({ minimal = false }: FooterProps) => {
 
           {/* Company Links */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Company</h4>
+            <h4 className="font-semibold text-muted-foreground mb-4">Company</h4>
             <ul className="space-y-3">
               {footerLinks.company.map(link => <li key={link.name}>
                   <Link to={link.path} className="text-muted-foreground hover:text-accent transition-colors">
@@ -100,7 +100,7 @@ const Footer = ({ minimal = false }: FooterProps) => {
 
           {/* Resources Links */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Resources</h4>
+            <h4 className="font-semibold text-muted-foreground mb-4">Resources</h4>
             <ul className="space-y-3">
               {footerLinks.resources.map(link => <li key={link.name}>
                   <Link to={link.path} className="text-muted-foreground hover:text-accent transition-colors">
@@ -112,7 +112,7 @@ const Footer = ({ minimal = false }: FooterProps) => {
 
           {/* Legal Links */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Legal</h4>
+            <h4 className="font-semibold text-muted-foreground mb-4">Legal</h4>
             <ul className="space-y-3">
               {footerLinks.legal.map(link => <li key={link.name}>
                   <Link to={link.path} className="text-muted-foreground hover:text-accent transition-colors">

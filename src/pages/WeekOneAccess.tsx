@@ -182,7 +182,7 @@ const WeekOneAccess = () => {
           <div className="w-full max-w-md">
             <div className="text-center mb-8">
               <img src={mindshiftLogo} alt="MindShift System" className="h-16 mx-auto mb-6" />
-              <h1 className="text-2xl font-bold mb-2 text-foreground">Reset Your Password</h1>
+              <h1 className="text-2xl font-bold mb-2 text-muted-foreground">Reset Your Password</h1>
               <p className="text-muted-foreground">
                 Enter your email and we'll send you a reset link
               </p>
@@ -190,7 +190,7 @@ const WeekOneAccess = () => {
 
             <form onSubmit={handleForgotPassword} className="space-y-6">
               <div>
-                <Label htmlFor="email" className="text-foreground">Email</Label>
+                <Label htmlFor="email" className="text-muted-foreground">Email</Label>
                 <div className="relative mt-2">
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
                   <Input
@@ -243,7 +243,7 @@ const WeekOneAccess = () => {
         <div className="w-full max-w-md">
           <div className="text-center mb-8">
             <img src={mindshiftLogo} alt="MindShift System" className="h-16 mx-auto mb-6" />
-            <h1 className="text-2xl font-bold mb-2 text-foreground">
+            <h1 className="text-2xl font-bold mb-2 text-muted-foreground">
               {isLogin ? 'Welcome Back' : 'Get Free Access to Week 1'}
             </h1>
             <p className="text-muted-foreground">
@@ -256,7 +256,7 @@ const WeekOneAccess = () => {
           <div className="card-premium">
             <form onSubmit={handleAuth} className="space-y-5">
               <div>
-                <Label htmlFor="email" className="text-foreground">Email</Label>
+                <Label htmlFor="email" className="text-muted-foreground">Email</Label>
                 <div className="relative mt-2">
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
                   <Input
@@ -273,7 +273,7 @@ const WeekOneAccess = () => {
               </div>
 
               <div>
-                <Label htmlFor="password" className="text-foreground">Password</Label>
+                <Label htmlFor="password" className="text-muted-foreground">Password</Label>
                 <div className="relative mt-2">
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
                   <Input
@@ -288,7 +288,7 @@ const WeekOneAccess = () => {
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-muted-foreground"
                   >
                     {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
                   </button>
@@ -298,7 +298,7 @@ const WeekOneAccess = () => {
 
               {!isLogin && (
                 <div>
-                  <Label htmlFor="confirmPassword" className="text-foreground">Confirm Password</Label>
+                  <Label htmlFor="confirmPassword" className="text-muted-foreground">Confirm Password</Label>
                   <div className="relative mt-2">
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
                     <Input
@@ -313,7 +313,7 @@ const WeekOneAccess = () => {
                     <button
                       type="button"
                       onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-muted-foreground"
                     >
                       {showConfirmPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
                     </button>
@@ -356,7 +356,7 @@ const WeekOneAccess = () => {
                   setIsLogin(!isLogin);
                   setErrors({});
                 }}
-                className="text-sm text-muted-foreground hover:text-foreground"
+                className="text-sm text-muted-foreground hover:text-muted-foreground"
               >
                 {isLogin ? "Don't have an account? " : 'Already have an account? '}
                 <span className="text-accent hover:underline">

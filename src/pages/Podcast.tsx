@@ -122,7 +122,7 @@ const Podcast = () => {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <h3 className="font-bold text-lg leading-tight mb-2 text-foreground">
+                      <h3 className="font-bold text-lg leading-tight mb-2 text-muted-foreground">
                         {episode.title}
                       </h3>
                       <p className="text-sm text-muted-foreground mb-3 line-clamp-3">

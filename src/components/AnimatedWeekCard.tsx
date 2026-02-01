@@ -47,7 +47,7 @@ const AnimatedWeekCard = ({ week, title, description, index }: WeekCardProps) =>
               <span className="text-sm font-bold text-accent">{index + 1}</span>
             </div>
           </div>
-          <CardTitle className="text-foreground">{title}</CardTitle>
+          <CardTitle className="text-muted-foreground">{title}</CardTitle>
         </CardHeader>
         <CardContent>
           <p className="text-muted-foreground">{description}</p>
