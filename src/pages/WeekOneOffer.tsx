@@ -50,11 +50,11 @@ const WeekOneOffer = () => {
           <div className="container-premium">
             <div className="max-w-4xl mx-auto text-center">
               <div className="mb-8 tracking-wide">
-                <p className="text-2xl md:text-3xl font-bold text-foreground">FOR A LIMITED TIME ONLY !!</p>
+                <p className="text-2xl md:text-3xl font-bold text-muted-foreground">FOR A LIMITED TIME ONLY !!</p>
                 <p className="text-xl md:text-2xl lg:text-3xl font-bold text-accent">
                   GET WEEK 1 OF THE MINDSHIFT SYSTEM 12 WEEK PROGRAM
                 </p>
-                <p className="text-3xl md:text-4xl font-bold text-foreground">ABSOLUTELY FREE!!</p>
+                <p className="text-3xl md:text-4xl font-bold text-muted-foreground">ABSOLUTELY FREE!!</p>
               </div>
 
               <Button
