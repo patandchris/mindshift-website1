@@ -37,7 +37,7 @@ const WeekOneOffer = () => {
     "Identifying the unconscious beliefs that are limiting your success",
     "Understanding where those beliefs were formed",
     "Loosening the certainty that keeps those beliefs in place",
-    "Replace these limiting beliefs with an empowering belief system geared towards success",
+    "Installing more empowering internal standards",
   ];
 
   return (
@@ -50,11 +50,11 @@ const WeekOneOffer = () => {
           <div className="container-premium">
             <div className="max-w-4xl mx-auto text-center">
               <div className="mb-8 tracking-wide">
-                <p className="text-2xl md:text-3xl font-bold text-foreground">FOR A LIMITED TIME ONLY !</p>
+                <p className="text-2xl md:text-3xl font-bold text-foreground">FOR A LIMITED TIME ONLY !!</p>
                 <p className="text-xl md:text-2xl lg:text-3xl font-bold text-accent">
                   GET WEEK 1 OF THE MINDSHIFT SYSTEM 12 WEEK PROGRAM
                 </p>
-                <p className="text-3xl md:text-4xl font-bold text-foreground">FREE</p>
+                <p className="text-3xl md:text-4xl font-bold text-foreground">ABSOLUTELY FREE!!</p>
               </div>
 
               <Button
