@@ -9,37 +9,41 @@ const WeekOneOffer = () => {
   const weekOneIncludes = [
     {
       title: "A Guide to Beliefs",
-      description: "Understand how beliefs are formed, why they operate automatically, and how they silently dictate your confidence, income, and results.",
-      icon: Brain
+      description:
+        "Understand how beliefs are formed, why they operate automatically, and how they silently dictate your confidence, income, and results.",
+      icon: Brain,
     },
     {
       title: "Guided Hypnosis",
-      description: "Begin upgrading your unconscious programming at the point where resistance is lowest, allowing new empowering beliefs to take hold naturally.",
-      icon: Moon
+      description:
+        "Begin upgrading your unconscious programming at the point where resistance is lowest, allowing new empowering beliefs to take hold naturally.",
+      icon: Moon,
     },
     {
       title: "Belief Awareness Exercise",
-      description: "Simple, structured questions designed to expose where you may be unknowingly limiting your own success.",
-      icon: Target
+      description:
+        "Simple, structured questions designed to expose where you may be unknowingly limiting your own success.",
+      icon: Target,
     },
     {
       title: "NLP Change Pattern",
-      description: "A Neuro Linguistic Programming change pattern designed to rewire your unconscious programming towards success.",
-      icon: Sparkles
-    }
+      description:
+        "A Neuro Linguistic Programming change pattern designed to rewire your unconscious programming towards success.",
+      icon: Sparkles,
+    },
   ];
 
   const beliefProcessPoints = [
     "Identifying the unconscious beliefs that are limiting your success",
     "Understanding where those beliefs were formed",
     "Loosening the certainty that keeps those beliefs in place",
-    "Installing more empowering internal standards"
+    "Replace these limiting beliefs with an empowering belief system geared towards success",
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <Header hideNavAndCta />
-      
+
       <main className="pt-24">
         {/* CTA Section - Moved to Top */}
         <section className="py-10">
@@ -47,19 +51,21 @@ const WeekOneOffer = () => {
             <div className="max-w-4xl mx-auto text-center">
               <div className="mb-8 tracking-wide">
                 <p className="text-2xl md:text-3xl font-bold text-foreground">FOR A LIMITED TIME ONLY !</p>
-                <p className="text-xl md:text-2xl lg:text-3xl font-bold text-accent">GET WEEK 1 OF THE MINDSHIFT SYSTEM 12 WEEK PROGRAM</p>
+                <p className="text-xl md:text-2xl lg:text-3xl font-bold text-accent">
+                  GET WEEK 1 OF THE MINDSHIFT SYSTEM 12 WEEK PROGRAM
+                </p>
                 <p className="text-3xl md:text-4xl font-bold text-foreground">FREE</p>
               </div>
 
-              <Button 
-                variant="premium" 
+              <Button
+                variant="premium"
                 size="xl"
                 className="mb-4"
-                onClick={() => window.location.href = '/week-one-access'}
+                onClick={() => (window.location.href = "/week-one-access")}
               >
                 Start Week One Now
               </Button>
-              
+
               <p className="text-sm text-muted-foreground">
                 This limited-time offer will be removed soon. No long-term commitment required.
               </p>
@@ -92,7 +98,7 @@ const WeekOneOffer = () => {
               <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-muted-foreground">
                 During week 1, you will begin the process of:
               </h3>
-              
+
               <div className="max-w-xl mx-auto space-y-4 mb-8">
                 {beliefProcessPoints.map((point, index) => (
                   <div key={index} className="flex items-start gap-4">
@@ -115,10 +121,13 @@ const WeekOneOffer = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-muted-foreground">
                 What's Included in <span className="text-accent">Week 1</span>?
               </h2>
-              
+
               <div className="grid md:grid-cols-2 gap-8">
                 {weekOneIncludes.map((item, index) => (
-                  <Card key={index} className="bg-[hsl(225_44%_12%)] border-border hover:border-accent/50 transition-all duration-300">
+                  <Card
+                    key={index}
+                    className="bg-[hsl(225_44%_12%)] border-border hover:border-accent/50 transition-all duration-300"
+                  >
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
                         <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
@@ -147,12 +156,8 @@ const WeekOneOffer = () => {
               <p className="text-2xl md:text-3xl font-bold text-muted-foreground mb-8">
                 Click below for your free access to week 1
               </p>
-              
-              <Button 
-                variant="premium" 
-                size="xl"
-                onClick={() => window.location.href = '/week-one-access'}
-              >
+
+              <Button variant="premium" size="xl" onClick={() => (window.location.href = "/week-one-access")}>
                 Start Week One Now
               </Button>
             </div>
