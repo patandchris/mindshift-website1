@@ -39,11 +39,11 @@ const Header = ({ hideNavAndCta = false }: HeaderProps) => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           {hideNavAndCta ? (
-            <div className="flex items-center">
+            <div className="flex items-center flex-1 justify-center">
               <img
                 src={patChrisLogo}
                 alt="Pat & Chris Coaching"
-                className="h-16 w-auto"
+                className="h-20 w-auto"
               />
             </div>
           ) : (
@@ -51,7 +51,7 @@ const Header = ({ hideNavAndCta = false }: HeaderProps) => {
               <img
                 src={patChrisLogo}
                 alt="Pat & Chris Coaching"
-                className="h-16 w-auto"
+                className="h-20 w-auto"
               />
             </Link>
           )}

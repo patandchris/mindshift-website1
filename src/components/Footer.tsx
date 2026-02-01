@@ -56,7 +56,7 @@ const Footer = ({ minimal = false }: FooterProps) => {
         <div className="container-premium py-8">
           <div className="flex justify-center">
             <div className="cursor-default">
-              <img src={patChrisLogo} alt="Pat & Chris Coaching" className="h-16 w-auto" />
+              <img src={patChrisLogo} alt="Pat & Chris Coaching" className="h-20 w-auto" />
             </div>
           </div>
         </div>
@@ -74,7 +74,7 @@ const Footer = ({ minimal = false }: FooterProps) => {
             top: 0,
             behavior: 'smooth'
           })}>
-              <img src={patChrisLogo} alt="Pat & Chris Coaching" className="h-16 w-auto" />
+              <img src={patChrisLogo} alt="Pat & Chris Coaching" className="h-20 w-auto" />
             </Link>
             <p className="text-muted-foreground mb-1 max-w-md mt-1">Helping ambitious men break through their barriers and create the life they truly want through proven mindset transformation.</p>
             
