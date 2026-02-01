@@ -66,7 +66,7 @@ const Header = ({ hideNavAndCta = false }: HeaderProps) => {
                   className={`text-lg font-bold transition-colors hover:text-accent ${
                     location.pathname === item.path
                       ? "text-accent"
-                      : "text-foreground"
+                      : "text-muted-foreground"
                   }`}
                 >
                   {item.name}

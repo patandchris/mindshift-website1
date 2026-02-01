@@ -161,7 +161,7 @@ const AudioLessonCard = ({
                   variant="ghost"
                   size="icon"
                   onClick={handleRestart}
-                  className="h-9 w-9 text-muted-foreground hover:text-foreground"
+                  className="h-9 w-9 text-muted-foreground hover:text-muted-foreground"
                   title="Restart"
                 >
                   <SkipBack className="w-4 h-4" />
@@ -184,7 +184,7 @@ const AudioLessonCard = ({
                   variant="ghost"
                   size="icon"
                   onClick={handleSkipToEnd}
-                  className="h-9 w-9 text-muted-foreground hover:text-foreground"
+                  className="h-9 w-9 text-muted-foreground hover:text-muted-foreground"
                   title="Skip to end"
                 >
                   <SkipForward className="w-4 h-4" />

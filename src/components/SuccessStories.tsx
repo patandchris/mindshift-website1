@@ -61,7 +61,7 @@ const SuccessStories = () => {
               }}
             />
           </div>
-          <p className="text-xl max-w-3xl mx-auto text-foreground">
+          <p className="text-xl max-w-3xl mx-auto text-muted-foreground">
             See how ambitious professionals like you have transformed their mindset and achieved breakthrough results with The MindShift System.
           </p>
         </div>
@@ -107,7 +107,7 @@ const SuccessStories = () => {
 
             {/* Text Testimonial - Right on Desktop */}
             <div className="w-full lg:w-1/2 lg:pl-8">
-              <blockquote className="text-lg leading-relaxed mb-6 text-foreground">
+              <blockquote className="text-lg leading-relaxed mb-6 text-muted-foreground">
                 "Thanks to the MindShift coaching program, I learned that to achieve my future goals, first I have to change myself. I have to think, act and believe differently, and that's what I've been doing since starting MindShift.
                 <br /><br />
                 By applying all aspects covered by this MindShift Coaching Program, I've been noticing significant changes regarding the way I think, my actions and beliefs. This is bringing me unexpected results, awareness, and new knowledge in areas that I've never thought possible before. It's like opening a treasure chest every day, and it's really changing my behaviors and my life!"
