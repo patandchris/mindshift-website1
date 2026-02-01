@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import patChrisLogo from "@/assets/pat-chris-logo-new.png";
+import patChrisLogo from "@/assets/pat-chris-logo.png";
 
 interface HeaderProps {
   hideNavAndCta?: boolean;

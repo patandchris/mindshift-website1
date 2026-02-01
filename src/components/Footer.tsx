@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Youtube, Linkedin, Mail } from "lucide-react";
-import patChrisLogo from "@/assets/pat-chris-logo-new.png";
+import patChrisLogo from "@/assets/pat-chris-logo.png";
 
 interface FooterProps {
   minimal?: boolean;
