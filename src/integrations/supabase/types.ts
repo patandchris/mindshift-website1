@@ -60,6 +60,13 @@ export type Database = {
             referencedRelation: "week1_members"
             referencedColumns: ["id"]
           },
+          {
+            foreignKeyName: "member_content_progress_member_id_fkey"
+            columns: ["member_id"]
+            isOneToOne: false
+            referencedRelation: "week1_members_public"
+            referencedColumns: ["id"]
+          },
         ]
       }
       user_roles: {
@@ -169,7 +176,45 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      week1_members_public: {
+        Row: {
+          completed_at: string | null
+          created_at: string | null
+          id: string | null
+          last_activity_at: string | null
+          progress_percentage: number | null
+          registered_at: string | null
+          started_at: string | null
+          status: Database["public"]["Enums"]["member_status"] | null
+          updated_at: string | null
+          user_id: string | null
+        }
+        Insert: {
+          completed_at?: string | null
+          created_at?: string | null
+          id?: string | null
+          last_activity_at?: string | null
+          progress_percentage?: number | null
+          registered_at?: string | null
+          started_at?: string | null
+          status?: Database["public"]["Enums"]["member_status"] | null
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          completed_at?: string | null
+          created_at?: string | null
+          id?: string | null
+          last_activity_at?: string | null
+          progress_percentage?: number | null
+          registered_at?: string | null
+          started_at?: string | null
+          status?: Database["public"]["Enums"]["member_status"] | null
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       check_is_admin: { Args: never; Returns: boolean }
