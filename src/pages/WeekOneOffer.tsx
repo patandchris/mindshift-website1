@@ -30,7 +30,7 @@ const WeekOneOffer = () => {
   ];
 
   const beliefProcessPoints = [
-    "Identifying unconscious beliefs that cap your success",
+    "Identifying the unconscious beliefs that are limiting your success",
     "Understanding where those beliefs were formed",
     "Loosening the certainty that keeps those beliefs in place",
     "Installing more empowering internal standards"
