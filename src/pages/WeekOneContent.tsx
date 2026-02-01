@@ -282,13 +282,6 @@ const WeekOneContent = () => {
             ))}
           </div>
         </section>
-
-        {/* Bottom CTA */}
-        <section className="mt-12 flex justify-center">
-          <Button variant="premium" size="lg" className="h-14 px-8 text-lg" onClick={() => window.open('https://calendly.com/patandchris/30min', '_blank')}>
-            Get Access to Weeks 2-11
-          </Button>
-        </section>
       </main>
 
       {/* Footer */}
