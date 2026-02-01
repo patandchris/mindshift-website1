@@ -21,9 +21,10 @@ const getElementAttribute = (element: Element | null, tagName: string, attribute
 };
 
 const stripHtmlTags = (html: string): string => {
-  const tmp = document.createElement('div');
-  tmp.innerHTML = html;
-  return tmp.textContent || tmp.innerText || '';
+  // Use DOMParser for safe HTML text extraction - avoids innerHTML XSS risks
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, 'text/html');
+  return doc.body.textContent || '';
 };
 
 export const usePodcastFeed = (feedUrl: string) => {
