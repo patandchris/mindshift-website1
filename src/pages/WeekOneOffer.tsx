@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Brain, Moon, Target, Sparkles } from "lucide-react";
+import { CheckCircle, Brain, Moon, Target, Sparkles, Rocket, Crown } from "lucide-react";
 import mindshiftLogo from "@/assets/mindshift-logo-new.png";
 
 const WeekOneOffer = () => {
@@ -30,6 +30,18 @@ const WeekOneOffer = () => {
       description:
         "A Neuro Linguistic Programming change pattern designed to rewire your unconscious programming towards success.",
       icon: Sparkles,
+    },
+    {
+      title: "Action",
+      description:
+        "Take consistent action without hesitation or self sabotage.",
+      icon: Rocket,
+    },
+    {
+      title: "Mindset",
+      description:
+        "Upgrade how you see yourself, so success feels natural, not risky.",
+      icon: Crown,
     },
   ];
 
