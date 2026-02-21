@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Download, ExternalLink } from 'lucide-react';
+import { Download } from 'lucide-react';
 
 interface DocumentCardProps {
   id: string;
@@ -76,15 +76,6 @@ const DocumentCard = ({
             {/* Action Buttons */}
             {fileUrl ? (
               <div className="flex flex-wrap gap-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={handleOpen}
-                  className="text-sm"
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Open
-                </Button>
                 <Button
                   variant="outline"
                   size="sm"

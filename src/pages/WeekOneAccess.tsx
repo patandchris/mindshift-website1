@@ -14,9 +14,7 @@ import mindshiftLogo from '@/assets/mindshift-logo-new.png';
 const signupSchema = z.object({
   name: z.string().trim().min(1, 'Name is required').max(100, 'Name must be less than 100 characters'),
   email: z.string().trim().email('Please enter a valid email address').max(255, 'Email must be less than 255 characters'),
-  password: z.string()
-    .min(1, 'Password is required')
-    .max(128, 'Password must be less than 128 characters'),
+  password: z.string().min(1, 'Password is required'),
   confirmPassword: z.string()
 }).refine((data) => data.password === data.confirmPassword, {
   message: "Passwords don't match",
@@ -266,8 +264,8 @@ const WeekOneAccess = () => {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       required
-                      placeholder="Your full name"
-                      className="pl-10 bg-background border-border"
+                      placeholder="Your name"
+                      className="pl-10 bg-card border-border text-foreground"
                     />
                   </div>
                   {errors.name && <p className="text-destructive text-sm mt-1">{errors.name}</p>}
@@ -285,7 +283,7 @@ const WeekOneAccess = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     placeholder="you@example.com"
-                    className="pl-10 bg-background border-border"
+                    className="pl-10 bg-card border-border text-foreground"
                   />
                 </div>
                 {errors.email && <p className="text-destructive text-sm mt-1">{errors.email}</p>}
@@ -302,7 +300,7 @@ const WeekOneAccess = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                     placeholder="••••••••"
-                    className="pl-10 pr-10 bg-background border-border placeholder:text-muted-foreground/40 placeholder:font-light"
+                    className="pl-10 pr-10 bg-card border-border text-foreground placeholder:text-muted-foreground/40 placeholder:font-light"
                   />
                   <button
                     type="button"
@@ -327,7 +325,7 @@ const WeekOneAccess = () => {
                       onChange={(e) => setConfirmPassword(e.target.value)}
                       required
                       placeholder="••••••••"
-                      className="pl-10 pr-10 bg-background border-border placeholder:text-muted-foreground/40 placeholder:font-light"
+                      className="pl-10 pr-10 bg-card border-border text-foreground placeholder:text-muted-foreground/40 placeholder:font-light"
                     />
                     <button
                       type="button"
