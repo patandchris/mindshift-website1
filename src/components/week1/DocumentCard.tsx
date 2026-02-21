@@ -26,18 +26,11 @@ const DocumentCard = ({
   const handleOpen = async () => {
     if (fileUrl) {
       try {
-        // For Word documents, try to open with MS Word protocol
-        if (contentType === 'document' && fileUrl.endsWith('.docx')) {
-          // Use ms-word protocol to open in Word
-          window.open(`ms-word:ofe|u|${fileUrl}`, '_self');
-        } else {
-          // For PDFs, open in new tab
-          window.open(fileUrl, '_blank', 'noopener,noreferrer');
-        }
+        // Open all files in a new tab - works universally across devices
+        window.open(fileUrl, '_blank', 'noopener,noreferrer');
         onComplete(true);
       } catch (error) {
         console.error('Error opening file:', error);
-        // Fallback to download
         handleDownload();
       }
     }
@@ -73,11 +66,6 @@ const DocumentCard = ({
           <div className="mb-4">
             <div className="flex items-start justify-between gap-2">
               <h3 className="font-semibold text-accent">{title}</h3>
-            {isCompleted && (
-              <span className="text-xs bg-green-600/20 text-green-500 border border-green-500/50 px-2 py-1 rounded-full flex-shrink-0">
-                ✓ Viewed
-              </span>
-            )}
             </div>
             <p className="text-sm text-muted-foreground mt-1">{description}</p>
             <span className="inline-block text-xs text-muted-foreground bg-secondary px-2 py-0.5 rounded mt-2">

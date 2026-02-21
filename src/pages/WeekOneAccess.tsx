@@ -7,18 +7,16 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
-import { Loader2, Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react';
+import { Loader2, Eye, EyeOff, Mail, Lock, ArrowRight, User } from 'lucide-react';
 import { z } from 'zod';
 import mindshiftLogo from '@/assets/mindshift-logo-new.png';
 
 const signupSchema = z.object({
+  name: z.string().trim().min(1, 'Name is required').max(100, 'Name must be less than 100 characters'),
   email: z.string().trim().email('Please enter a valid email address').max(255, 'Email must be less than 255 characters'),
   password: z.string()
-    .min(8, 'Password must be at least 8 characters')
-    .max(128, 'Password must be less than 128 characters')
-    .regex(/[A-Z]/, 'Password must contain at least one uppercase letter')
-    .regex(/[a-z]/, 'Password must contain at least one lowercase letter')
-    .regex(/[0-9]/, 'Password must contain at least one number'),
+    .min(1, 'Password is required')
+    .max(128, 'Password must be less than 128 characters'),
   confirmPassword: z.string()
 }).refine((data) => data.password === data.confirmPassword, {
   message: "Passwords don't match",
@@ -33,6 +31,7 @@ const loginSchema = z.object({
 const WeekOneAccess = () => {
   const [isLogin, setIsLogin] = useState(false);
   const [isForgotPassword, setIsForgotPassword] = useState(false);
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -118,7 +117,7 @@ const WeekOneAccess = () => {
           description: "Redirecting to your Week 1 content...",
         });
       } else {
-        const validation = signupSchema.safeParse({ email, password, confirmPassword });
+        const validation = signupSchema.safeParse({ name, email, password, confirmPassword });
         if (!validation.success) {
           const fieldErrors: Record<string, string> = {};
           validation.error.errors.forEach(err => {
@@ -133,6 +132,7 @@ const WeekOneAccess = () => {
           password,
           options: {
             emailRedirectTo: `${window.location.origin}/week-one-content`,
+            data: { full_name: name },
           },
         });
 
@@ -255,6 +255,25 @@ const WeekOneAccess = () => {
 
           <div className="card-premium">
             <form onSubmit={handleAuth} className="space-y-5">
+              {!isLogin && (
+                <div>
+                  <Label htmlFor="name" className="text-muted-foreground">Name</Label>
+                  <div className="relative mt-2">
+                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                    <Input
+                      id="name"
+                      type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                      placeholder="Your full name"
+                      className="pl-10 bg-background border-border"
+                    />
+                  </div>
+                  {errors.name && <p className="text-destructive text-sm mt-1">{errors.name}</p>}
+                </div>
+              )}
+
               <div>
                 <Label htmlFor="email" className="text-muted-foreground">Email</Label>
                 <div className="relative mt-2">
@@ -283,7 +302,7 @@ const WeekOneAccess = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                     placeholder="••••••••"
-                    className="pl-10 pr-10 bg-background border-border"
+                    className="pl-10 pr-10 bg-background border-border placeholder:text-muted-foreground/40 placeholder:font-light"
                   />
                   <button
                     type="button"
@@ -308,7 +327,7 @@ const WeekOneAccess = () => {
                       onChange={(e) => setConfirmPassword(e.target.value)}
                       required
                       placeholder="••••••••"
-                      className="pl-10 pr-10 bg-background border-border"
+                      className="pl-10 pr-10 bg-background border-border placeholder:text-muted-foreground/40 placeholder:font-light"
                     />
                     <button
                       type="button"
