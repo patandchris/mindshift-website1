@@ -3,6 +3,8 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
 // Allowed origins for CORS - restrict to production and development domains
 const allowedOrigins = [
+  'https://patandchris.com',
+  'https://www.patandchris.com',
   'https://mindshift-website1.lovable.app',
   'https://id-preview--ac3b99e9-64d6-484e-b0ab-263e802b2e64.lovable.app',
   'http://localhost:5173',
