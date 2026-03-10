@@ -86,7 +86,7 @@ export const usePodcastFeed = (feedUrl: string) => {
               day: 'numeric',
               year: 'numeric'
             }) : '',
-            episode: parseInt(episodeNumber) || index + 1,
+            episode: parseInt(episodeNumber) || (items.length - index),
             audioUrl: getElementAttribute(item, 'enclosure', 'url'),
             thumbnail: thumbnail || undefined,
           };
