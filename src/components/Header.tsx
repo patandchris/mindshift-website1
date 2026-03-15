@@ -23,8 +23,10 @@ const Header = ({ hideNavAndCta = false }: HeaderProps) => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Coaching", path: "/coaching-program" },
+    { name: "Start Free Week", path: "/week-one-offer" },
+    { name: "Programs", path: "/programs" },
     { name: "Podcast", path: "/podcast" },
+    { name: "About", path: "/about" },
   ];
 
   return (
@@ -78,13 +80,15 @@ const Header = ({ hideNavAndCta = false }: HeaderProps) => {
           {/* CTA Button */}
           {!hideNavAndCta && (
             <div className="hidden lg:block">
-              <Button 
-                variant="default" 
-                size="lg" 
+              <Button
+                variant="default"
+                size="lg"
                 className="bg-gradient-gold text-background font-bold hover:shadow-glow transition-all duration-300"
                 asChild
               >
-                <Link to="/coaching-program" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Start Your Transformation</Link>
+                <Link to="/week-one-offer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                  Start Week One Free
+                </Link>
               </Button>
             </div>
           )}
@@ -120,14 +124,14 @@ const Header = ({ hideNavAndCta = false }: HeaderProps) => {
                 </Link>
               ))}
               <div className="px-4 pt-4">
-                <Button 
-                  variant="default" 
-                  size="lg" 
+                <Button
+                  variant="default"
+                  size="lg"
                   className="w-full bg-gradient-gold text-background font-bold hover:shadow-glow transition-all duration-300"
                   asChild
                 >
-                  <Link to="/coaching-program" onClick={() => { setIsMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-                    Start Your Transformation
+                  <Link to="/week-one-offer" onClick={() => { setIsMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+                    Start Week One Free
                   </Link>
                 </Button>
               </div>
