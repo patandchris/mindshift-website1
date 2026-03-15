@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium Pat & Chris Coaching Design System
+Black background with gold highlights for buttons/headlines and white text
+Premium, masculine, and minimalist look for ambitious men aged 40-55
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Core brand colors - Navy blue and bronze gold theme */
+    --background: 225 44% 14%;        /* Dark navy blue background #141C34 */
+    --foreground: 0 0% 98%;          /* Grey-white for refined readability */
+
+    --card: 225 44% 12%;              /* Slightly lighter navy for cards - better contrast */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 225 44% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Bronze gold for CTAs and highlights #907015 */
+    --primary: 44 75% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 225 44% 18%;         /* Lighter navy */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 225 40% 20%;
+    --muted-foreground: 0 0% 75%;
+
+    --accent: 44 75% 32%;            /* Bronze gold */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 225 40% 25%;
+    --input: 225 40% 25%;
+    --ring: 44 75% 32%;
+
+    --radius: 0.75rem;
+
+    /* Bronze gold gradient for special elements */
+    --gradient-gold: linear-gradient(135deg, hsl(44 75% 32%) 0%, hsl(42 70% 38%) 50%, hsl(40 65% 42%) 100%);
+    
+    /* Elegant shadows with gold glow */
+    --shadow-gold: 0 10px 30px -10px hsl(44 75% 32% / 0.4);
+    --shadow-glow: 0 0 40px hsl(44 75% 32% / 0.5);
+    --shadow-elegant: 0 20px 40px -10px hsl(225 44% 8% / 0.5);
+    
+    /* Smooth premium transitions */
+    --transition-elegant: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Premium font weights */
+    --font-light: 300;
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-black: 900;
+  }
+
+  .dark {
+    /* Same as root for consistent theme */
+    --background: 225 44% 14%;
+    --foreground: 0 0% 100%;
+    --card: 225 44% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 225 44% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 44 75% 32%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 225 44% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 225 40% 20%;
+    --muted-foreground: 0 0% 75%;
+    --accent: 44 75% 32%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 225 40% 25%;
+    --input: 225 40% 25%;
+    --ring: 44 75% 32%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-medium antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-6xl font-black;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+
+@layer components {
+  /* Premium button variants */
+  .btn-hero {
+    background: var(--gradient-gold);
+    @apply text-primary-foreground font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg;
+    box-shadow: var(--shadow-gold);
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground border border-border font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:bg-accent hover:text-accent-foreground;
+  }
+
+  /* Premium card styles */
+  .card-premium {
+    @apply bg-card border border-border rounded-xl p-6 transition-all duration-300;
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .card-premium:hover {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* Shadow utilities */
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Gold accent dividers */
+  .divider-gold {
+    @apply h-px bg-gradient-to-r from-transparent via-accent to-transparent;
+  }
+
+  /* Premium section spacing */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  /* Container with max width */
+  .container-premium {
+    @apply container mx-auto px-4 md:px-6 lg:px-8;
+  }
+}
