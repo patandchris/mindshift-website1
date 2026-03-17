@@ -47,15 +47,15 @@ const Hero = () => {
             Eliminate limiting beliefs, build success habits, and unlock your focus with our proven system designed for ambitious professionals ready to break through their barriers.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex justify-center">
-            <Link to="/coaching-program" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              <Button variant="default" size="lg" className="group bg-gradient-gold text-background font-bold hover:shadow-glow transition-all duration-300">
-                Start Your Transformation
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </Link>
-          </div>
+{/* CTA Buttons */}
+<div className="flex justify-center">
+  <Link to="/week-one-offer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+    <Button variant="default" size="lg" className="group bg-gradient-gold text-background font-bold hover:shadow-glow transition-all duration-300">
+      Start Week One Free
+      <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+    </Button>
+  </Link>
+</div>
         </div>
 
       </div>
