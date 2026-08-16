@@ -25,8 +25,6 @@ const shifts = [
   "what they believed was possible",
 ];
 
-const StorySection = () => null;
-
 const PatStorySection = ({ onExploreClick }: StorySectionProps) => (
   <section className="section-padding">
     <div className="container-premium">
