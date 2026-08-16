@@ -69,6 +69,87 @@ export type Database = {
           },
         ]
       }
+      mindshift_applications: {
+        Row: {
+          commitment_score: number
+          created_at: string
+          duration_stuck: string
+          email: string
+          fbclid: string | null
+          financial_fit: string
+          first_name: string
+          focus_area: string
+          id: string
+          ip_hash: string | null
+          landing_url: string | null
+          last_name: string
+          phone: string
+          qualified: boolean
+          referrer: string | null
+          situation: string
+          tried_before: string
+          utm_campaign: string | null
+          utm_content: string | null
+          utm_medium: string | null
+          utm_source: string | null
+          utm_term: string | null
+          why_now: string
+          will_participate: string
+        }
+        Insert: {
+          commitment_score: number
+          created_at?: string
+          duration_stuck: string
+          email: string
+          fbclid?: string | null
+          financial_fit: string
+          first_name: string
+          focus_area: string
+          id?: string
+          ip_hash?: string | null
+          landing_url?: string | null
+          last_name: string
+          phone: string
+          qualified?: boolean
+          referrer?: string | null
+          situation: string
+          tried_before: string
+          utm_campaign?: string | null
+          utm_content?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+          utm_term?: string | null
+          why_now: string
+          will_participate: string
+        }
+        Update: {
+          commitment_score?: number
+          created_at?: string
+          duration_stuck?: string
+          email?: string
+          fbclid?: string | null
+          financial_fit?: string
+          first_name?: string
+          focus_area?: string
+          id?: string
+          ip_hash?: string | null
+          landing_url?: string | null
+          last_name?: string
+          phone?: string
+          qualified?: boolean
+          referrer?: string | null
+          situation?: string
+          tried_before?: string
+          utm_campaign?: string | null
+          utm_content?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+          utm_term?: string | null
+          why_now?: string
+          will_participate?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string | null
