@@ -14,6 +14,7 @@ import Auth from "./pages/Auth";
 import MindshiftApp from "./pages/MindshiftApp";
 import WeekOneAccess from "./pages/WeekOneAccess";
 import WeekOneContent from "./pages/WeekOneContent";
+import MindshiftApply from "./pages/MindshiftApply";
 
 const queryClient = new QueryClient();
 
