@@ -35,6 +35,7 @@ const App = () => (
           <Route path="/mindshift-app" element={<MindshiftApp />} />
           <Route path="/week-one-access" element={<WeekOneAccess />} />
           <Route path="/week-one-content" element={<WeekOneContent />} />
+          <Route path="/mindshift-apply" element={<MindshiftApply />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
