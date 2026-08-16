@@ -124,4 +124,3 @@ const PatStorySection = ({ onExploreClick }: StorySectionProps) => (
 );
 
 export default PatStorySection;
-export { StorySection };
