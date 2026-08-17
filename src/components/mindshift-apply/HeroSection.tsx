@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import MediaPlaceholder from "./MediaPlaceholder";
+import patChrisHero from "@/assets/pat-chris-hero.jpg.asset.json";
 
 interface HeroSectionProps {
   onApplyClick: () => void;
