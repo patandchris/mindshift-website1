@@ -45,7 +45,7 @@ const PatStorySection = ({ onExploreClick }: StorySectionProps) => (
           <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
             <p>
               What started as his question became a decade-long journey both of them.
-              <br /><br /><br />
+              <br /><br />
               Pat had a good career, a family and a stable life.
             </p>
             <p>
@@ -64,7 +64,7 @@ const PatStorySection = ({ onExploreClick }: StorySectionProps) => (
             </p>
             <p>Together, they became fascinated by one question:</p>
             <p className="text-xl italic text-accent">
-              Why do some people keep creating new opportunitiesa while others work just as hard and remain stuck?
+              Why do some people keep creating new opportunities while others work just as hard and remain stuck?
             </p>
             <p>Over the next decade, they studied:</p>
             <ul className="grid gap-2 sm:grid-cols-2">
