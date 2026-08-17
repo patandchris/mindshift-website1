@@ -85,15 +85,11 @@ const PatStorySection = ({ onExploreClick }: StorySectionProps) => (
               </span>
               .
             </p>
-            <p>Together, they began changing the way they approached:</p>
-            <ul className="grid gap-2 sm:grid-cols-2">
-              {shifts.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            <p>
+              Together, they began changing the way they approached goals, money, opportunities, failure, setbacks and what they believed was possible.
+              <br /><br /><br />
+              They experienced setbacks too. Some of their real-estate investments didn't go as planned, but instead of treating failure as a reason to stop, they learned to treat it as feedback.
+            </p>
             <p className="border-l-2 border-accent pl-6 text-xl text-foreground">
               Knowing what to do is not the same as becoming the person who consistently does it.
             </p>
