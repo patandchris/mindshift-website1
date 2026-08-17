@@ -26,9 +26,8 @@ const HeroSection = ({ onApplyClick }: HeroSectionProps) => (
             </p>
             <p>Yet somewhere underneath it all, you know something needs to change.</p>
             <p>
-              MindShift is a 12-week personal transformation coaching program created by Pat &amp;
-              Chris to help you identify and change the beliefs, patterns and behaviors that may be
-              keeping you from moving toward the life you actually want.
+              MindShift is a 12-week coaching experience designed to help you identify and change the
+              beliefs and patterns keeping you from moving toward the life you actually want.
             </p>
           </div>
 
