@@ -87,7 +87,7 @@ const PatStorySection = ({ onExploreClick }: StorySectionProps) => (
             </p>
             <p>
               Together, they began changing the way they approached goals, money, opportunities, failure, setbacks and what they believed was possible.
-              <br /><br /><br />
+              <br /><br />
               They experienced setbacks too. Some of their real-estate investments didn't go as planned, but instead of treating failure as a reason to stop, they learned to treat it as feedback.
             </p>
             <p className="border-l-2 border-accent pl-6 text-xl text-foreground">
