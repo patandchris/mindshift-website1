@@ -46,11 +46,15 @@ const HeroSection = ({ onApplyClick }: HeroSectionProps) => (
         </div>
 
         <div className="lg:pl-6">
-          <MediaPlaceholder
-            label="Hero — real Pat &amp; Chris photo"
-            aspect="aspect-[4/5]"
-            caption="Both founders together. Replace with the real photograph."
-          />
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-accent/30 bg-card">
+            <img
+              src={patChrisHero.url}
+              alt="Pat and Chris recording the podcast together in studio"
+              className="h-full w-full object-cover object-top"
+              loading="eager"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+          </div>
         </div>
       </div>
     </div>
