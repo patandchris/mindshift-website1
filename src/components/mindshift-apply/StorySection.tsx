@@ -39,11 +39,15 @@ const PatStorySection = ({ onExploreClick }: StorySectionProps) => (
 
         <div>
           <h2 className="mb-8">
-            At 45, Pat had a realization he couldn&rsquo;t ignore. What started as his question became a decade-long journey both of them
+            At 45, Pat had a realization he couldn&rsquo;t ignore.
           </h2>
 
           <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
-            <p>Pat had a good career, a family and a stable life.</p>
+            <p>
+              What started as his question became a decade-long journey both of them.
+              <br /><br /><br />
+              Pat had a good career, a family and a stable life.
+            </p>
             <p>
               Then one day, sitting at his desk, he opened a retirement calculator.
             </p>
