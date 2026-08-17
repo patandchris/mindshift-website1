@@ -44,7 +44,7 @@ const PatStorySection = ({ onExploreClick }: StorySectionProps) => (
 
           <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
             <p>
-              What started as his question became a decade-long journey both of them.
+              What started as his question became a decade-long journey for both of them.
               <br /><br />
               Pat had a good career, a family and a stable life.
             </p>
