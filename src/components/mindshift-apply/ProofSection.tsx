@@ -1,17 +1,25 @@
-import MediaPlaceholder from "./MediaPlaceholder";
+import haroldoVideo from "@/assets/haroldo-testimonial.mp4.asset.json";
 
 const ProofSection = () => (
   <section className="section-padding">
     <div className="container-premium">
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div className="mx-auto w-full max-w-sm">
-          <MediaPlaceholder
-            label="Haroldo testimonial video — replace with real video"
-            aspect="aspect-[9/16]"
-            variant="video"
-            caption="Real client video, with subtitles."
-          />
+          <div className="relative aspect-[9/16] w-full overflow-hidden rounded-2xl border border-accent/30 bg-card">
+            <video
+              src={haroldoVideo.url}
+              controls
+              playsInline
+              preload="metadata"
+              className="h-full w-full object-cover"
+              aria-label="Haroldo Chacon MindShift client testimonial video"
+            />
+          </div>
+          <p className="mt-3 text-center text-sm text-muted-foreground">
+            Real client video.
+          </p>
         </div>
+
 
         <div>
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-accent">
