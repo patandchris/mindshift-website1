@@ -41,10 +41,10 @@ const IdentificationSection = () => (
 
       <div className="mx-auto mt-12 max-w-2xl border-l-2 border-accent pl-6 text-left">
         <p className="text-xl leading-relaxed text-foreground">
-          Sometimes the problem isn&rsquo;t a lack of information.
+          Sometimes the problem isn&rsquo;t what you know.
         </p>
         <p className="text-xl leading-relaxed text-accent">
-          It&rsquo;s the patterns underneath the information.
+          It&rsquo;s the patterns you keep repeating.
         </p>
       </div>
     </div>
