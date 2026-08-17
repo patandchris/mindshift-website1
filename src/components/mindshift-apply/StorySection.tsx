@@ -95,7 +95,6 @@ const PatStorySection = ({ onExploreClick }: StorySectionProps) => (
             </p>
             <p>That journey eventually became the foundation of MindShift</p>
           </div>
-          </div>
 
           <Button
             variant="outline"
