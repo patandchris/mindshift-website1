@@ -24,7 +24,7 @@ const InvestmentSection = ({ onApplyClick }: InvestmentSectionProps) => (
 
         <div className="card-premium mx-auto">
           <p className="text-muted-foreground">The complete 12-week MindShift experience is:</p>
-          <p className="my-4 text-5xl font-black text-accent md:text-6xl">$4,000</p>
+          <p className="my-4 text-5xl font-black text-accent md:text-6xl">$3,997</p>
           <p className="text-muted-foreground">Payment plans are available.</p>
 
           <ul className="mx-auto mt-8 grid max-w-xl gap-3 text-left sm:grid-cols-2">
