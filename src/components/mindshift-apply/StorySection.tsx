@@ -30,11 +30,15 @@ const PatStorySection = ({ onExploreClick }: StorySectionProps) => (
     <div className="container-premium">
       <div className="grid gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
         <div className="lg:sticky lg:top-28 lg:self-start">
-          <MediaPlaceholder
-            label="Pat story — real Pat photo"
-            aspect="aspect-[4/5]"
-            caption="Replace with a real photograph of Pat."
-          />
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-accent/30 bg-card">
+            <img
+              src={patStoryPhoto.url}
+              alt="Pat cooking in his kitchen"
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+          </div>
         </div>
 
         <div>
