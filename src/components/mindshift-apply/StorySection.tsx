@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import MediaPlaceholder from "./MediaPlaceholder";
+import patStoryPhoto from "@/assets/pat-story.jpg.asset.json";
 
 interface StorySectionProps {
   onExploreClick: () => void;
