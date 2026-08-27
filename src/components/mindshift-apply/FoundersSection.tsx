@@ -74,11 +74,15 @@ const FoundersSection = () => (
 
         {/* CHRIS */}
         <article>
-          <MediaPlaceholder
-            label="Chris profile — real photo"
-            aspect="aspect-[4/5]"
-            className="mb-6"
-          />
+          <div className="relative mb-6 aspect-[4/5] w-full overflow-hidden rounded-2xl border border-accent/30 bg-card">
+            <img
+              src={chrisPhoto.url}
+              alt="Chris playing guitar in the studio"
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+          </div>
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-accent">
             The methodology
           </p>
