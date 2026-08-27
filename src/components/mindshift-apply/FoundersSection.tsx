@@ -1,4 +1,5 @@
 import MediaPlaceholder from "./MediaPlaceholder";
+import chrisPhoto from "@/assets/chris-guitar.jpg.asset.json";
 
 const FoundersSection = () => (
   <section className="section-padding bg-secondary/30">
