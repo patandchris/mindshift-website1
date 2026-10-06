@@ -2,7 +2,7 @@ const statements = [
   "You feel like you're operating below your potential.",
   "You keep waiting for the \u201cright time\u201d to make an important change.",
   "You've achieved things, but something still feels incomplete.",
-  "You want more confidence, direction or purpose.",
+  "You research, plan or prepare, but still avoid the action that would actually mov you forward.",
   "You make progress, then fall back into old patterns.",
   "You know your next chapter needs to look different from your last one.",
 ];
@@ -21,8 +21,7 @@ const IdentificationSection = () => (
           <p>Maybe you&rsquo;ve set goals before.</p>
           <p>Maybe you already know what you want to change.</p>
           <p>
-            And yet you still find yourself returning to the same thoughts, habits, doubts or
-            behaviors.
+            And yet, somehow, you still find yourself returning to the same doubts, habits and patterns.
           </p>
         </div>
       </div>
