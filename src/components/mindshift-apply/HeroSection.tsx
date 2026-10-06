@@ -24,10 +24,19 @@ const HeroSection = ({ onApplyClick }: HeroSectionProps) => (
               You may have a career, responsibilities and a life that looks successful from the
               outside.
             </p>
-            <p>Yet somewhere underneath it all, you know something needs to change.</p>
             <p>
-              MindShift is a 12-week coaching experience designed to help you identify and change the
-              beliefs and patterns keeping you from moving toward the life you actually want.
+              Yet somewhere underneath it all, you know syou're not operating at the level you're
+              capable of.
+              <br />
+              <br />
+              <br />
+              You may even know what needs to change. The harder question is why knowing hasn't
+              been enough.
+            </p>
+            <p>
+              MindShift is a 12-week coaching experience designed to help you identify the beliefs
+              and patterns that may be keeping you stuck, define the future you actually want, and
+              build the behaviors and internal standards needed to move toward it.
             </p>
           </div>
 
