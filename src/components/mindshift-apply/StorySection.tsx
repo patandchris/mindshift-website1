@@ -90,7 +90,7 @@ const PatStorySection = ({ onExploreClick }: StorySectionProps) => (
               .
             </p>
             <p>
-              Together, they began changing the way they approached goals, money, opportunities, failure, setbacks and what they believed was possible.
+              Together, they began applying what they were learning to the way they approached goals, money, opportunity and setbacks.
               <br /><br />
               They experienced setbacks too. Some of their real-estate investments didn't go as planned, but instead of treating failure as a reason to stop, they learned to treat it as feedback.
             </p>
