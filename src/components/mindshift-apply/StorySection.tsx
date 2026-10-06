@@ -12,7 +12,7 @@ const studies = [
   "behavior",
   "NLP",
   "subconscious patterns",
-  "the thinking patterns of highly successful people",
+  "how people respond to goals,\nopportunity and failure",
 ];
 
 const shifts = [
@@ -48,7 +48,7 @@ const PatStorySection = ({ onExploreClick }: StorySectionProps) => (
 
           <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
             <p>
-              What started as his question became a decade-long journey for both of them.
+              What began as Pat's question became a decade-long journey they shared.
               <br /><br />
               Pat had a good career, a family and a stable life.
             </p>
@@ -56,7 +56,7 @@ const PatStorySection = ({ onExploreClick }: StorySectionProps) => (
               Then one day, sitting at his desk, he opened a retirement calculator.
             </p>
             <p>
-              If nothing changed, he realized he could still be working into his 70s, living within many of the same financial limits and assumptions he had accepted for years.
+              If nothing changed, he realized he could still be working into his 70s, living within many of the same limits and assumptions he had accepted for years.
             </p>
             <p>There was nothing &ldquo;wrong&rdquo; with his life.</p>
             <p>But he wanted more for himself and his family.</p>
