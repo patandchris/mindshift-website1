@@ -10,24 +10,19 @@ const MissionSection = () => (
           </h2>
           <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
             <p>
-              For Pat &amp; Chris, personal development did not simply become a way to chase another
-              goal.
+              For Pat &amp; Chris, personal development was never just about achieving another goal.
             </p>
-            <p className="text-foreground">It changed the experience of the journey itself.</p>
+            <p className="text-foreground">
+              Over time, it changed the way they approached possibility, setbacks and the journey
+              itself.
+            </p>
             <p>
-              They describe themselves today as happier, more optimistic about possibility and
-              better equipped to deal with setbacks than they were before they began this journey.
+              As they began seeing meaningful changes in other people too, the reason for MindShift
+              became clearer:
             </p>
-            <p>Seeing those changes in other people became even more meaningful.</p>
-            <p>
-              When people like Haroldo began describing how MindShift had affected their confidence,
-              thinking and everyday behavior, Pat &amp; Chris realized how powerful it was to help
-              another person experience meaningful change.
-            </p>
-            <p>Their objective with MindShift is simple:</p>
             <p className="border-l-2 border-accent pl-6 text-xl text-foreground">
-              Help people who know they are capable of more start becoming the person capable of
-              creating more.
+              Help people who know they’re capable of more understand what may be holding them back
+              — and build the patterns, behaviors and internal standards needed to move forward.
             </p>
           </div>
         </div>
