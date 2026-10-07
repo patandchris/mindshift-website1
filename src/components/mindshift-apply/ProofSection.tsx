@@ -30,12 +30,10 @@ const ProofSection = () => (
           </h2>
 
           <blockquote className="mb-4 border-l-2 border-accent pl-6 text-lg leading-relaxed text-foreground">
-            &ldquo;To get different results, I realized I had to think, act and believe differently.
-            Since starting MindShift, I&rsquo;ve noticed significant changes in the way I think, my
-            actions and my beliefs.&rdquo;
+            “In order to get different results, you have to think, act and believe differently, and that's what I've been doing since starting Mindshift.”
           </blockquote>
           <p className="mb-8 text-base italic text-muted-foreground">
-            Haroldo Chacon &mdash; MindShift Client
+            Haroldo describes noticing significant changes in the way he thinks, acts and approaches his goals.
           </p>
 
           <div className="space-y-4 leading-relaxed text-muted-foreground">
