@@ -85,10 +85,7 @@ const FoundersSection = () => (
           Pat brings the lived journey. Chris brings the methodology.
         </p>
         <p>MindShift brings both together in one structured 12-week process.</p>
-        <p>
-          They didn&rsquo;t build MindShift from a perfect life. They built it from years of
-          studying, applying, failing, adjusting and continuing.
-        </p>
+        <p>{"\n"}</p>
       </div>
     </div>
   </section>
