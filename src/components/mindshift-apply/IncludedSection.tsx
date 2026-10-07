@@ -29,7 +29,7 @@ const items = [
   {
     icon: Target,
     title: "Reusable Toolkit Beyond Week 12",
-    body: "MindShift doesn't end with the final module. You leave with guided exercises, routines and a practical framework for returning to the tools when new goals, stbacks or old patterns appear.",
+    body: "MindShift doesn't end with the final module. You leave with guided exercises, routines and a practical framework for returning to the tools when new goals, setbacks or old patterns appear.",
   },
 ];
 
