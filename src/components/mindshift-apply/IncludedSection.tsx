@@ -14,7 +14,7 @@ const items = [
   {
     icon: CalendarCheck,
     title: "Weekly MindShift Check-In",
-    body: "Pat & Chris personally follow each client's progress every week. The objective is to prevent clients from simply consuming content and disappearing.",
+    body: "Pat & Chris personally follow each client's progress every week to help them reflect on what's changing, stay engaged with the process and keep moving forward.",
   },
   {
     icon: MessageCircle,
