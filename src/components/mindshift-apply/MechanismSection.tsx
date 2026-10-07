@@ -47,11 +47,10 @@ const MechanismSection = () => (
 
       <div className="mx-auto mt-12 max-w-3xl space-y-3 text-center text-lg text-muted-foreground">
         <p>
-          MindShift is not about thinking positively and waiting for life to change.
+          MindShift isn't about thinking positively and waiting for life to change.
         </p>
         <p className="text-foreground">
-          It is about changing the way you think, decide and act &mdash; then repeatedly putting
-          that change into practice.
+          It's a structured process for understanding what's been running you, building a new directio, working on what keeps pulling you back and practicing the responses you want to carry forward.
         </p>
       </div>
     </div>
