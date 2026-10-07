@@ -24,7 +24,7 @@ const items = [
   {
     icon: Repeat,
     title: "Daily Implementation Routines",
-    body: "Short journaling, affirmation and visualization routines designed to turn ideas into repeated practice.",
+    body: "Short journaling, affirmation and visualization practices that develop throughout the program, designed to turn insight into repeated daily practice.",
   },
   {
     icon: Target,
