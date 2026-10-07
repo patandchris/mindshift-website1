@@ -9,7 +9,7 @@ const items = [
   {
     icon: Headphones,
     title: "Guided NLP & Hypnosis Audio",
-    body: "Structured guided exercises used throughout the program as tools for belief, identity and behavioral work.",
+    body: "Guided exercises used throughout the program to explore beliefs, internal patterns, future behaviors and personal responses, alongside progressive hypnosis audio.",
   },
   {
     icon: CalendarCheck,
