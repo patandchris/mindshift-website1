@@ -39,8 +39,7 @@ const IncludedSection = () => (
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="mb-4">This is not just a library of content.</h2>
         <p className="text-lg text-muted-foreground">
-          MindShift combines a structured 12-week process with ongoing human support from Pat &amp;
-          Chris.
+          MindShift combines a structured 12-week progression with guided practice, direct human support and tools designed to keep being useful beyond Week 12.
         </p>
       </div>
 
