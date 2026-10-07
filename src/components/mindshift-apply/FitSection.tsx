@@ -1,22 +1,19 @@
 import { Check, X } from "lucide-react";
 
 const fits = [
-  "Your life looks fine from the outside but something still feels missing.",
-  "You know you're capable of more.",
-  "You're willing to examine your own beliefs and behaviors.",
-  "You're prepared to take consistent action for 12 weeks.",
-  "You're open to coaching, NLP exercises, hypnosis and structured personal-development work.",
-  "You are looking for meaningful change rather than another motivational video.",
-  "You are financially able to invest in a premium coaching experience.",
+  "Your life looks fine from the outside, but you know you’re capable of more.",
+  "You’re willing to honestly examine your beliefs, patterns and behaviors.",
+  "You’re prepared to consistently apply what you learn for 12 weeks.",
+  "You’re open to coaching, guided NLP-based exercises, hypnosis and structured personal-development work.",
+  "You want a process you can actively practice — not just more information.",
 ];
 
 const notFits = [
-  "You are looking for a quick fix.",
-  "You expect Pat & Chris to change your life for you.",
-  "You are unwilling to implement what you learn.",
-  "You only want free personal-development content.",
-  "You are currently unable to invest financially in a premium program.",
-  "You are seeking medical, psychiatric or psychological treatment.",
+  "You’re looking for a quick fix or guaranteed outcome.",
+  "You expect Pat & Chris to do the work for you.",
+  "You’re unwilling to examine your own patterns and decisions.",
+  "You’re not prepared to consistently put what you learn into practice.",
+  "You’re looking only for content to consume rather than a structured coaching process.",
 ];
 
 const FitSection = () => (
