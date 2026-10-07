@@ -1,23 +1,23 @@
 const steps = [
   {
     number: "1",
-    title: "Identify",
-    body: "Recognize the beliefs, internal dialogue and recurring patterns influencing your current decisions and behavior.",
+    title: "SEE",
+    body: "Identify the beliefs, patterns and automatic responses that may be influencing how you think, decide and act. ",
   },
   {
     number: "2",
-    title: "Redefine",
-    body: "Build a clear vision of the life you want and identify the goals and behaviors required to move toward it.",
+    title: "BUILD",
+    body: "Define the future you actually want, understand why it matters, and build a clear path from where you are to where you want to go.",
   },
   {
     number: "3",
-    title: "Reinforce",
-    body: "Use structured exercises, reflection, visualization, NLP techniques, hypnosis audio and daily routines to reinforce more empowering patterns.",
+    title: "REMOVE",
+    body: "Work on the self-talk, old rules and familiar responses that can quietly pull you back toward the patterns you're trying to leave behind.",
   },
   {
     number: "4",
-    title: "Act",
-    body: "Turn internal change into real-world behavior through consistent action, accountability, focus and persistence.",
+    title: "REHEARSE",
+    body: "Use guided exercises, visualization, NLP-based work and repetition to make new behaviors and internal standards more familiar.",
   },
 ];
 
@@ -27,7 +27,7 @@ const MechanismSection = () => (
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="mb-4">
           Change the pattern.
-          <span className="block text-accent">Then change the result.</span>
+          <span className="block text-accent">Change what happens next.</span>
         </h2>
       </div>
 
