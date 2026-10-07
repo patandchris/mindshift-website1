@@ -19,6 +19,11 @@ const steps = [
     title: "REHEARSE",
     body: "Use guided exercises, visualization, NLP-based work and repetition to make new behaviors and internal standards more familiar.",
   },
+  {
+    number: "5",
+    title: "HOLD",
+    body: "Recognize old responses when they return, treat setbacks as feedback and keep reinforcing the behaviors that are actually moving you forward.",
+  },
 ];
 
 const MechanismSection = () => (
@@ -31,9 +36,17 @@ const MechanismSection = () => (
         </h2>
       </div>
 
-      <ol className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        {steps.map((step) => (
-          <li key={step.title} className="card-premium h-full">
+      <ol className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-6">
+        {steps.map((step, index) => (
+          <li
+            key={step.title}
+            className={[
+              "card-premium h-full",
+              index === 3 ? "lg:col-span-2 lg:col-start-2" : "",
+              index === 4 ? "lg:col-span-2 lg:col-start-4" : "",
+              index === 3 || index === 4 ? "md:col-span-2 lg:col-span-2" : "md:col-span-1 lg:col-span-2",
+            ].join(" ")}
+          >
             <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 text-lg font-bold text-accent">
               {step.number}
             </span>
@@ -50,7 +63,7 @@ const MechanismSection = () => (
           MindShift isn't about thinking positively and waiting for life to change.
         </p>
         <p className="text-foreground">
-          It's a structured process for understanding what's been running you, building a new directio, working on what keeps pulling you back and practicing the responses you want to carry forward.
+          It's a structured process for understanding what's been running you, building a new direction, working on what keeps pulling you back, practicing new responses, and learning how to hold the change.
         </p>
       </div>
     </div>
