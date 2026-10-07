@@ -33,23 +33,19 @@ const ProofSection = () => (
             “In order to get different results, you have to think, act and believe differently, and that's what I've been doing since starting Mindshift.”
           </blockquote>
           <p className="mb-8 text-base italic text-muted-foreground">
-            Haroldo describes noticing significant changes in the way he thinks, acts and approaches his goals.
+            Haroldo Chacon - Mindshift Client
           </p>
 
           <div className="space-y-4 leading-relaxed text-muted-foreground">
-            <p>Haroldo moved to the United States from Brazil.</p>
+            <p>Haroldo moved to the United States from Brazil and built a career and life in the U.S.</p>
             <p>
-              Although he had built a life and career in the U.S., he had struggled with confidence
-              and with fully feeling like he belonged.
+              When he started Mindshift, one of the areas he wanted to work on was his confidence and the way he approached his future.
             </p>
             <p>
-              Through MindShift, Haroldo describes changing the way he thinks, acts and approaches
-              opportunities. He became noticeably more confident and positive.
+              Throughout the program, Haroldo described noticing changes in the way he thinks, acts and responds to opportunities - changes that became noticeable to the people around him too.
             </p>
             <p>
-              The change became visible enough that even his wife noticed a meaningful difference in
-              him. MindShift also influenced how he approached leadership and difficult situations
-              in other areas of his life.
+              
             </p>
           </div>
         </div>
