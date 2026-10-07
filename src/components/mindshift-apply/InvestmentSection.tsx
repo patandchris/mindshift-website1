@@ -5,12 +5,12 @@ interface InvestmentSectionProps {
 }
 
 const includes = [
-  "the complete 12-week MindShift curriculum",
-  "exercises and resources",
-  "guided audio",
-  "weekly check-ins",
-  "direct WhatsApp access to Pat & Chris",
-  "ongoing personal support and accountability",
+  "Structured 12-week MindShift progression",
+  "Guided NLP exercises & hypnosis audio",
+  "Weekly MindShift check-ins",
+  "Direct WhatsApp access to Pat & Chris",
+  "Daily implementation routines",
+  "Reusable tools beyond Week 12",
 ];
 
 const InvestmentSection = ({ onApplyClick }: InvestmentSectionProps) => (
@@ -23,7 +23,7 @@ const InvestmentSection = ({ onApplyClick }: InvestmentSectionProps) => (
         </h2>
 
         <div className="card-premium mx-auto">
-          <p className="text-muted-foreground">The complete 12-week MindShift experience is:</p>
+          <p className="text-muted-foreground">The investment for the complete 12-week MindShift experience is:</p>
           <p className="my-4 text-5xl font-black text-accent md:text-6xl">$3,997</p>
           <p className="text-muted-foreground">Payment plans are available.</p>
 
@@ -40,11 +40,11 @@ const InvestmentSection = ({ onApplyClick }: InvestmentSectionProps) => (
         <div className="mt-10 space-y-4 text-lg leading-relaxed text-muted-foreground">
           <p>
             Because Pat &amp; Chris are personally involved in the experience, MindShift has limited
-            client capacity. Enrollment therefore begins with an application.
+            client capacity. Enrollment begins with an application.
           </p>
           <p className="text-foreground">
-            We are not looking for the largest number of participants. We are looking for people
-            prepared to seriously engage with the process.
+            We’re looking for people who are prepared to seriously engage with the process for the
+            full 12 weeks.
           </p>
         </div>
 
