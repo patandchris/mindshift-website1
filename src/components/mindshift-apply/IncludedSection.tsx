@@ -4,7 +4,7 @@ const items = [
   {
     icon: BookOpen,
     title: "Structured 12-Week Curriculum",
-    body: "A structured week-by-week progression where each module builds on the work completed befoe it, su",
+    body: "A structured week-by-week progression where each module builds on the work completed before it, supported by audio content, exercises and practical resources.",
   },
   {
     icon: Headphones,
