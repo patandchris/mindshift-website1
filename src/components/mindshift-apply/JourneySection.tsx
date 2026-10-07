@@ -1,43 +1,34 @@
 const phases = [
   {
     label: "Phase 1",
-    weeks: "Weeks 1–4",
-    title: "Understand what is running you",
-    themes: ["beliefs", "vision", "goals", "action", "limiting behaviors", "direction"],
+    weeks: "Weeks 1–6",
+    title: "BUILD THE NEW",
+    themes: ["beliefs", "vision", "goals", "action", "focus", "identity"],
     description:
-      "Begin by identifying the beliefs and patterns influencing your current life. Then define a clearer vision, create meaningful goals and begin translating intention into action.",
+      "Start by identifying the beliefs and patterns that may be influencing your current decisions. Then define the future you actually want, turn it into meaningful goals, take action and begin directing your focus toward the life you’re building.",
   },
   {
     label: "Phase 2",
-    weeks: "Weeks 5–8",
-    title: "Reinforce a new internal direction",
-    themes: [
-      "focus",
-      "identity",
-      "affirmations",
-      "visualization",
-      "subconscious patterns",
-      "NLP exercises",
-      "structured routines",
-    ],
+    weeks: "Weeks 7–9",
+    title: "REMOVE WHAT PULLS YOU BACK",
+    themes: ["self-talk", "worth", "ownership", "family stories", "old rules"],
     description:
-      "Work on reinforcing the thoughts, habits and identity that support the future you want to create.",
+      "Once the new direction is clear, go deeper into the internal scripts that can quietly pull you back toward what feels familiar — from self-talk and worth to personal responsibility, family narratives and old conclusions.",
   },
   {
     label: "Phase 3",
-    weeks: "Weeks 9–12",
-    title: "Build the person who follows through",
+    weeks: "Weeks 10–12",
+    title: "REHEARSE, INTEGRATE & HOLD THE NEW",
     themes: [
-      "responsibility",
-      "self-talk",
-      "productivity",
-      "persistence",
-      "learning from failure",
+      "visualization",
+      "future identity",
+      "setbacks as feedback",
       "consistency",
-      "long-term integration",
+      "integration",
+      "forward commitment",
     ],
     description:
-      "Focus on personal ownership, consistent action and creating behaviors designed to continue beyond the 12-week program.",
+      "Practice how the person you’re becoming thinks, decides and acts. Learn to recognize old responses when they return, treat setbacks as feedback and leave with routines and tools designed to help you keep moving after Week 12.",
   },
 ];
 
@@ -45,10 +36,10 @@ const JourneySection = () => (
   <section className="section-padding bg-secondary/30">
     <div className="container-premium">
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="mb-4">
-          12 weeks designed to move from{" "}
-          <span className="text-accent">awareness to action.</span>
-        </h2>
+        <h2 className="mb-4">12 weeks. Three stages. One clear progression.</h2>
+        <p className="text-lg text-accent">
+          Build the new. Work on what pulls you back. Learn to hold what you’ve built.
+        </p>
       </div>
 
       <div className="mt-12 grid gap-6 lg:grid-cols-3">
