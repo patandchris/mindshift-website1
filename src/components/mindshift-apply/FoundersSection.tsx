@@ -1,5 +1,6 @@
 import MediaPlaceholder from "./MediaPlaceholder";
 import chrisPhoto from "@/assets/chris-guitar.jpg.asset.json";
+import patPhoto from "@/assets/pat-profile.png.asset.json";
 
 const FoundersSection = () => (
   <section className="section-padding bg-secondary/30">
@@ -17,11 +18,14 @@ const FoundersSection = () => (
       <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:gap-12">
         {/* PAT */}
         <article>
-          <MediaPlaceholder
-            label="Pat profile — real photo"
-            aspect="aspect-[4/5]"
-            className="mb-6"
-          />
+          <div className="mb-6 aspect-[4/5] overflow-hidden rounded-2xl border border-accent/20">
+            <img
+              src={patPhoto.url}
+              alt="Pat, co-founder of MindShift, standing at home"
+              className="h-full w-full object-cover object-top"
+              loading="lazy"
+            />
+          </div>
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-accent">
             The lived journey
           </p>
