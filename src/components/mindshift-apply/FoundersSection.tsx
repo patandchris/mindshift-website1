@@ -10,7 +10,7 @@ const FoundersSection = () => (
           Two perspectives. <span className="text-accent">One shared obsession.</span>
         </h2>
         <p className="text-lg text-muted-foreground">
-          Understanding why people stay stuck &mdash; and helping them change the patterns that keep
+          Understanding why people stay stuck &mdash; and helping them work on the patterns that may be keeping
           them there.
         </p>
       </div>
