@@ -294,8 +294,12 @@ const ApplicationForm = () => {
         <div ref={headingRef} className="mx-auto max-w-2xl text-center">
           <h2 className="mb-4">See if MindShift is the right fit for you.</h2>
           <p className="text-lg text-muted-foreground">
-            This application takes approximately 3&ndash;5 minutes. Your answers help the MindShift
-            team understand where you are today and whether a conversation makes sense.
+            This application takes approximately 3&ndash;5 minutes. It helps us understand where you
+            are today, what you want to change, and whether MindShift may be the right fit.
+          </p>
+          <p className="mt-4 text-lg text-muted-foreground">
+            If your application looks like a fit, you&rsquo;ll be invited to book a conversation with
+            our team.
           </p>
         </div>
 
