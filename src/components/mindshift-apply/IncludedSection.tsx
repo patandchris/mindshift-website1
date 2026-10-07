@@ -28,8 +28,8 @@ const items = [
   },
   {
     icon: Target,
-    title: "Personal Accountability",
-    body: "MindShift requires action. The program encourages clients to repeatedly connect what they learn to the real decisions and actions they take in their lives.",
+    title: "Reusable Toolkit Beyond Week 12",
+    body: "MindShift doesn't end with the final module. You leave with guided exercises, routines and a practical framework for returning to the tools when new goals, stbacks or old patterns appear.",
   },
 ];
 
