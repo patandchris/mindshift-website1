@@ -4,7 +4,7 @@ const items = [
   {
     icon: BookOpen,
     title: "Structured 12-Week Curriculum",
-    body: "Weekly audio content, exercises and PDF resources built around the MindShift progression.",
+    body: "A structured week-by-week progression where each module builds on the work completed befoe it, su",
   },
   {
     icon: Headphones,
