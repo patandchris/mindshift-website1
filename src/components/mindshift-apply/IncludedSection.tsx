@@ -19,7 +19,7 @@ const items = [
   {
     icon: MessageCircle,
     title: "Direct WhatsApp Access to Pat & Chris",
-    body: "Clients can communicate directly with Pat & Chris during the program when they need clarification, guidance or support.",
+    body: "Communicate directly with Pat & Chris throughout the program when you need clarification, guidance or support.",
   },
   {
     icon: Repeat,
