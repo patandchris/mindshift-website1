@@ -1,4 +1,4 @@
-import MediaPlaceholder from "./MediaPlaceholder";
+import missionPhoto from "@/assets/pat-chris-mission.png.asset.json";
 
 const MissionSection = () => (
   <section className="section-padding">
@@ -33,11 +33,14 @@ const MissionSection = () => (
         </div>
 
         <div className="lg:order-first">
-          <MediaPlaceholder
-            label="Pat &amp; Chris together — mission section"
-            aspect="aspect-[4/3]"
-            caption="Replace with a real photo of Pat &amp; Chris."
-          />
+          <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-accent/30">
+            <img
+              src={missionPhoto.url}
+              alt="Pat and Chris smiling at each other while recording in their studio"
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </div>
