@@ -25,7 +25,7 @@ const HeroSection = ({ onApplyClick }: HeroSectionProps) => (
               outside.
             </p>
             <p>
-              Yet somewhere underneath it all, you know syou're not operating at the level you're
+              Yet somewhere underneath it all, you know you're not operating at the level you're
               capable of.
               <br />
               <br />

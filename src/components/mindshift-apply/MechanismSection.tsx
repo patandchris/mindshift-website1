@@ -11,7 +11,7 @@ const steps = [
   },
   {
     number: "3",
-    title: "REMOVE",
+    title: "RELEASE",
     body: "Work on the self-talk, old rules and familiar responses that can quietly pull you back toward the patterns you're trying to leave behind.",
   },
   {

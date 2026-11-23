@@ -47,11 +47,7 @@ const PatStorySection = ({ onExploreClick }: StorySectionProps) => (
           </h2>
 
           <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
-            <p>
-              What began as Pat's question became a decade-long journey they shared.
-              <br /><br />
-              Pat had a good career, a family and a stable life.
-            </p>
+            <p>Pat had a good career, a family and a stable life.</p>
             <p>
               Then one day, sitting at his desk, he opened a retirement calculator.
             </p>
@@ -80,9 +76,6 @@ const PatStorySection = ({ onExploreClick }: StorySectionProps) => (
               ))}
             </ul>
             <p>
-              They began applying what they learned to their own lives.
-            </p>
-            <p>
               Chris went deeper into the methodology, becoming an{" "}
               <span className="font-semibold text-foreground">
                 NLP Practitioner and Certified Hypnotist
@@ -97,7 +90,7 @@ const PatStorySection = ({ onExploreClick }: StorySectionProps) => (
             <p className="border-l-2 border-accent pl-6 text-xl text-foreground">
               Knowing what to do is not the same as becoming the person who consistently does it.
             </p>
-            <p>That journey eventually became the foundation of MindShift</p>
+            <p>That journey eventually became the foundation of MindShift.</p>
           </div>
 
           <Button

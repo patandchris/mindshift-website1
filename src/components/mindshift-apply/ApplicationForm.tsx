@@ -31,7 +31,7 @@ const DURATIONS = [
 ] as const;
 
 const FINANCIAL_OPTIONS = [
-  "I'm ready to invest $4,000 if I believe MindShift is right for me.",
+  "I'm ready to invest $3,997 if I believe MindShift is right for me.",
   "I could invest using a payment plan.",
   "I would need to discuss the investment with my partner.",
   "I'm interested, but I'm not currently able to make this level of investment.",
@@ -322,8 +322,12 @@ const ApplicationForm = () => {
             </div>
           </div>
 
-          {/* Honeypot — hidden from humans, tempting to bots */}
-          <div className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
+          {/* Honeypot — kept in the DOM for bots, fully invisible to users and screen readers */}
+          <div
+            className="absolute h-px w-px overflow-hidden"
+            aria-hidden="true"
+            style={{ left: "-9999px", top: "auto", clip: "rect(0 0 0 0)" }}
+          >
             <label htmlFor="website">Website</label>
             <input
               id="website"
@@ -331,6 +335,7 @@ const ApplicationForm = () => {
               type="text"
               tabIndex={-1}
               autoComplete="off"
+              aria-hidden="true"
               value={honeypot}
               onChange={(e) => setHoneypot(e.target.value)}
             />
@@ -534,7 +539,7 @@ const ApplicationForm = () => {
               </QuestionBlock>
 
               <QuestionBlock
-                label="MindShift is a premium 12-week coaching program. The investment is $4,000, with payment plans available. If you believe MindShift is the right fit for you, which best describes your situation?"
+                label="MindShift is a premium 12-week coaching program. The investment is $3,997, with payment plans available. If you believe MindShift is the right fit for you, which best describes your situation?"
                 error={errors.financialFit}
               >
                 <RadioGroup

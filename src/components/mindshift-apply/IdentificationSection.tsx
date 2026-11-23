@@ -2,7 +2,7 @@ const statements = [
   "You feel like you're operating below your potential.",
   "You keep waiting for the \u201cright time\u201d to make an important change.",
   "You've achieved things, but something still feels incomplete.",
-  "You research, plan or prepare, but still avoid the action that would actually mov you forward.",
+  "You research, plan or prepare, but still avoid the action that would actually move you forward.",
   "You make progress, then fall back into old patterns.",
   "You know your next chapter needs to look different from your last one.",
 ];

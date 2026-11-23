@@ -10,7 +10,7 @@ const phases = [
   {
     label: "Phase 2",
     weeks: "Weeks 7–9",
-    title: "REMOVE WHAT PULLS YOU BACK",
+    title: "WORK ON WHAT PULLS YOU BACK",
     themes: ["self-talk", "worth", "ownership", "family stories", "old rules"],
     description:
       "Once the new direction is clear, go deeper into the internal scripts that can quietly pull you back toward what feels familiar — from self-talk and worth to personal responsibility, family narratives and old conclusions.",

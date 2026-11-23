@@ -24,7 +24,7 @@ const DURATIONS = [
 ] as const;
 
 const FINANCIAL_OPTIONS = [
-  "I'm ready to invest $4,000 if I believe MindShift is right for me.",
+  "I'm ready to invest $3,997 if I believe MindShift is right for me.",
   "I could invest using a payment plan.",
   "I would need to discuss the investment with my partner.",
   "I'm interested, but I'm not currently able to make this level of investment.",
